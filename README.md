@@ -17,7 +17,7 @@ Table of Contents
       * [Scenario-102: Chef HelloWorld II](#scenario-102-chef-helloworld-ii)
       * [Scenario-103: Enforce TDD for your chef cookbooks](#scenario-103-enforce-tdd-for-your-chef-cookbooks)
       * [Scenario-104: Enforce TDD for your chef cookbooks II](#scenario-104-enforce-tdd-for-your-chef-cookbooks-ii)
-      * [Scenario-105: Enforce TDD for your chef cookbooks III](#scenario-105-enforce-tdd-for-your-chef-cookbooks-iii)
+      * [Scenario-105: Chef cookbook for cluster deployment](#scenario-105-chef-cookbook-for-cluster-deployment)
    * [More Resources](#more-resources)
    * [License](#license)
 
@@ -53,9 +53,10 @@ Enforce kitchen verify logic via serverspec
 - Tasks:
 ```
 Based on Scenario-101, test cookbook with both VM and docker
+Enforce rubocop for code static check
 ```
 
-## Scenario-105: Enforce TDD for your chef cookbooks III
+## Scenario-105: Chef cookbook for cluster deployment
 - Objective: Test and verify the deployment for both all-in-one and 2 nodes cluster
 - Tasks:
 ```
