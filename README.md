@@ -19,7 +19,7 @@ Table of Contents
       * [Scenario-201: Enforce TDD For Your Chef Cookbooks I](#scenario-201-enforce-tdd-for-your-chef-cookbooks-i)
       * [Scenario-202: Enforce TDD For Your Chef Cookbooks II](#scenario-202-enforce-tdd-for-your-chef-cookbooks-ii)
       * [Scenario-301: Use Chef To Deploy A Real Service](#scenario-301-use-chef-to-deploy-a-real-service)
-      * [Scenario-401: Cluster Deployment Tests For Chef Cookbooks](#scenario-401-cluster-deployment-tests-for-chef-cookbooks)
+      * [Scenario-302: Cluster Deployment Tests For Chef Cookbooks](#scenario-302-cluster-deployment-tests-for-chef-cookbooks)
    * [More Resources](#more-resources)
    * [Contributors: Give people credits](#contributors-give-people-credits)
    * [License](#license)
@@ -82,13 +82,13 @@ Add jenkins dummy jobs, plugins
 ```
 - See more: [Scenario-301](./Scenario-301)
 
-## Scenario-401: Cluster Deployment Tests For Chef Cookbooks
+## Scenario-302: Cluster Deployment Tests For Chef Cookbooks
 - Objective: Test and verify the deployment for both all-in-one and 2 nodes cluster
 - Tasks:
 ```
 Test 2 nodes cluster deployment in docker
 ```
-- See more: [Scenario-401](./Scenario-401)
+- See more: [Scenario-302](./Scenario-302)
 
 # More Resources
 
