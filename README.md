@@ -18,7 +18,7 @@ Table of Contents
       * [Scenario-103: Chef HelloWorld III](#scenario-103-chef-helloworld-iii)
       * [Scenario-201: Enforce TDD For Your Chef Cookbooks I](#scenario-201-enforce-tdd-for-your-chef-cookbooks-i)
       * [Scenario-202: Enforce TDD For Your Chef Cookbooks II](#scenario-202-enforce-tdd-for-your-chef-cookbooks-ii)
-      * [Scenario-301: Use Chef to deploy a real service](#scenario-301-use-chef-to-deploy-a-real-service)
+      * [Scenario-301: Use Chef To Deploy A Real Service](#scenario-301-use-chef-to-deploy-a-real-service)
       * [Scenario-401: Cluster Deployment Tests For Chef Cookbooks](#scenario-401-cluster-deployment-tests-for-chef-cookbooks)
    * [More Resources](#more-resources)
    * [Contributors: Give people credits](#contributors-give-people-credits)
@@ -72,7 +72,7 @@ Based on Scenario-104, test cookbook with both VM and docker
 ```
 - See more: [Scenario-202](./Scenario-202)
 
-## Scenario-301: Use Chef to deploy a real service
+## Scenario-301: Use Chef To Deploy A Real Service
 - Objective: Use chef for real
 - Tasks:
 ```
