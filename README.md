@@ -13,11 +13,12 @@ Table of Contents
 
    * [chef-study](#chef-study)
    * [Scenarios](#scenarios)
-      * [Scenario-101: Chef HelloWorld](#scenario-101-chef-helloworld)
+      * [Scenario-101: Chef HelloWorld I](#scenario-101-chef-helloworld-i)
       * [Scenario-102: Chef HelloWorld II](#scenario-102-chef-helloworld-ii)
-      * [Scenario-103: Enforce TDD For Your Chef Cookbooks](#scenario-103-enforce-tdd-for-your-chef-cookbooks)
-      * [Scenario-104: Enforce TDD For Your Chef Cookbooks II](#scenario-104-enforce-tdd-for-your-chef-cookbooks-ii)
-      * [Scenario-105: Cluster Deployment Tests For Chef Cookbooks](#scenario-105-cluster-deployment-tests-for-chef-cookbooks)
+      * [Scenario-103: Chef HelloWorld III](#scenario-103-chef-helloworld-iii)
+      * [Scenario-104: Enforce TDD For Your Chef Cookbooks](#scenario-104-enforce-tdd-for-your-chef-cookbooks)
+      * [Scenario-105: Enforce TDD For Your Chef Cookbooks II](#scenario-105-enforce-tdd-for-your-chef-cookbooks-ii)
+      * [Scenario-106: Cluster Deployment Tests For Chef Cookbooks](#scenario-106-cluster-deployment-tests-for-chef-cookbooks)
    * [More Resources](#more-resources)
    * [License](#license)
 
