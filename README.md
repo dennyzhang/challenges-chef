@@ -8,6 +8,19 @@ File me [tickets](https://github.com/DennyZhang/chef-study/issues) or star [the 
 
 <a href="https://github.com/DennyZhang?tab=followers"><img align="right" width="200" height="183" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/fork_github.png" /></a>
 
+Table of Contents
+=================
+
+   * [chef-study](#chef-study)
+   * [Scenarios](#scenarios)
+      * [Scenario-101: Chef HelloWorld](#scenario-101-chef-helloworld)
+      * [Scenario-102: Chef HelloWorld II](#scenario-102-chef-helloworld-ii)
+      * [Scenario-103: Enforce TDD for your chef cookbooks](#scenario-103-enforce-tdd-for-your-chef-cookbooks)
+      * [Scenario-104: Enforce TDD for your chef cookbooks II](#scenario-104-enforce-tdd-for-your-chef-cookbooks-ii)
+      * [Scenario-105: Enforce TDD for your chef cookbooks III](#scenario-105-enforce-tdd-for-your-chef-cookbooks-iii)
+   * [More Resources](#more-resources)
+   * [License](#license)
+
 Chef study from dummies to pros
 
 # Scenarios
