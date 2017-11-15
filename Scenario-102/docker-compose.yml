@@ -6,4 +6,4 @@ services:
     image: chef/chef
     volumes:
       - ./config:/tmp/config
-      - cookbooks:/tmp/cookbooks
+      - ./cookbooks:/tmp/cookbooks
