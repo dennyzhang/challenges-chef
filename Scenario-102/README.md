@@ -33,7 +33,7 @@ ssh vagrant@192.168.50.10
 wget -O /tmp/chefdk.deb \
      https://packages.chef.io/files/stable/chefdk/2.3.4/ubuntu/16.04/chefdk_2.3.4-1_amd64.deb
 
-sudo dpkg -i /tmp/chefdk.deb
+sudo dpkg -i /tmp/chefdk*.deb
 
 # chef-solo version: 13.4.19
 chef-solo -verison
