@@ -49,6 +49,7 @@ Enforce rubocop and foodcritic for code static check
 - Tasks:
 ```
 Start 2 container: chef server and chef client
+Install Jenkins in chef client node
 ```
 - See more: [Scenario-103](./Scenario-103)
 
