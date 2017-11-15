@@ -15,9 +15,9 @@ Table of Contents
    * [Scenarios](#scenarios)
       * [Scenario-101: Chef HelloWorld](#scenario-101-chef-helloworld)
       * [Scenario-102: Chef HelloWorld II](#scenario-102-chef-helloworld-ii)
-      * [Scenario-103: Enforce TDD for your chef cookbooks](#scenario-103-enforce-tdd-for-your-chef-cookbooks)
-      * [Scenario-104: Enforce TDD for your chef cookbooks II](#scenario-104-enforce-tdd-for-your-chef-cookbooks-ii)
-      * [Scenario-105: Chef cookbook for cluster deployment](#scenario-105-chef-cookbook-for-cluster-deployment)
+      * [Scenario-103: Enforce TDD For Your Chef Cookbooks](#scenario-103-enforce-tdd-for-your-chef-cookbooks)
+      * [Scenario-104: Enforce TDD For Your Chef Cookbooks II](#scenario-104-enforce-tdd-for-your-chef-cookbooks-ii)
+      * [Scenario-105: Cluster Deployment Tests For Chef Cookbooks](#scenario-105-cluster-deployment-tests-for-chef-cookbooks)
    * [More Resources](#more-resources)
    * [License](#license)
 
@@ -38,7 +38,7 @@ create a dummy cookbook to install curl package
 Based on Scenario-101, start a docker container with chef preinstalled
 ```
 
-## Scenario-103: Enforce TDD for your chef cookbooks
+## Scenario-103: Enforce TDD For Your Chef Cookbooks
 - Objective: Test your cookbooks
 - Tasks:
 ```
@@ -46,7 +46,7 @@ Use kitchen to test your cookbook: start a VM and test the logic
 Enforce kitchen verify logic via serverspec
 ```
 
-## Scenario-104: Enforce TDD for your chef cookbooks II
+## Scenario-104: Enforce TDD For Your Chef Cookbooks II
 - Objective: Support test with both VM and docker, thus it can be faster
 - Tasks:
 ```
@@ -54,7 +54,7 @@ Based on Scenario-101, test cookbook with both VM and docker
 Enforce rubocop for code static check
 ```
 
-## Scenario-105: Chef cookbook for cluster deployment
+## Scenario-105: Cluster Deployment Tests For Chef Cookbooks
 - Objective: Test and verify the deployment for both all-in-one and 2 nodes cluster
 - Tasks:
 ```
