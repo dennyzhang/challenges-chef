@@ -12,7 +12,7 @@ Chef study from dummies to pros
 
 # Scenarios
 
-## Scenario-101: Chef helloworld
+## Scenario-101: Chef HelloWorld
 - Objective: Get familar with chef.
 - Tasks:
 ```
@@ -20,11 +20,33 @@ Start a VM, install chef facility
 create a dummy cookbook to install curl package
 ```
 
-## Scenario-102: Chef helloworld II
+## Scenario-102: Chef HelloWorld II
 - Objective: Speed up the chef process via docker image
 - Tasks:
 ```
 Based on Scenario-101, start a docker container with chef preinstalled
+```
+
+## Scenario-103: Enforce TDD for your chef cookbooks
+- Objective: Test your cookbooks
+- Tasks:
+```
+Use kitchen to test your cookbook: start a VM and test the logic
+Enforce kitchen verify logic via serverspec
+```
+
+## Scenario-104: Enforce TDD for your chef cookbooks II
+- Objective: Support test with both VM and docker, thus it can be faster
+- Tasks:
+```
+Based on Scenario-101, test cookbook with both VM and docker
+```
+
+## Scenario-105: Enforce TDD for your chef cookbooks III
+- Objective: Test and verify the deployment for both all-in-one and 2 nodes cluster
+- Tasks:
+```
+Test 2 nodes cluster deployment in docker
 ```
 
 # More Resources
