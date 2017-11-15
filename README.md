@@ -27,8 +27,8 @@ Table of Contents
 - Objective: Create a dummy cookbook
 - Tasks:
 ```
-Use docker container to start a env with chef preinstalled
-Create dummy cookbook and apply it
+Use docker container to start a env with chef pre-installed
+Create a dummy cookbook and apply it
 ```
 
 ## Scenario-102: Chef HelloWorld II
@@ -36,7 +36,9 @@ Create dummy cookbook and apply it
 - Tasks:
 ```
 Start a VM, install chef facility
-create a dummy cookbook to install curl package
+create a dummy cookbook to install lsof package
+Before install lsof, run "apt-get update" by chef.
+Enforce rubocop and foodcritic for code static check
 ```
 
 ## Scenario-103: Enforce TDD For Your Chef Cookbooks
