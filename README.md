@@ -48,8 +48,7 @@ Enforce rubocop and foodcritic for code static check
 - Objective: Setup chef server and chef client
 - Tasks:
 ```
-Start 2 container
-Then setup chef server and chef client
+Start 2 container: chef server and chef client
 ```
 - See more: [Scenario-103](./Scenario-103)
 
