@@ -7,31 +7,13 @@ File me [tickets](https://github.com/DennyZhang/chef-study/issues) or star [the 
 Table of Contents
 =================
 
-   * [Run code static check via rubocop](#run-code-static-check-via-rubocop)
-   * [Run code static check via foodcritic](#run-code-static-check-via-foodcritic)
    * [Start VM via vagrant](#start-vm-via-vagrant)
    * [Login and install chef-dk](#login-and-install-chef-dk)
    * [Upload chef cookbook code](#upload-chef-cookbook-code)
    * [Apply Chef update](#apply-chef-update)
+   * [Run code static check](#run-code-static-check)
    * [Destroy local vm](#destroy-local-vm)
    * [Test in public cloud?](#test-in-public-cloud)
-
-# Run code static check via rubocop
-```
-gem install rubocop -v "0.44.1"
-cd cookbooks/example
-rubocop .
-```
-Check more about rubocop: https://www.dennyzhang.com/rubocop_errors
-
-# Run code static check via foodcritic
-```
-gem install foodcritic -v "4.0.0"
-cd cookbooks/
-foodcritic example
-```
-
-TODO: how to install foodcritic in mac OSX
 
 # Start VM via vagrant
 ```
@@ -45,11 +27,14 @@ More about vagrant: https://www.vagrantup.com/docs/providers/basic_usage.html
 ```
 ssh vagrant@192.168.50.10
 # password: vagrant
-sudo su -
 
 # https://downloads.chef.io/chefdk
-wget -O /tmp/chefdk.deb https://packages.chef.io/files/stable/chefdk/2.3.4/ubuntu/16.04/chefdk_2.3.4-1_amd64.deb
-dpkg -i /tmp/chefdk.deb
+wget -O /tmp/chefdk.deb \
+     https://packages.chef.io/files/stable/chefdk/2.3.4/ubuntu/16.04/chefdk_2.3.4-1_amd64.deb
+
+sudo dpkg -i /tmp/chefdk.deb
+
+# chef-solo version: 
 chef-solo --verison
 ```
 
@@ -69,6 +54,24 @@ sudo chef-solo -c config/solo.rb -j config/node.json
 # After deployment, we should see jq package installed
 which jq
 ```
+
+# Run code static check
+- rubocop
+```
+gem install rubocop -v "0.44.1"
+cd cookbooks/example
+rubocop .
+```
+Check more about rubocop: https://www.dennyzhang.com/rubocop_errors
+
+- foodcritic
+```
+gem install foodcritic -v "4.0.0"
+cd cookbooks/
+foodcritic example
+```
+
+TODO: how to install foodcritic in mac OSX
 
 # Destroy local vm
 ```

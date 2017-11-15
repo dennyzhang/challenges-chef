@@ -20,6 +20,7 @@ Table of Contents
       * [Scenario-105: Enforce TDD For Your Chef Cookbooks II](#scenario-105-enforce-tdd-for-your-chef-cookbooks-ii)
       * [Scenario-106: Cluster Deployment Tests For Chef Cookbooks](#scenario-106-cluster-deployment-tests-for-chef-cookbooks)
    * [More Resources](#more-resources)
+   * [Contributors: Give people credits](#contributors-give-people-credits)
    * [License](#license)
 
 # Scenarios
@@ -79,6 +80,9 @@ Test 2 nodes cluster deployment in docker
 - See more: [Scenario-106](./Scenario-106)
 
 # More Resources
+
+# Contributors: Give people credits
+Below are folks who have contributed via GitHub!
 
 # License
 - Code is licensed under [MIT License](https://www.dennyzhang.com/wp-content/mit_license.txt).
