@@ -1,7 +1,7 @@
-# Start docker-compose env
+# 1. Start docker-compose env
 docker-compose up -d
 
-# Login to the container, and run procedure
+# 2. Login to the container, and run procedure
 ```
 docker exec -it my_chef sh
 apt-get -y update
@@ -16,4 +16,10 @@ chef-solo -c config/solo.rb -j config/node.json
 
 # After chef apply, lsof package is installed
 which lsof
+```
+
+# 3. Destroy docker-compose env after testing
+
+```
+docker-compose down -v
 ```
