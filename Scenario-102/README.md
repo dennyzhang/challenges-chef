@@ -16,7 +16,7 @@ Table of Contents
    * [Destroy local vm](#destroy-local-vm)
    * [Test in public cloud?](#test-in-public-cloud)
 
-[scenario-102-screenshot.jpg](../images/scenario-102-screenshot.jpg)
+![scenario-102-screenshot.jpg](../images/scenario-102-screenshot.jpg)
 
 # Start VM via vagrant
 ```
