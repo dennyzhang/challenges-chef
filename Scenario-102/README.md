@@ -1,3 +1,8 @@
+- Start VM via vagrant
+```
+vagrant up
+```
+
 - Run code static check via rubocop
 ```
 cd cookbooks/example
