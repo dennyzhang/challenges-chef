@@ -23,19 +23,20 @@ Table of Contents
 
 # Scenarios
 
-## Scenario-101: Chef HelloWorld
-- Objective: Get familar with chef.
+## Scenario-101: Chef HelloWorld I
+- Objective: Create a dummy cookbook
+- Tasks:
+```
+Use docker container to start a env with chef preinstalled
+Create dummy cookbook and apply it
+```
+
+## Scenario-102: Chef HelloWorld II
+- Objective: Pure VM deployment
 - Tasks:
 ```
 Start a VM, install chef facility
 create a dummy cookbook to install curl package
-```
-
-## Scenario-102: Chef HelloWorld II
-- Objective: Speed up the chef process via docker image
-- Tasks:
-```
-Based on Scenario-101, start a docker container with chef preinstalled
 ```
 
 ## Scenario-103: Enforce TDD For Your Chef Cookbooks
