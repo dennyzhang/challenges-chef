@@ -82,11 +82,13 @@ Add jenkins dummy jobs, plugins
 ```
 - See more: [Scenario-301](./Scenario-301)
 
-## Scenario-302: Cluster Deployment Tests For Chef Cookbooks
+## Scenario-302: Use Chef To Deploy A Real Service II
 - Objective: Test and verify the deployment for both all-in-one and 2 nodes cluster
 - Tasks:
 ```
-Test 2 nodes cluster deployment in docker
+Test 2 nodes jenkins cluster deployment in docker
+Verify the deployment
+Support deploy to both docker and EC2
 ```
 - See more: [Scenario-302](./Scenario-302)
 
