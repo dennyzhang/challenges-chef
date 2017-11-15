@@ -10,6 +10,7 @@ Table of Contents
    * [Start VM via vagrant](#start-vm-via-vagrant)
    * [Login and install chef-dk](#login-and-install-chef-dk)
    * [Upload chef cookbook code](#upload-chef-cookbook-code)
+   * [Get cookbooks dependency](#get-cookbooks-dependency)
    * [Apply Chef update](#apply-chef-update)
    * [Run code static check](#run-code-static-check)
    * [Destroy local vm](#destroy-local-vm)
@@ -34,14 +35,22 @@ wget -O /tmp/chefdk.deb \
 
 sudo dpkg -i /tmp/chefdk.deb
 
-# chef-solo version: 
-chef-solo --verison
+# chef-solo version: 13.4.19
+chef-solo -verison
 ```
 
 # Upload chef cookbook code
 ```
 scp -r Scenario-102 vagrant@192.168.50.10:/tmp/
 ```
+
+# Get cookbooks dependency
+```
+ssh vagrant@192.168.50.10
+cd /tmp/Scenario-102/cookbooks/example/
+berks install
+```
+
 # Apply Chef update
 ```
 ssh vagrant@192.168.50.10
