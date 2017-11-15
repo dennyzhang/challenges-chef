@@ -24,12 +24,13 @@ Table of Contents
 # Scenarios
 
 ## Scenario-101: Chef HelloWorld I
-- Objective: Create a dummy cookbook
+- Objective: Create a dummy cookbook, and test it in docker
 - Tasks:
 ```
 Use docker container to start a env with chef pre-installed
 Create a dummy cookbook and apply it
 ```
+- See more [Scenario-101](./Scenario-101)
 
 ## Scenario-102: Chef HelloWorld II
 - Objective: Pure VM deployment
@@ -37,9 +38,10 @@ Create a dummy cookbook and apply it
 ```
 Start a VM, install chef facility
 create a dummy cookbook to install lsof package
-Before install lsof, run "apt-get update" by chef.
+Before install lsof, run "apt-get update" by chef
 Enforce rubocop and foodcritic for code static check
 ```
+- See more [Scenario-102](./Scenario-102)
 
 ## Scenario-103: Enforce TDD For Your Chef Cookbooks
 - Objective: Test your cookbooks
@@ -48,6 +50,7 @@ Enforce rubocop and foodcritic for code static check
 Use kitchen to test your cookbook: start a VM and test the logic
 Enforce kitchen verify logic via serverspec
 ```
+- See more [Scenario-103](./Scenario-103)
 
 ## Scenario-104: Enforce TDD For Your Chef Cookbooks II
 - Objective: Support test with both VM and docker, thus it can be faster
@@ -56,12 +59,14 @@ Enforce kitchen verify logic via serverspec
 Based on Scenario-101, test cookbook with both VM and docker
 Enforce rubocop for code static check
 ```
+- See more [Scenario-104](./Scenario-104)
 
 ## Scenario-105: Cluster Deployment Tests For Chef Cookbooks
 - Objective: Test and verify the deployment for both all-in-one and 2 nodes cluster
 - Tasks:
 ```
 Test 2 nodes cluster deployment in docker
+- See more [Scenario-105](./Scenario-105)
 ```
 
 # More Resources
