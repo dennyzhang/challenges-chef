@@ -1,38 +1,19 @@
-- Get chef image for binaries and libraries
+# Start docker-compose env
+docker-compose up -d
 
-https://hub.docker.com/r/chef/chef/
+# Login to the container, and run procedure
 ```
-docker pull chef/chef
-```
+docker exec -it my_chef sh
+apt-get -y update
 
-- Start chef container
-```
-export docker_image="chef/chef"
-docker stop my-test; docker rm my-test
-docker run -t -d --privileged -h mytest --name my-test --entrypoint=/bin/sh "$docker_image"
+cd /tmp
 
-docker exec -it my-test bash
+# Before chef apply, lsof package is missing
+which lsof
 
-which curl
-```
+# From config/node.json, we specify to apply example cookbook
+chef-solo -c config/solo.rb -j config/node.json
 
-- start helloworld
-
-https://www.morethanseven.net/2010/10/30/Chef-hello-world/
-
-Get example chef code
-```
-apk add --update git
-
-mkdir /tmp/chef_test
-cd /tmp/chef_test
-git clone https://github.com/DennyZhang/dennytest.git
-cd dennytest/chef_helloworld
-```
-
-Apply example cookbook
-```
-sudo chef-solo -c config/solo.rb -j config/node.json
-
-which curl
+# After chef apply, lsof package is installed
+which lsof
 ```
