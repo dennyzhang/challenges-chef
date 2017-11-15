@@ -43,31 +43,39 @@ Enforce rubocop and foodcritic for code static check
 ```
 - See more: [Scenario-102](./Scenario-102)
 
-## Scenario-103: Enforce TDD For Your Chef Cookbooks
+## Scenario-103: Chef HelloWorld III
+- Objective: Setup chef server and chef client
+- Tasks:
+```
+Start 2 container
+Then setup chef server and chef client
+```
+- See more: [Scenario-103](./Scenario-103)
+
+## Scenario-104: Enforce TDD For Your Chef Cookbooks
 - Objective: Test your cookbooks
 - Tasks:
 ```
 Use kitchen to test your cookbook: start a VM and test the logic
 Enforce kitchen verify logic via serverspec
 ```
-- See more: [Scenario-103](./Scenario-103)
+- See more: [Scenario-104](./Scenario-104)
 
-## Scenario-104: Enforce TDD For Your Chef Cookbooks II
+## Scenario-105: Enforce TDD For Your Chef Cookbooks II
 - Objective: Support test with both VM and docker, thus it can be faster
 - Tasks:
 ```
-Based on Scenario-101, test cookbook with both VM and docker
-Enforce rubocop for code static check
+Based on Scenario-104, test cookbook with both VM and docker
 ```
-- See more: [Scenario-104](./Scenario-104)
+- See more: [Scenario-105](./Scenario-105)
 
-## Scenario-105: Cluster Deployment Tests For Chef Cookbooks
+## Scenario-106: Cluster Deployment Tests For Chef Cookbooks
 - Objective: Test and verify the deployment for both all-in-one and 2 nodes cluster
 - Tasks:
 ```
 Test 2 nodes cluster deployment in docker
 ```
-- See more: [Scenario-105](./Scenario-105)
+- See more: [Scenario-106](./Scenario-106)
 
 # More Resources
 
