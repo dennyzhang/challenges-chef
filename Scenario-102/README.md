@@ -88,7 +88,7 @@ TODO: how to install foodcritic in mac OSX
 
 # Destroy local vm
 ```
-vagrant destroy
+vagrant destroy -f
 ```
 
 # Test in public cloud?
