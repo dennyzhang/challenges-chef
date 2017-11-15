@@ -38,8 +38,8 @@ Create a dummy cookbook and apply it
 - Tasks:
 ```
 Start a VM, install chef facility
-create a dummy cookbook to install lsof package
-Before install lsof, run "apt-get update" by chef
+create a dummy cookbook to install jq package
+Before install jq, run "apt-get update" by chef
 Enforce rubocop and foodcritic for code static check
 ```
 - See more: [Scenario-102](./Scenario-102)

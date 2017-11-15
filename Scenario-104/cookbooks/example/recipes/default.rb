@@ -1,1 +1,1 @@
-package 'lsof'
+package 'jq'

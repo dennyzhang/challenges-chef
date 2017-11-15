@@ -21,14 +21,14 @@ apt-get -y update
 
 cd /tmp
 
-# Before chef apply, lsof package is missing
-which lsof
+# Before chef apply, jq package is missing
+which jq
 
 # From config/node.json, we specify to apply example cookbook
 chef-solo -c config/solo.rb -j config/node.json
 
-# After chef apply, lsof package is installed
-which lsof
+# After chef apply, jq package is installed
+which jq
 ```
 
 # Destroy docker-compose env after testing
