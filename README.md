@@ -1,4 +1,4 @@
-# chef-study
+# chef-study: Case study from dummy to pro
 
 [![Build Status](https://travis-ci.org/DennyZhang/chef-study.svg?branch=master)](https://travis-ci.org/DennyZhang/chef-study) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
@@ -20,8 +20,6 @@ Table of Contents
       * [Scenario-105: Chef cookbook for cluster deployment](#scenario-105-chef-cookbook-for-cluster-deployment)
    * [More Resources](#more-resources)
    * [License](#license)
-
-Chef study from dummies to pros
 
 # Scenarios
 
