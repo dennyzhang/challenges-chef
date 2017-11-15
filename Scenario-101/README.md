@@ -11,6 +11,8 @@ Table of Contents
    * [Login to the container, and run procedure](#login-to-the-container-and-run-procedure)
    * [Destroy docker-compose env after testing](#destroy-docker-compose-env-after-testing)
 
+![scenario-101-screenshot.png](../images/scenario-101-screenshot.png)
+
 # Start docker-compose env
 docker-compose up -d
 
