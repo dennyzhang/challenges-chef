@@ -2,4 +2,4 @@ source 'https://rubygems.org'
 # source 'https://ruby.taobao.org/'
 
 gem 'foodcritic', '~> 4.0.0'
-gem 'rubocop', '~> 0.28.0'
+gem 'rubocop', '~> 0.44.1'
