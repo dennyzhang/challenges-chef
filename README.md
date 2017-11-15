@@ -16,9 +16,10 @@ Table of Contents
       * [Scenario-101: Chef HelloWorld I](#scenario-101-chef-helloworld-i)
       * [Scenario-102: Chef HelloWorld II](#scenario-102-chef-helloworld-ii)
       * [Scenario-103: Chef HelloWorld III](#scenario-103-chef-helloworld-iii)
-      * [Scenario-104: Enforce TDD For Your Chef Cookbooks I](#scenario-104-enforce-tdd-for-your-chef-cookbooks-i)
-      * [Scenario-105: Enforce TDD For Your Chef Cookbooks II](#scenario-105-enforce-tdd-for-your-chef-cookbooks-ii)
-      * [Scenario-106: Cluster Deployment Tests For Chef Cookbooks](#scenario-106-cluster-deployment-tests-for-chef-cookbooks)
+      * [Scenario-201: Enforce TDD For Your Chef Cookbooks I](#scenario-201-enforce-tdd-for-your-chef-cookbooks-i)
+      * [Scenario-202: Enforce TDD For Your Chef Cookbooks II](#scenario-202-enforce-tdd-for-your-chef-cookbooks-ii)
+      * [Scenario-301: Use Chef to deploy a real service](#scenario-301-use-chef-to-deploy-a-real-service)
+      * [Scenario-401: Cluster Deployment Tests For Chef Cookbooks](#scenario-401-cluster-deployment-tests-for-chef-cookbooks)
    * [More Resources](#more-resources)
    * [Contributors: Give people credits](#contributors-give-people-credits)
    * [License](#license)
@@ -50,34 +51,44 @@ Enforce rubocop and foodcritic for code static check
 - Tasks:
 ```
 Start 2 container: chef server and chef client
-Install Jenkins in chef client node
+Apply dummy cookbook in chef client node
 ```
 - See more: [Scenario-103](./Scenario-103)
 
-## Scenario-104: Enforce TDD For Your Chef Cookbooks I
+## Scenario-201: Enforce TDD For Your Chef Cookbooks I
 - Objective: Test your cookbooks
 - Tasks:
 ```
 Use kitchen to test your cookbook: start a VM and test the logic
 Enforce kitchen verify logic via serverspec
 ```
-- See more: [Scenario-104](./Scenario-104)
+- See more: [Scenario-201](./Scenario-201)
 
-## Scenario-105: Enforce TDD For Your Chef Cookbooks II
+## Scenario-202: Enforce TDD For Your Chef Cookbooks II
 - Objective: Support test with both VM and docker, thus it can be faster
 - Tasks:
 ```
 Based on Scenario-104, test cookbook with both VM and docker
 ```
-- See more: [Scenario-105](./Scenario-105)
+- See more: [Scenario-202](./Scenario-202)
 
-## Scenario-106: Cluster Deployment Tests For Chef Cookbooks
+## Scenario-301: Use Chef to deploy a real service
+- Objective: Use chef for real
+- Tasks:
+```
+Deploy jenkins with customization.
+Add one jenkins user
+Add jenkins dummy jobs, plugins
+```
+- See more: [Scenario-301](./Scenario-301)
+
+## Scenario-401: Cluster Deployment Tests For Chef Cookbooks
 - Objective: Test and verify the deployment for both all-in-one and 2 nodes cluster
 - Tasks:
 ```
 Test 2 nodes cluster deployment in docker
 ```
-- See more: [Scenario-106](./Scenario-106)
+- See more: [Scenario-401](./Scenario-401)
 
 # More Resources
 
