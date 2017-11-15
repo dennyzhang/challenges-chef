@@ -1,0 +1,9 @@
+version: '2'
+services:
+  my_chef:
+    container_name: my_chef
+    hostname: my_chef
+    image: chef/chef
+    volumes:
+      - ./config:/tmp/config
+      - cookbooks:/tmp/cookbooks
