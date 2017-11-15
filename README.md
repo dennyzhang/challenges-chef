@@ -40,7 +40,7 @@ Create a dummy cookbook and apply it
 ```
 Start a VM, install chef facility
 create a dummy cookbook to install jq package
-Before install jq, run "apt-get update" by chef
+Before install jq, run "apt-get update" by chef. So you need berkshelf.
 Enforce rubocop and foodcritic for code static check
 ```
 - See more: [Scenario-102](./Scenario-102)

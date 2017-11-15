@@ -46,9 +46,13 @@ scp -r Scenario-102 vagrant@192.168.50.10:/tmp/
 
 # Get cookbooks dependency
 ```
+mkdir -p /tmp/cookbooks
 ssh vagrant@192.168.50.10
 cd /tmp/Scenario-102/cookbooks/example/
-berks install
+berks vendor /tmp/cookbooks
+ls -lth /tmp/cookbooks
+
+cd /tmp/Scenario-102/
 ```
 
 # Apply Chef update
