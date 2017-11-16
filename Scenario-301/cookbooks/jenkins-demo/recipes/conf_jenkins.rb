@@ -77,24 +77,10 @@ end
 # end
 
 # install depended plugins for naginator
-jenkins_plugin 'bouncycastle-api' do
-  version '2.16.0'
-end
-
-jenkins_plugin 'structs' do
-  version '1.5'
-end
-
-jenkins_plugin 'junit' do
-  version '1.18'
-end
-
-jenkins_plugin 'script-security' do
-  version '1.22'
-end
-
-jenkins_plugin 'matrix-project' do
-  version '1.7.1'
+node['jenkins_plugins'].each do |plug, ver|
+   jenkins_plugin plug do
+     version ver
+   end
 end
 
 jenkins_plugin 'naginator' do
