@@ -43,7 +43,7 @@ chef-solo -c config/solo.rb -j config/node.json
 ```
 
 # Verify Jenkins
-http://localhost:8080
+curl -I http://localhost:8080
 
 # Destroy docker-compose env after testing
 
