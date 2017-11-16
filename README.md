@@ -73,12 +73,10 @@ Based on Scenario-104, test cookbook with both VM and docker
 - See more: [Scenario-202](./Scenario-202)
 
 ## Scenario-301: Use Chef To Deploy A Real Service I
-- Objective: Use chef for real
+- Objective: Use chef to deploy one common service for real
 - Tasks:
 ```
-Deploy jenkins with customization.
-Add one jenkins user
-Add jenkins dummy jobs, plugins
+Deploy jenkins with customization: one jenkins user, dummy jobs and some plugins
 ```
 - See more: [Scenario-301](./Scenario-301)
 
