@@ -13,6 +13,12 @@ Table of Contents
 
 ![scenario-101-screenshot.png](../images/scenario-101-screenshot.png)
 
+# Requirement
+
+1. Setup standalone jenkins server
+2. Install plugin: ThinBackup, slack
+3. Install job: serverspec, rubocop check for git repo
+
 # Start docker-compose env
 docker-compose up -d
 
