@@ -29,6 +29,7 @@ ls -lth /tmp/berks_cookbooks
 
 # Apply Chef update
 ```
+cd /tmp
 # From config/node.json, we specify to apply example cookbook
 chef-solo -c config/solo.rb -j config/node.json
 
