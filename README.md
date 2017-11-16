@@ -54,6 +54,7 @@ Start 2 container: chef server and chef client
 Apply dummy cookbook in chef client node
 ```
 - See more: [Scenario-103](./Scenario-103)
+- TODO
 
 ## Scenario-201: Enforce TDD For Your Chef Cookbooks I
 - Objective: Test your cookbooks
