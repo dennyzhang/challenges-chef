@@ -38,31 +38,6 @@ file '/etc/sudoers.d/jenkins' do
 end
 
 #######################################################
-%w(/var/lib/jenkins/.ssh /var/lib/jenkins/.m2).each do |x|
-  directory x do
-    owner 'jenkins'
-    group 'jenkins'
-    mode 0o755
-    action :create
-  end
-end
-
-# ssh login key
-cookbook_file '/var/lib/jenkins/ssh_id_rsa' do
-  source 'sshlogin_id_rsa'
-  owner 'jenkins'
-  group 'jenkins'
-  mode 0o400
-end
-
-ssh_config 'github.com' do
-  options 'User' => 'git', \
-          'IdentityFile' => '/var/lib/jenkins/.ssh/github_id_rsa', \
-          'StrictHostKeyChecking' => 'no'
-  user 'jenkins'
-end
-
-#######################################################
 
 # TODO: enable jenkins plugins with mininum performance downgrade
 
