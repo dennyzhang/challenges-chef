@@ -7,9 +7,13 @@ File me [tickets](https://github.com/DennyZhang/chef-study/issues) or star [the 
 Table of Contents
 =================
 
+   * [Requirement](#requirement)
    * [Start docker-compose env](#start-docker-compose-env)
    * [Login to the container, and run procedure](#login-to-the-container-and-run-procedure)
+   * [Apply Chef update](#apply-chef-update)
+   * [Verify Jenkins](#verify-jenkins)
    * [Destroy docker-compose env after testing](#destroy-docker-compose-env-after-testing)
+   * [More Resources](#more-resources)
 
 ![scenario-101-screenshot.png](../images/scenario-101-screenshot.png)
 
@@ -50,3 +54,6 @@ curl -I http://localhost:8080
 ```
 docker-compose down -v
 ```
+
+# More Resources
+- jenkins cookbook: https://github.com/chef-cookbooks/jenkins
