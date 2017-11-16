@@ -16,48 +16,25 @@ Table of Contents
 # Start docker-compose env
 docker-compose up -d
 
-# Setup chef server in chef_server container
+# Login to the container, and run procedure
 ```
-docker exec -it chef_server bash
-# install chef server
-wget -O /tmp/chef-server-core_12.17.5-1_amd64.deb \
-     https://packages.chef.io/files/stable/chef-server/12.17.5/ubuntu/14.04/chef-server-core_12.17.5-1_amd64.deb
+docker exec -it my_chef sh
+apt-get -y update
 
-dpkg -i /tmp/chef-server-core_*.deb
+cd /tmp
 
-which chef-server-ctl
-chef-server-ctl reconfigure
-```
+# Before chef apply, jq package is missing
+which jq
 
-# Use chef_client as both client and knife workstation
+# From config/node.json, we specify to apply example cookbook
+chef-solo -c config/solo.rb -j config/node.json
 
-- Configure knife workstation
-```
-docker exec -it chef_client bash
-
-cat > ~/.ssh/knife.rb <<EOF
-log_level                :info
-log_location             STDOUT
-node_name                'admin'
-client_key               '/Users/mac/.chef/admin.pem'
-validation_client_name   'digitalocean-validator'
-validation_key           '/Users/mac/.chef/digitalocean-validator.pem'
-chef_server_url          'https://chef_server/organizations/digitalocean'
-syntax_check_cache_path  '/Users/mac/.chef/syntax_check_cache'
-ssl_verify_mode :verify_none
-EOF
-```
-
-- Upload chef cookbook
-```
-```
-
-- Use knife to run deployment
-```
-docker exec -it chef_client bash
+# After chef apply, jq package is installed
+which jq
 ```
 
 # Destroy docker-compose env after testing
+
 ```
 docker-compose down -v
 ```
