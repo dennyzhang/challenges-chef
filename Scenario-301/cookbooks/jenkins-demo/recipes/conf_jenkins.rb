@@ -4,7 +4,7 @@
 # Cookbook Name:: jenkins-demo
 # Recipe:: conf_jenkins
 #
-# Copyright 2015, TOTVS Labs
+# Copyright 2017, DennyZhang.com
 #
 # All rights reserved - Do Not Redistribute
 #

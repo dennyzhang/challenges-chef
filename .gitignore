@@ -1,3 +1,4 @@
 local-mode-cache
 .vagrant
 *.deb
+Berksfile.lock
