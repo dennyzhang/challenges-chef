@@ -78,9 +78,9 @@ end
 
 # install depended plugins for naginator
 node['jenkins_plugins'].each do |plug, ver|
-   jenkins_plugin plug do
-     version ver
-   end
+  jenkins_plugin plug do
+    version ver
+  end
 end
 
 jenkins_plugin 'naginator' do
