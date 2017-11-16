@@ -10,8 +10,10 @@ default['jenkins_mdm']['install_devkit'] = '0'
 default['jenkins_mdm']['jenkins_jobs'] = 'TailLogfile'
 
 default['jenkins_plugins'] = {
-  'bouncycastle-api' => '2.16.0',
+  'thinbackup' => '1.9',
+  'slack' => '2.2',
   'junit' => '1.18',
+  'bouncycastle-api' => '2.16.0',
   'script-security' => '1.22',
   'matrix-project' => '1.7.1'
 }
