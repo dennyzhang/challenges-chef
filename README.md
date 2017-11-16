@@ -91,11 +91,10 @@ Support deploy to both docker and EC2
 - See more: [Scenario-302](./Scenario-302)
 
 # More Resources
+<img align="right" width="200" height="183" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/magic.gif">
 
 # Contributors: Give People Credits
 Below are folks who have contributed via GitHub!
-
-<img align="right" width="200" height="183" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/magic.gif">
 
 # License
 - Code is licensed under [MIT License](https://www.dennyzhang.com/wp-content/mit_license.txt).
