@@ -21,7 +21,7 @@ Table of Contents
       * [Scenario-301: Use Chef To Deploy A Real Service I](#scenario-301-use-chef-to-deploy-a-real-service-i)
       * [Scenario-302: Use Chef To Deploy A Real Service II](#scenario-302-use-chef-to-deploy-a-real-service-ii)
    * [More Resources](#more-resources)
-   * [Contributors: Give people credits](#contributors-give-people-credits)
+   * [Contributors: Give People Credits](#contributors-give-people-credits)
    * [License](#license)
 
 # Scenarios
@@ -92,7 +92,7 @@ Support deploy to both docker and EC2
 
 # More Resources
 
-# Contributors: Give people credits
+# Contributors: Give People Credits
 Below are folks who have contributed via GitHub!
 
 # License
