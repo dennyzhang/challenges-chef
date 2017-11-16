@@ -63,6 +63,7 @@ Use kitchen to test your cookbook: start a VM and test the logic
 Enforce kitchen verify logic via serverspec
 ```
 - See more: [Scenario-201](./Scenario-201)
+- TODO
 
 ## Scenario-202: Enforce TDD For Your Chef Cookbooks II
 - Objective: Support test with both VM and docker, thus it can be faster
@@ -71,6 +72,7 @@ Enforce kitchen verify logic via serverspec
 Based on Scenario-104, test cookbook with both VM and docker
 ```
 - See more: [Scenario-202](./Scenario-202)
+- TODO
 
 ## Scenario-301: Use Chef To Deploy A Real Service I
 - Objective: Use chef to deploy one common service for real
@@ -79,6 +81,7 @@ Based on Scenario-104, test cookbook with both VM and docker
 Deploy jenkins with customization: one jenkins user, dummy jobs and some plugins
 ```
 - See more: [Scenario-301](./Scenario-301)
+- TODO
 
 ## Scenario-302: Use Chef To Deploy A Real Service II
 - Objective: Test and verify the deployment for both all-in-one and 2 nodes cluster
@@ -89,6 +92,7 @@ Verify the deployment
 Support deploy to both docker and EC2
 ```
 - See more: [Scenario-302](./Scenario-302)
+- TODO
 
 # More Resources
 <img align="right" width="200" height="183" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/magic.gif">
