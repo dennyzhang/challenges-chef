@@ -2,8 +2,6 @@
 driver:
   name: docker
 driver_config:
-  #http_proxy: <%= ENV.fetch('HTTP_PROXY', "http://172.17.42.1:3128") %>
-  #https_proxy: <%= ENV.fetch('HTTPS_PROXY', "http://172.17.42.1:3128") %>
   instance_name: <%= ENV.fetch('INSTANCE_NAME', "jenkins-demo") %>
   use_sudo: false
   privileged: true
@@ -36,14 +34,7 @@ suites:
       - recipe[devops_library::install_serverspec]
       - recipe[jenkins-demo::default]
     attributes:
-        {common_basic:
-                {app_branch_name: '<%= ENV.fetch('APP_BRANCH_NAME', "") %>',
-                framework_branch_name: '<%= ENV.fetch('FRAMEWORK_BRANCH_NAME', "") %>',
-                devops_branch_name: '<%= ENV.fetch('branch_name', "") %>'
-                },
-         os_basic:
-                {enable_firewall: 'true'},
-         jenkins_mdm:
+        {jenkins_mdm:
                 {buildrepo_dir: '/var/lib/jenkins/code/',
                 install_devkit: '1',
                 avoid_external_network: '0'
