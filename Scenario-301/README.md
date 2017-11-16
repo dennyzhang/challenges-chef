@@ -25,16 +25,18 @@ mkdir -p /tmp/berks_cookbooks
 cd /tmp/cookbooks/jenkins-demo/
 berks vendor /tmp/berks_cookbooks
 ls -lth /tmp/berks_cookbooks
+```
 
-# Before chef apply, jq package is missing
-which jq
-
+# Apply Chef update
+```
 # From config/node.json, we specify to apply example cookbook
 chef-solo -c config/solo.rb -j config/node.json
 
-# After chef apply, jq package is installed
-which jq
+# After deployment, jenkins is up and running
 ```
+
+# Verify Jenkins
+http://localhost:8080
 
 # Destroy docker-compose env after testing
 
