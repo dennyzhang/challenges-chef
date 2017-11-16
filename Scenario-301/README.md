@@ -19,9 +19,12 @@ docker-compose up -d
 # Login to the container, and run procedure
 ```
 docker exec -it my_chef sh
-apt-get -y update
 
-cd /tmp
+mkdir -p /tmp/berks_cookbooks
+
+cd /tmp/cookbooks/jenkins-demo/
+berks vendor /tmp/berks_cookbooks
+ls -lth /tmp/berks_cookbooks
 
 # Before chef apply, jq package is missing
 which jq

@@ -1,1 +1,1 @@
-cookbook_path [File.expand_path(File.join(File.dirname(__FILE__), '..', "cookbooks")), '/tmp/cookbooks/']
+cookbook_path [File.expand_path(File.join(File.dirname(__FILE__), '..', "cookbooks")), '/tmp/berks_cookbooks/']

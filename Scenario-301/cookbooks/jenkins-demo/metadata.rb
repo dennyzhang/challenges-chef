@@ -22,10 +22,3 @@ depends 'windows', '=1.38.2'
 depends 'yum', '=3.8.1'
 depends 'yum-epel', '=0.6.3'
 depends 'chef_changereport_handler', '=1.0.5'
-
-depends 'common-basic', '=0.0.1'
-depends 'os-basic', '=0.0.1'
-depends 'general_security', '=0.0.1'
-
-depends 'devops_basic'
-depends 'devops_library'

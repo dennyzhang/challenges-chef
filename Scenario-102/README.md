@@ -49,10 +49,10 @@ scp -r Scenario-102 vagrant@192.168.50.10:/tmp/
 # Get cookbooks dependency
 ```
 ssh vagrant@192.168.50.10
-mkdir -p /tmp/cookbooks
+mkdir -p /tmp/berks_cookbooks
 cd /tmp/Scenario-102/cookbooks/example/
-berks vendor /tmp/cookbooks
-ls -lth /tmp/cookbooks
+berks vendor /tmp/berks_cookbooks
+ls -lth /tmp/berks_cookbooks
 
 cd /tmp/Scenario-102/
 ```

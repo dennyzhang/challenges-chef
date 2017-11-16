@@ -1,3 +1,3 @@
 {
-  "run_list": [ "recipe[example]" ]
+  "run_list": [ "recipe[jenkins-demo]" ]
 }
