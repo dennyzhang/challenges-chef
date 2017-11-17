@@ -31,9 +31,9 @@ wget -O /tmp/chef-server-core_12.17.5-1_amd64.deb \
      https://packages.chef.io/files/stable/chef-server/12.17.5/ubuntu/14.04/chef-server-core_12.17.5-1_amd64.deb
 
 dpkg -i /tmp/chef-server-core_*.deb
+which chef-server-ctl
 
 # https://hub.docker.com/r/base/chef-server/~/dockerfile/
-which chef-server-ctl
 
 dpkg-divert --local --rename --add /sbin/initctl
 ln -sf /bin/true /sbin/initctl
