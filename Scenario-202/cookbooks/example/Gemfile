@@ -3,9 +3,9 @@ source 'https://rubygems.org'
 
 gem 'kitchen-docker', '= 2.6.0'
 gem 'test-kitchen', '= 1.19.0'
-gem 'test-digitalocean'
-gem 'test-vagrant'
-gem 'test-ec2'
+gem 'kitchen-digitalocean'
+gem 'kitchen-vagrant'
+gem 'kitchen-ec2'
 
 gem 'berkshelf', '= 6.3.1'
 
