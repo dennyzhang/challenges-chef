@@ -3,9 +3,8 @@ services:
   chef_server:
     container_name: chef_server
     hostname: chef_server
-    # https://hub.docker.com/r/chef/chefdk/
-    image: chef/chefdk
-    entrypoint: ["tail", "-f", "/dev/null"]
+    # https://hub.docker.com/r/base/chef-server/~/dockerfile/
+    image: base/chef-server
   chef_client:
     container_name: chef_client
     hostname: chef_client
