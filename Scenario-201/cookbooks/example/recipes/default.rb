@@ -1,9 +1,19 @@
-# Run apt-get update first
-include_recipe 'apt::default'
+# -*- encoding: utf-8 -*-
 
-package 'jq' do
-  action :install
-  not_if "dpkg -l #{x} | grep -E '^ii'"  
+#
+# Cookbook Name:: example
+# Recipe:: default
+#
+# Copyright 2017, DennyZhang.com
+#
+# All rights reserved - Do Not Redistribute
+#
+
+%w(jq).each do |x|
+  package 'jq' do
+    action :install
+    not_if "dpkg -l #{x} | grep -E '^ii'"
+  end
 end
 
 template '/etc/ec2-user/version.txt' do
