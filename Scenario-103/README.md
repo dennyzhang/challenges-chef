@@ -21,7 +21,10 @@ Table of Contents
 
 # Procedures
 - Start docker-compose env
+```
 docker-compose up -d
+docker-compose ps
+```
 
 - Setup chef server in docker container
 
