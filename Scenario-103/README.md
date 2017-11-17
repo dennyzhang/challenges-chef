@@ -7,16 +7,20 @@ File me [tickets](https://github.com/DennyZhang/chef-study/issues) or star [the 
 Table of Contents
 =================
 
-   * [Start docker-compose env](#start-docker-compose-env)
-   * [Login to the container, and run procedure](#login-to-the-container-and-run-procedure)
-   * [Destroy docker-compose env after testing](#destroy-docker-compose-env-after-testing)
+   * [Requirements](#requirements)
+   * [Procedures](#procedures)
 
-![scenario-101-screenshot.png](../images/scenario-101-screenshot.png)
+![scenario-103-screenshot.png](../images/scenario-103-screenshot.png)
 
-# Start docker-compose env
+# Requirements
+1. Start 2 container: chef server and chef client
+2. Apply dummy cookbook in chef client node
+
+# Procedures
+- Start docker-compose env
 docker-compose up -d
 
-# Setup chef server in chef_server container
+- Setup chef server in chef_server container
 ```
 docker exec -it chef_server bash
 # install chef server
@@ -29,7 +33,7 @@ which chef-server-ctl
 chef-server-ctl reconfigure
 ```
 
-# Use chef_client as both client and knife workstation
+- Use chef_client as both client and knife workstation
 
 - Configure knife workstation
 ```
@@ -57,7 +61,7 @@ EOF
 docker exec -it chef_client bash
 ```
 
-# Destroy docker-compose env after testing
+- Destroy docker-compose env after testing
 ```
 docker-compose down -v
 ```
