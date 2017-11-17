@@ -9,6 +9,11 @@ Table of Contents
 
    * [Requirements](#requirements)
    * [Procedure](#procedure)
+      * [Common Setup](#common-setup)
+      * [kitchen docker deployment](#kitchen-docker-deployment)
+      * [kitchen digitalocean deployment](#kitchen-digitalocean-deployment)
+      * [kitchen ec2 deployment](#kitchen-ec2-deployment)
+      * [kitchen vagrant deployment](#kitchen-vagrant-deployment)
 
 ![scenario-202-design.png](../images/scenario-202-design.png)
 
@@ -20,6 +25,7 @@ Table of Contents
 3. Use Kitchen to test cloud VM deployment
 
 # Procedure
+## Common Setup
 - Install bundle
 ```
 apt-get install ruby-dev
@@ -37,6 +43,7 @@ cd cookbooks/example
 bundle install
 ```
 
+## kitchen docker deployment
 - Run kitchen test
 ```
 # https://github.com/test-kitchen/kitchen-docker
@@ -45,5 +52,9 @@ kitchen list
 kitchen verify
 kitchen destroy
 ```
+
+## kitchen digitalocean deployment
+## kitchen ec2 deployment
+## kitchen vagrant deployment
 
 <a href="https://www.dennyzhang.com"><img align="right" width="200" height="183" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns.png"></a>
