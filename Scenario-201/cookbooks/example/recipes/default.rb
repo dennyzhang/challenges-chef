@@ -16,6 +16,13 @@
   end
 end
 
+directory '/etc/ec2-user/' do
+  owner 'root'
+  group 'root'
+  mode 0o755
+  action :create
+end
+
 template '/etc/ec2-user/version.txt' do
   source 'version.txt.erb'
   mode 0o700
