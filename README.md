@@ -67,13 +67,14 @@ Table of Contents
 2. Enforce kitchen verify logic via serverspec
 ```
 - See more: [Scenario-201](./Scenario-201)
-- TODO
 
 ## Scenario-202: Enforce TDD For Your Chef Cookbooks II
 - Objective: Deploy for 3 scenarios: docker, local VM and public cloud
 - Requirements:
 ```
-1. Based on Scenario-201, test cookbook with both VM and docker
+1. Use Kitchen to test local vm deployment
+2. Use Kitchen to test docker deployment
+3. Use Kitchen to test cloud VM deployment
 ```
 - See more: [Scenario-202](./Scenario-202)
 - TODO

@@ -1,0 +1,11 @@
+AllCops:
+  Excludes:
+
+Metrics/LineLength:
+  Max: 100
+
+Style/Next:
+  Enabled: false
+
+BlockLength:
+  Max: 90

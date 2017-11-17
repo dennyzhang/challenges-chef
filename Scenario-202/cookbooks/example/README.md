@@ -1,0 +1,1 @@
+A chef cookbook template:

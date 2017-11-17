@@ -10,14 +10,14 @@ Table of Contents
    * [Requirements](#requirements)
    * [Procedure](#procedure)
 
-![scenario-201-design.png](../images/scenario-201-design.png)
+![scenario-202-design.png](../images/scenario-202-design.png)
 
 <a href="https://www.dennyzhang.com"><img align="right" width="200" height="183" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns.png"></a>
 
 # Requirements
-Run kitchen docker in your laptop.
-1. Use kitchen to test your cookbook: start a container and test the logic
-2. Enforce kitchen verify logic via serverspec
+1. Use Kitchen to test local vm deployment
+2. Use Kitchen to test docker deployment
+3. Use Kitchen to test cloud VM deployment
 
 # Procedure
 - Install bundle
