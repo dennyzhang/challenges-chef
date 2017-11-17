@@ -28,7 +28,7 @@ Table of Contents
 
 ## Scenario-101: Chef HelloWorld I
 - Objective: Create a dummy cookbook, and test it in docker
-- Tasks:
+- Requirements:
 ```
 1. Use docker container to start a env with chef pre-installed
 2. Create a dummy cookbook and apply it
@@ -37,7 +37,7 @@ Table of Contents
 
 ## Scenario-102: Chef HelloWorld II
 - Objective: Pure VM deployment
-- Tasks:
+- Requirements:
 ```
 1. Start a VM, install chef facility
 2. create a dummy cookbook to install jq package
@@ -48,7 +48,7 @@ Table of Contents
 
 ## Scenario-103: Chef HelloWorld III
 - Objective: Setup chef server and chef client
-- Tasks:
+- Requirements:
 ```
 Start 2 container: chef server and chef client
 Apply dummy cookbook in chef client node
@@ -58,7 +58,7 @@ Apply dummy cookbook in chef client node
 
 ## Scenario-201: Enforce TDD For Your Chef Cookbooks I
 - Objective: Test your cookbooks
-- Tasks:
+- Requirements:
 ```
 Use kitchen to test your cookbook: start a VM and test the logic
 Enforce kitchen verify logic via serverspec
@@ -68,16 +68,16 @@ Enforce kitchen verify logic via serverspec
 
 ## Scenario-202: Enforce TDD For Your Chef Cookbooks II
 - Objective: Support test with both VM and docker, thus it can be faster
-- Tasks:
+- Requirements:
 ```
-Based on Scenario-104, test cookbook with both VM and docker
+Based on Scenario-201, test cookbook with both VM and docker
 ```
 - See more: [Scenario-202](./Scenario-202)
 - TODO
 
 ## Scenario-301: Use Chef To Deploy A Real Service I
 - Objective: Use chef to deploy one common service for real
-- Tasks:
+- Requirements:
 ```
 Deploy jenkins with customization: one jenkins user, dummy jobs and some plugins
 ```
@@ -86,7 +86,7 @@ Deploy jenkins with customization: one jenkins user, dummy jobs and some plugins
 
 ## Scenario-302: Use Chef To Deploy A Real Service II
 - Objective: Test and verify the deployment for both all-in-one and 2 nodes cluster
-- Tasks:
+- Requirements:
 ```
 Test 2 nodes jenkins cluster deployment in docker
 Verify the deployment

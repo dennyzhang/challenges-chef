@@ -7,13 +7,13 @@ File me [tickets](https://github.com/DennyZhang/chef-study/issues) or star [the 
 Table of Contents
 =================
 
-   * [Requirement](#requirement)
+   * [Requirements](#requirements)
    * [Procedure](#procedure)
    * [Test in public cloud?](#test-in-public-cloud)
 
 ![scenario-102-screenshot.png](../images/scenario-102-screenshot.png)
 
-# Requirement
+# Requirements
 1. Start a VM, install chef facility
 2. create a dummy cookbook to install jq package
 3. Before install jq, run "apt-get update" by chef. So you need berkshelf.
