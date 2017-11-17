@@ -30,8 +30,8 @@ Table of Contents
 - Objective: Create a dummy cookbook, and test it in docker
 - Tasks:
 ```
-Use docker container to start a env with chef pre-installed
-Create a dummy cookbook and apply it
+1. Use docker container to start a env with chef pre-installed
+2. Create a dummy cookbook and apply it
 ```
 - See more: [Scenario-101](./Scenario-101)
 
@@ -39,10 +39,10 @@ Create a dummy cookbook and apply it
 - Objective: Pure VM deployment
 - Tasks:
 ```
-Start a VM, install chef facility
-create a dummy cookbook to install jq package
-Before install jq, run "apt-get update" by chef. So you need berkshelf.
-Enforce rubocop and foodcritic for code static check
+1. Start a VM, install chef facility
+2. create a dummy cookbook to install jq package
+3. Before install jq, run "apt-get update" by chef. So you need berkshelf.
+4. Enforce rubocop and foodcritic for code static check
 ```
 - See more: [Scenario-102](./Scenario-102)
 

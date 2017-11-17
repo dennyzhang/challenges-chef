@@ -7,18 +7,20 @@ File me [tickets](https://github.com/DennyZhang/chef-study/issues) or star [the 
 Table of Contents
 =================
 
-   * [Start VM via vagrant](#start-vm-via-vagrant)
-   * [Login and install chef-dk](#login-and-install-chef-dk)
-   * [Upload chef cookbook code](#upload-chef-cookbook-code)
-   * [Get cookbooks dependency](#get-cookbooks-dependency)
-   * [Apply Chef update](#apply-chef-update)
-   * [Run code static check](#run-code-static-check)
-   * [Destroy local vm](#destroy-local-vm)
+   * [Requirement](#requirement)
+   * [Procedure](#procedure)
    * [Test in public cloud?](#test-in-public-cloud)
 
 ![scenario-102-screenshot.png](../images/scenario-102-screenshot.png)
 
-# Start VM via vagrant
+# Requirement
+1. Start a VM, install chef facility
+2. create a dummy cookbook to install jq package
+3. Before install jq, run "apt-get update" by chef. So you need berkshelf.
+4. Enforce rubocop and foodcritic for code static check
+
+# Procedure
+- Start VM via vagrant
 ```
 vagrant up
 ```
@@ -26,7 +28,7 @@ More about virtualbox: https://www.virtualbox.org/wiki/Downloads
 
 More about vagrant: https://www.vagrantup.com/docs/providers/basic_usage.html
 
-# Login and install chef-dk
+- Login and install chef-dk
 ```
 ssh vagrant@192.168.50.10
 # password: vagrant
@@ -41,12 +43,12 @@ sudo dpkg -i /tmp/chefdk*.deb
 chef-solo -verison
 ```
 
-# Upload chef cookbook code
+- Upload chef cookbook code
 ```
 scp -r Scenario-102 vagrant@192.168.50.10:/tmp/
 ```
 
-# Get cookbooks dependency
+- Get cookbooks dependency
 ```
 ssh vagrant@192.168.50.10
 mkdir -p /tmp/berks_cookbooks
@@ -57,7 +59,7 @@ ls -lth /tmp/berks_cookbooks
 cd /tmp/Scenario-102/
 ```
 
-# Apply Chef update
+- Apply Chef update
 ```
 ssh vagrant@192.168.50.10
 cd /tmp/Scenario-102
@@ -70,8 +72,8 @@ sudo chef-solo -c config/solo.rb -j config/node.json
 which jq
 ```
 
-# Run code static check
-- rubocop
+- Run code static check
+rubocop:
 ```
 gem install rubocop -v "0.44.1"
 cd cookbooks/example
@@ -79,7 +81,7 @@ rubocop .
 ```
 Check more about rubocop: https://www.dennyzhang.com/rubocop_errors
 
-- foodcritic
+foodcritic:
 ```
 gem install foodcritic -v "4.0.0"
 cd cookbooks/
@@ -88,7 +90,7 @@ foodcritic example
 
 TODO: how to install foodcritic in mac OSX
 
-# Destroy local vm
+- Destroy local vm
 ```
 vagrant destroy -f
 ```

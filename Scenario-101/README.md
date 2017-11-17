@@ -7,33 +7,41 @@ File me [tickets](https://github.com/DennyZhang/chef-study/issues) or star [the 
 Table of Contents
 =================
 
-   * [Start docker-compose env](#start-docker-compose-env)
-   * [Login to the container, and run procedure](#login-to-the-container-and-run-procedure)
-   * [Destroy docker-compose env after testing](#destroy-docker-compose-env-after-testing)
+   * [Requirements](#requirements)
+   * [Procedure](#procedure)
 
 ![scenario-101-screenshot.png](../images/scenario-101-screenshot.png)
 
-# Start docker-compose env
+# Requirements
+```
+1. Use docker container to start a env with chef pre-installed
+2. Create a dummy cookbook and apply it
+```
+
+# Procedure
+
+- Start docker-compose env
+
 docker-compose up -d
 
-# Login to the container, and run procedure
+- Login to the container, and run procedure
 ```
 docker exec -it my_chef sh
 apt-get -y update
 
 cd /tmp
 
-# Before chef apply, jq package is missing
+- Before chef apply, jq package is missing
 which jq
 
-# From config/node.json, we specify to apply example cookbook
+- From config/node.json, we specify to apply example cookbook
 chef-solo -c config/solo.rb -j config/node.json
 
-# After chef apply, jq package is installed
+- After chef apply, jq package is installed
 which jq
 ```
 
-# Destroy docker-compose env after testing
+- Destroy docker-compose env after testing
 
 ```
 docker-compose down -v
