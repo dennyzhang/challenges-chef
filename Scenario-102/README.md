@@ -12,6 +12,7 @@ Table of Contents
    * [Test in public cloud?](#test-in-public-cloud)
 
 ![scenario-102-screenshot.png](../images/scenario-102-screenshot.png)
+<a href="https://www.dennyzhang.com"><img align="right" width="200" height="183" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns.png"></a>
 
 # Requirements
 1. Start a VM, install chef facility
@@ -100,3 +101,4 @@ vagrant destroy -f
 Now you have finished local VM deployment. Congratulations!
 
 Why not move to public cloud? AWS, AZure, or whatever. Should be easy for you, right?
+<a href="https://www.dennyzhang.com"><img align="right" width="200" height="183" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns.png"></a>
