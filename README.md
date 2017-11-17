@@ -95,8 +95,9 @@ Table of Contents
 - See more: [Scenario-302](./Scenario-302)
 - TODO
 
-# More Resources
 <img align="right" width="200" height="183" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/magic.gif">
+
+# More Resources
 
 # Contributors: Give People Credits
 Below are folks who have contributed via GitHub!
