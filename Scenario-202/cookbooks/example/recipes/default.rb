@@ -9,7 +9,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-%w(jq).each do |x|
+%w[jq].each do |x|
   package 'jq' do
     action :install
     not_if "dpkg -l #{x} | grep -E '^ii'"
