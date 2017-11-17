@@ -54,6 +54,9 @@ kitchen destroy
 ```
 
 ## kitchen digitalocean deployment
+```
+
+```
 ## kitchen ec2 deployment
 ## kitchen vagrant deployment
 
