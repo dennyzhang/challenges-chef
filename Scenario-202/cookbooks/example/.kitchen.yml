@@ -19,7 +19,7 @@ transport:
 
 provisioner:
   name: chef_zero
-  require_chef_omnibus: 12.17.44
+  require_chef_omnibus: 13.6.4
   data_path: test/shared
   client_rb:
       file_cache_path: "/var/chef/cache"

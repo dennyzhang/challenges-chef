@@ -23,7 +23,7 @@ Table of Contents
 - Start docker-compose env
 docker-compose up -d
 
-- Setup chef server in chef_server container
+- Setup chef server in docker container
 ```
 docker exec -it chef_server bash
 # install chef server
