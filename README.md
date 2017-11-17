@@ -8,8 +8,6 @@ File me [tickets](https://github.com/DennyZhang/chef-study/issues) or star [the 
 
 <a href="https://github.com/DennyZhang?tab=followers"><img align="right" width="200" height="183" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/fork_github.png" /></a>
 
-<a href="https://www.dennyzhang.com"><img align="right" width="200" height="183" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns.png"></a>
-
 Table of Contents
 =================
 
@@ -25,6 +23,8 @@ Table of Contents
    * [More Resources](#more-resources)
    * [Contributors: Give People Credits](#contributors-give-people-credits)
    * [License](#license)
+
+<a href="https://www.dennyzhang.com"><img align="right" width="200" height="183" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns.png"></a>
 
 # Scenarios
 
