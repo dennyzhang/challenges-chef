@@ -58,6 +58,7 @@ Table of Contents
 ```
 - See more: [Scenario-103](./Scenario-103)
 - TODO
+![scenario-103-design.png](./images/scenario-103-design.png)
 
 ## Scenario-201: Enforce TDD For Your Chef Cookbooks I
 - Objective: Test your cookbooks. Run kitchen docker in your laptop.
@@ -67,6 +68,7 @@ Table of Contents
 2. Enforce kitchen verify logic via serverspec
 ```
 - See more: [Scenario-201](./Scenario-201)
+![scenario-201-design.png](./images/scenario-201-design.png)
 
 ## Scenario-202: Enforce TDD For Your Chef Cookbooks II
 - Objective: Deploy for 3 scenarios: docker, local VM and public cloud
@@ -78,6 +80,7 @@ Table of Contents
 ```
 - See more: [Scenario-202](./Scenario-202)
 - TODO
+![scenario-202-design.png](./images/scenario-202-design.png)
 
 ## Scenario-301: Use Chef To Deploy A Real Service I
 - Objective: Use chef to deploy one common service for real
