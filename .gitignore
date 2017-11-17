@@ -3,3 +3,4 @@ local-mode-cache
 *.deb
 Berksfile.lock
 .kitchen
+Gemfile.lock
