@@ -1,31 +1,19 @@
 ---
 driver:
-  name: docker
-
-driver_config:
-  instance_name: <%= ENV.fetch('INSTANCE_NAME', "example") %>
-  hostname: <%= ENV.fetch('INSTANCE_NAME', "example") %>
-  use_sudo: false
-  privileged: true
-  remove_images: false
-  image: <%= ENV.fetch('IMAGE_NAME', "chef/chefdk") %>
-  # tls_verify: true
-  # tls_cacert: <%= ENV.fetch('TLS_FOLDER', "tls") %>/ca.pem
-  # tls_cert: <%= ENV.fetch('TLS_FOLDER', "tls") %>/cert.pem
-  # tls_key: <%= ENV.fetch('TLS_FOLDER', "tls") %>/key.pem
-  # socket: tcp://172.17.0.1:4243
-transport:
-   username: kitchen
+  name: ec2
 
 provisioner:
   name: chef_zero
   require_chef_omnibus: 12.17.44
   data_path: test/shared
-  client_rb:
-      file_cache_path: "/var/chef/cache"
 
 platforms:
   - name: ubuntu-14.04
+    driver_config:
+      region: us-east-1
+      image_id: <%= ENV.fetch('EC2_IMAGE_ID', "ami-2a69aa47") %>
+      flavor_id: <%= ENV.fetch('EC2_FLAVOR_ID', "t1.micro") %>
+      server_name: <%= ENV.fetch('INSTANCE_NAME', "example") %>
 
 suites:
   - name: default

@@ -72,6 +72,20 @@ kitchen destroy
 ```
 
 ## kitchen ec2 deployment
+```
+# https://github.com/test-kitchen/kitchen-ec2
+# https://github.com/test-kitchen/kitchen-ec2/blob/master/lib/kitchen/driver/ec2.rb
+cd cookbooks/example
+export KITCHEN_YAML=".kitchen_ec2.yml"
+# TODO: customize this
+export AWS_SSH_KEY_ID="my_ssh_key_id"
+
+kitchen converge
+kitchen list
+kitchen verify
+kitchen destroy
+```
+
 ## kitchen vagrant deployment
 
 <a href="https://www.dennyzhang.com"><img align="right" width="200" height="183" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns.png"></a>
