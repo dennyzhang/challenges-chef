@@ -27,7 +27,7 @@ Table of Contents
 # Scenarios
 
 ## Scenario-101: Chef HelloWorld I
-- Objective: Create a dummy cookbook, and test it in docker
+- Objective: Create a dummy cookbook, and test deployment in docker
 - Requirements:
 ```
 1. Use docker container to start a env with chef pre-installed
