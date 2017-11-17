@@ -50,8 +50,9 @@ Table of Contents
 - Objective: Setup chef server and chef client
 - Requirements:
 ```
-1. Start 2 container: chef server and chef client
-2. Apply dummy cookbook in chef client node
+1. Start chef server in one container
+2. Setup chef client in another container
+3. Apply dummy cookbook in chef client node
 ```
 - See more: [Scenario-103](./Scenario-103)
 - TODO

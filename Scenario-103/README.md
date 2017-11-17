@@ -13,8 +13,9 @@ Table of Contents
 ![scenario-103-screenshot.png](../images/scenario-103-screenshot.png)
 
 # Requirements
-1. Start 2 container: chef server and chef client
-2. Apply dummy cookbook in chef client node
+1. Start chef server in one container
+2. Setup chef client in another container
+3. Apply dummy cookbook in chef client node
 
 # Procedures
 - Start docker-compose env
