@@ -22,9 +22,13 @@ Run kitchen docker in your laptop.
 # Procedure
 - Install bundle
 ```
+apt-get install ruby-dev
+
+ruby --version
 # https://github.com/bundler/bundler/issues/4065
 sudo gem install bundler -n /usr/local/bin
 
+bundle --version
 ```
 
 - Install gem depenencies
