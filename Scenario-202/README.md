@@ -82,6 +82,8 @@ aws configure
 export KEY_USER="denny-kitchen-test"
 aws ec2 create-key-pair --key-name $KEY_USER | ruby -e "require 'json'; puts JSON.parse(STDIN.read)['KeyMaterial']" > ~/.ssh/$KEY_USER
 
+chmod 600 ~/.ssh/$KEY_USER
+
 export AWS_SSH_KEY_ID="$KEY_USER"
 
 ```
@@ -95,6 +97,9 @@ cd cookbooks/example
 export KITCHEN_YAML=".kitchen_ec2.yml"
 # TODO: customize this
 export AWS_SSH_KEY_ID="my_ssh_key_id"
+
+# Update bundle: https://github.com/chef/chef-provisioning/issues/151
+bundle update
 
 kitchen converge
 kitchen list
