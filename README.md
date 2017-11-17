@@ -50,8 +50,8 @@ Table of Contents
 - Objective: Setup chef server and chef client
 - Requirements:
 ```
-Start 2 container: chef server and chef client
-Apply dummy cookbook in chef client node
+1. Start 2 container: chef server and chef client
+2. Apply dummy cookbook in chef client node
 ```
 - See more: [Scenario-103](./Scenario-103)
 - TODO
@@ -60,8 +60,8 @@ Apply dummy cookbook in chef client node
 - Objective: Test your cookbooks
 - Requirements:
 ```
-Use kitchen to test your cookbook: start a VM and test the logic
-Enforce kitchen verify logic via serverspec
+1. Use kitchen to test your cookbook: start a VM and test the logic
+2. Enforce kitchen verify logic via serverspec
 ```
 - See more: [Scenario-201](./Scenario-201)
 - TODO
@@ -70,7 +70,7 @@ Enforce kitchen verify logic via serverspec
 - Objective: Support test with both VM and docker, thus it can be faster
 - Requirements:
 ```
-Based on Scenario-201, test cookbook with both VM and docker
+1. Based on Scenario-201, test cookbook with both VM and docker
 ```
 - See more: [Scenario-202](./Scenario-202)
 - TODO
@@ -79,7 +79,7 @@ Based on Scenario-201, test cookbook with both VM and docker
 - Objective: Use chef to deploy one common service for real
 - Requirements:
 ```
-Deploy jenkins with customization: one jenkins user, dummy jobs and some plugins
+1. Deploy jenkins with customization: one jenkins user, dummy jobs and some plugins
 ```
 - See more: [Scenario-301](./Scenario-301)
 - TODO
@@ -88,9 +88,9 @@ Deploy jenkins with customization: one jenkins user, dummy jobs and some plugins
 - Objective: Test and verify the deployment for both all-in-one and 2 nodes cluster
 - Requirements:
 ```
-Test 2 nodes jenkins cluster deployment in docker
-Verify the deployment
-Support deploy to both docker and EC2
+1. Test 2 nodes jenkins cluster deployment in docker
+2. Verify the deployment
+3. Support deploy to both docker and EC2
 ```
 - See more: [Scenario-302](./Scenario-302)
 - TODO
