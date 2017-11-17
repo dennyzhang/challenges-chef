@@ -20,8 +20,21 @@ Run kitchen docker in your laptop.
 2. Enforce kitchen verify logic via serverspec
 
 # Procedure
-- Setup kitchen-vagrant
+- Install bundle
+```
+# https://github.com/bundler/bundler/issues/4065
+sudo gem install bundler -n /usr/local/bin
 
-https://github.com/test-kitchen/kitchen-vagrant
+```
+
+- Install gem depenencies
+```
+cd cookbooks/example
+bundle install
+```
+
+- Run kitchen test
+
+https://github.com/test-kitchen/kitchen-docker
 
 <a href="https://www.dennyzhang.com"><img align="right" width="200" height="183" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns.png"></a>

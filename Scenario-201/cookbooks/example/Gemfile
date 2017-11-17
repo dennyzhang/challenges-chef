@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 # source 'https://ruby.taobao.org/'
 
+gem 'kitchen-docker', '>= 2.5.0'
+gem 'test-kitchen', '>= 1.4.1'
+
 gem 'foodcritic', '~> 4.0.0'
 gem 'rubocop', '~> 0.48.1'
