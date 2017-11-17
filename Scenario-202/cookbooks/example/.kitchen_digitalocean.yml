@@ -11,7 +11,7 @@ platforms:
   - name: example
     driver_config:
       region: sfo2
-      size: <%= ENV.fetch('DIGITALOCEAN_FLAVOR', "2gb") %>
+      size: <%= ENV.fetch('DIGITALOCEAN_FLAVOR', "1gb") %>
       private_networking: false
       image: ubuntu-14-04-x64
       server_name: <%= ENV.fetch('INSTANCE_NAME', "example") %>
