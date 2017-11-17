@@ -11,7 +11,7 @@ Table of Contents
    * [Procedure](#procedure)
    * [Test in public cloud?](#test-in-public-cloud)
 
-![scenario-102-screenshot.png](../images/scenario-102-screenshot.png)
+![scenario-102-screenshot.jpg](../images/scenario-102-screenshot.jpg)
 <a href="https://www.dennyzhang.com"><img align="right" width="200" height="183" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns.png"></a>
 
 # Requirements

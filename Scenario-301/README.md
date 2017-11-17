@@ -15,7 +15,7 @@ Table of Contents
    * [Destroy docker-compose env after testing](#destroy-docker-compose-env-after-testing)
    * [More Resources](#more-resources)
 
-![scenario-101-screenshot.png](../images/scenario-101-screenshot.png)
+![scenario-103-design.png](../images/scenario-103-design.png)
 <a href="https://www.dennyzhang.com"><img align="right" width="200" height="183" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns.png"></a>
 
 # Requirement

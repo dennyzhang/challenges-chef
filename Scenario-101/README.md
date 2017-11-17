@@ -10,7 +10,7 @@ Table of Contents
    * [Requirements](#requirements)
    * [Procedure](#procedure)
 
-![scenario-101-screenshot.png](../images/scenario-101-screenshot.png)
+![scenario-101-screenshot.jpg](../images/scenario-101-screenshot.jpg)
 <a href="https://www.dennyzhang.com"><img align="right" width="200" height="183" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns.png"></a>
 
 # Requirements
