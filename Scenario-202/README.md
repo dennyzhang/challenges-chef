@@ -77,6 +77,13 @@ kitchen destroy
 # http://docs.aws.amazon.com/cli/latest/userguide/installing.html
 pip install awscli
 aws configure
+
+# Customize this
+export KEY_USER="denny-kitchen-test"
+aws ec2 create-key-pair --key-name $KEY_USER | ruby -e "require 'json'; puts JSON.parse(STDIN.read)['KeyMaterial']" > ~/.ssh/$KEY_USER
+
+export AWS_SSH_KEY_ID="$KEY_USER"
+
 ```
 
 - Install and run kitchen-ec2
