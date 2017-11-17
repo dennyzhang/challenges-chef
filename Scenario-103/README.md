@@ -32,11 +32,12 @@ dpkg -i /tmp/chef-server-core_*.deb
 
 # https://hub.docker.com/r/base/chef-server/~/dockerfile/
 which chef-server-ctl
+
 dpkg-divert --local --rename --add /sbin/initctl
 ln -sf /bin/true /sbin/initctl
+sysctl -w kernel.shmall=4194304 && sysctl -w kernel.shmmax=17179869184
 
-sysctl -w kernel.shmall=4194304 && sysctl -w kernel.shmmax=17179869184 && \
-	/opt/chef-server/embedded/bin/runsvdir-start
+/opt/chef-server/embedded/bin/runsvdir-start
 
 chef-server-ctl reconfigure
 ```
