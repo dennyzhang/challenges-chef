@@ -26,7 +26,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2017-11-17 23:10:15 +0000</string>
+	<string>2017-11-17 23:41:04 +0000</string>
 	<key>Modifier</key>
 	<string>mac</string>
 	<key>NotesVisible</key>
@@ -725,8 +725,8 @@
 					<integer>44146</integer>
 					<key>Points</key>
 					<array>
-						<string>{294.35527523244554, 268.45032099793468}</string>
-						<string>{335.9788548119123, 268.48772259904041}</string>
+						<string>{294.35527535787065, 268.35913443866389}</string>
+						<string>{335.97885011983738, 268.33911402006959}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -799,8 +799,8 @@ Bundle, Berkshelf, Kitchen}</string>
 					<integer>44143</integer>
 					<key>Points</key>
 					<array>
-						<string>{106.62590870842428, 294.76400523684413}</string>
-						<string>{162.16957662966425, 282.71947128296716}</string>
+						<string>{106.62609524512067, 294.7642026727446}</string>
+						<string>{162.16957825753326, 282.72053391214627}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -2211,8 +2211,8 @@ Chef, Severspect}</string>
 					<integer>44143</integer>
 					<key>Points</key>
 					<array>
-						<string>{77.448984726866541, 370.77269456496015}</string>
-						<string>{196.75579116637826, 254.30832927717927}</string>
+						<string>{77.448984722890714, 370.77269458244029}</string>
+						<string>{196.75579225527594, 254.30832929743272}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -2281,8 +2281,8 @@ Chef, Severspect}</string>
 					<integer>44167</integer>
 					<key>Points</key>
 					<array>
-						<string>{93.045774693313703, 372.46524169141503}</string>
-						<string>{164.68988578598368, 373.35198915603007}</string>
+						<string>{93.042092823914544, 372.51184320313803}</string>
+						<string>{166.62339077618441, 373.62317280968796}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -2316,8 +2316,8 @@ Chef, Severspect}</string>
 					<integer>44161</integer>
 					<key>Points</key>
 					<array>
-						<string>{299.41854447180754, 519.01076383532302}</string>
-						<string>{341.23216645578378, 519.01051314103131}</string>
+						<string>{299.41854447180754, 519.01100796276501}</string>
+						<string>{341.23216645578384, 519.01091170236452}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -2420,7 +2420,7 @@ Bundle, Berkshelf, Kitchen}</string>
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
 \fs20 \cf0 \ulnone \
-Chef, Severspect}</string>
+Chef, Severspec}</string>
 							</dict>
 						</dict>
 						<dict>
@@ -2904,8 +2904,8 @@ Chef, Severspect}</string>
 							<integer>44155</integer>
 							<key>Points</key>
 							<array>
-								<string>{296.88689837429911, 374.07554784819456}</string>
-								<string>{338.510472060035, 374.01246674480024}</string>
+								<string>{296.6231516089984, 374.62249463359524}</string>
+								<string>{337.53288887245571, 374.69570288865413}</string>
 							</array>
 							<key>Style</key>
 							<dict>
@@ -2929,7 +2929,7 @@ Chef, Severspect}</string>
 						</dict>
 						<dict>
 							<key>Bounds</key>
-							<string>{{165.18984696345922, 344.39238253373236}, {131.19705200195312, 59.566677093505859}}</string>
+							<string>{{167.12334462359809, 350.97605491864499}, {128.9998077702941, 47.060243886224335}}</string>
 							<key>Class</key>
 							<string>ShapedGraphic</string>
 							<key>ID</key>
@@ -2973,7 +2973,7 @@ Bundle, Berkshelf, Kitchen}</string>
 							<array>
 								<dict>
 									<key>Bounds</key>
-									<string>{{339.01047188516412, 344.17583538809771}, {122.31645202636719, 59.566677093505859}}</string>
+									<string>{{338.03288000765929, 350.80497333438183}, {120.26793710510255, 47.060243886224335}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>ID</key>
@@ -3008,12 +3008,12 @@ Bundle, Berkshelf, Kitchen}</string>
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
 \fs20 \cf0 \ulnone \
-Chef, Severspect}</string>
+Chef, Severspec}</string>
 									</dict>
 								</dict>
 								<dict>
 									<key>Bounds</key>
-									<string>{{147.46835042490201, 291.92405161279243}, {322.12576293945307, 132.96649169921875}}</string>
+									<string>{{149.69864176638922, 309.5238106451136}, {316.73090868253774, 105.04926300048828}}</string>
 									<key>Class</key>
 									<string>ShapedGraphic</string>
 									<key>FontInfo</key>
@@ -3496,8 +3496,8 @@ Chef, Severspect}</string>
 							<integer>44148</integer>
 							<key>Points</key>
 							<array>
-								<string>{293.72234149822816, 224.07555192243572}</string>
-								<string>{335.34591518396405, 224.01247081904143}</string>
+								<string>{293.72234168156132, 224.08911788231006}</string>
+								<string>{335.34591537049903, 224.03457953742162}</string>
 							</array>
 							<key>Style</key>
 							<dict>
@@ -3600,7 +3600,7 @@ Bundle, Berkshelf, Kitchen}</string>
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
 \fs20 \cf0 \ulnone \
-Chef, Severspect}</string>
+Chef, Severspec}</string>
 									</dict>
 								</dict>
 								<dict>
@@ -6783,7 +6783,7 @@ Chef, Severspect}</string>
 	<key>WindowInfo</key>
 	<dict>
 		<key>CurrentSheet</key>
-		<integer>2</integer>
+		<integer>1</integer>
 		<key>ExpandedCanvases</key>
 		<array>
 			<dict>
@@ -6806,9 +6806,9 @@ Chef, Severspect}</string>
 		<key>SidebarWidth</key>
 		<integer>119</integer>
 		<key>VisibleRegion</key>
-		<string>{{-122, 44.715446461073611}, {820.32519053133228, 532.52031694551306}}</string>
+		<string>{{-112, 53.968254376731252}, {800.79365685473283, 519.84127377586719}}</string>
 		<key>Zoom</key>
-		<real>1.2300000190734863</real>
+		<real>1.2599999904632568</real>
 		<key>ZoomValues</key>
 		<array>
 			<array>
