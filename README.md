@@ -60,17 +60,17 @@ Table of Contents
 - TODO
 
 ## Scenario-201: Enforce TDD For Your Chef Cookbooks I
-- Objective: Test your cookbooks. Run kitchen vagrant in your laptop.
+- Objective: Test your cookbooks. Run kitchen docker in your laptop.
 - Requirements:
 ```
-1. Use kitchen to test your cookbook: start a VM and test the logic
+1. Use kitchen to test your cookbook: start a container and test the logic
 2. Enforce kitchen verify logic via serverspec
 ```
 - See more: [Scenario-201](./Scenario-201)
 - TODO
 
 ## Scenario-202: Enforce TDD For Your Chef Cookbooks II
-- Objective: Support test with both VM and docker, thus it can be faster
+- Objective: Deploy for 3 scenarios: docker, local VM and public cloud
 - Requirements:
 ```
 1. Based on Scenario-201, test cookbook with both VM and docker

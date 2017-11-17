@@ -15,8 +15,8 @@ Table of Contents
 <a href="https://www.dennyzhang.com"><img align="right" width="200" height="183" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns.png"></a>
 
 # Requirements
-Run kitchen vagrant in your laptop:
-1. Use kitchen to test your cookbook: start a VM and test the logic
+Run kitchen docker in your laptop.
+1. Use kitchen to test your cookbook: start a container and test the logic
 2. Enforce kitchen verify logic via serverspec
 
 # Procedure
