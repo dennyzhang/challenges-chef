@@ -1,32 +1,6 @@
 ---
 driver:
-  name: docker
-driver_config:
-  # http_proxy: <%= ENV.fetch('HTTP_PROXY', "http://172.17.42.1:3128") %>
-  # https_proxy: <%= ENV.fetch('HTTPS_PROXY', "http://172.17.42.1:3128") %>
-  instance_name: <%= ENV.fetch('INSTANCE_NAME', "all-in-one") %>
-  hostname: <%= ENV.fetch('INSTANCE_NAME', "all-in-one") %>
-  use_sudo: false
-  privileged: true
-  remove_images: false
-  image: <%= ENV.fetch('IMAGE_NAME', "totvslabs/mdm:v1.1") %>
-  tls_verify: true
-  tls_cacert: <%= ENV.fetch('TLS_FOLDER', "../../env_setup/tls") %>/ca.pem
-  tls_cert: <%= ENV.fetch('TLS_FOLDER', "../../env_setup/tls") %>/cert.pem
-  tls_key: <%= ENV.fetch('TLS_FOLDER', "../../env_setup/tls") %>/key.pem
-  socket: tcp://172.17.0.1:4243
-  provision_command: "curl -L https://raw.githubusercontent.com/TOTVS/mdmpublic/tag_v5/chef/chef_kitchen_provision.sh | bash -e"
-  <% if ENV.fetch('DOCKER_PORT_FORWARD_PREFIX', "") != "" %>
-  forward:
-  - <%= ENV.fetch('DOCKER_PORT_FORWARD_PREFIX', "21") %>080:80
-  - <%= ENV.fetch('DOCKER_PORT_FORWARD_PREFIX', "21") %>543:443
-  - <%= ENV.fetch('DOCKER_PORT_FORWARD_PREFIX', "21") %>081:8081
-  - <%= ENV.fetch('DOCKER_PORT_FORWARD_PREFIX', "21") %>443:8443
-  <% end %>
-  volume:
-  - <%= ENV.fetch('DOCKER_VOLUME', "/data/docker/all-in-one/couchbase") %>/<%= ENV.fetch('JOB_NAME', "") %>:/opt/couchbase/
-transport:
-   username: kitchen
+  name: vagrant
 
 provisioner:
   name: chef_zero
@@ -42,8 +16,10 @@ suites:
   - name: default
     run_list:
       - recipe[apt::default]
+      - recipe[example::default]
     attributes:
         {example:
                 {update_version: '1.1'
                 }
         }
+
