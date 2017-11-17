@@ -9,7 +9,7 @@ transport:
 
 provisioner:
   name: chef_solo
-  require_chef_omnibus: 12.17.44
+  require_chef_omnibus: true
   data_path: test/shared
 
 platforms:
