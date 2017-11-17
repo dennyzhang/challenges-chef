@@ -55,8 +55,20 @@ kitchen destroy
 
 ## kitchen digitalocean deployment
 ```
+# https://github.com/test-kitchen/kitchen-digitalocean
+cd cookbooks/example
+export KITCHEN_YAML=".kitchen_digitalocean.yml"
 
+# Customize this with your credential
+export DIGITALOCEAN_ACCESS_TOKEN="1234"
+export DIGITALOCEAN_SSH_KEY_IDS="1234, 5678"
+
+kitchen converge
+kitchen list
+kitchen verify
+kitchen destroy
 ```
+
 ## kitchen ec2 deployment
 ## kitchen vagrant deployment
 

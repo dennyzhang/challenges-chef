@@ -1,31 +1,20 @@
 ---
 driver:
-  name: docker
-
-driver_config:
-  instance_name: <%= ENV.fetch('INSTANCE_NAME', "example") %>
-  hostname: <%= ENV.fetch('INSTANCE_NAME', "example") %>
-  use_sudo: false
-  privileged: true
-  remove_images: false
-  image: <%= ENV.fetch('IMAGE_NAME', "chef/chefdk") %>
-  # tls_verify: true
-  # tls_cacert: <%= ENV.fetch('TLS_FOLDER', "tls") %>/ca.pem
-  # tls_cert: <%= ENV.fetch('TLS_FOLDER', "tls") %>/cert.pem
-  # tls_key: <%= ENV.fetch('TLS_FOLDER', "tls") %>/key.pem
-  # socket: tcp://172.17.0.1:4243
-transport:
-   username: kitchen
+  name: digitalocean
 
 provisioner:
   name: chef_zero
   require_chef_omnibus: 12.17.44
   data_path: test/shared
-  client_rb:
-      file_cache_path: "/var/chef/cache"
 
 platforms:
-  - name: ubuntu-14.04
+  - name: example
+    driver_config:
+      region: sfo2
+      size: <%= ENV.fetch('DIGITALOCEAN_FLAVOR', "2gb") %>
+      private_networking: false
+      image: ubuntu-14-04-x64
+      server_name: <%= ENV.fetch('INSTANCE_NAME', "example") %>
 
 suites:
   - name: default
