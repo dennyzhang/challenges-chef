@@ -1,0 +1,8 @@
+language: ruby
+
+rvm:
+- 2.1.1
+
+script:
+  - bundle exec rspec --color --format progress
+  - bundle exec foodcritic -f any .

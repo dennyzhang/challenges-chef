@@ -7,12 +7,18 @@ File me [tickets](https://github.com/DennyZhang/chef-study/issues) or star [the 
 Table of Contents
 =================
 
-   * [Use chef kitchen to test](#use-chef-kitchen-to-test)
-   * [Enforce serverspec test](#enforce-serverspec-test)
+   * [Requiements](#requiements)
+   * [Procedure](#procedure)
 
 <a href="https://www.dennyzhang.com"><img align="right" width="200" height="183" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns.png"></a>
 
-# Use chef kitchen to test
+# Requiements
+1. Use kitchen to test your cookbook: start a VM and test the logic
+2. Enforce kitchen verify logic via serverspec
 
-# Enforce serverspec test
+# Procedure
+- Install vagrant and virtualbox
+
+- Install kitchen-vagrant
+
 <a href="https://www.dennyzhang.com"><img align="right" width="200" height="183" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns.png"></a>
