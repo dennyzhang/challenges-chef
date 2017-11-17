@@ -1,8 +1,9 @@
 # Run apt-get update first
 include_recipe 'apt::default'
 
-describe package('jq') do
-  it { should be_installed }
+package 'jq' do
+  action :install
+  not_if "dpkg -l #{x} | grep -E '^ii'"  
 end
 
 template '/etc/ec2-user/version.txt' do
