@@ -52,9 +52,9 @@ Table of Contents
 - Objective: Setup chef server and chef client
 - Requirements:
 ```
-1. Start chef server in one container
-2. Setup chef client in another container
-3. Apply dummy cookbook in chef client node
+1. Start 3 containers to run chef server, knife and chef client
+2. Install and configure knife
+3. From knife node run chef deployment in chef client node
 ```
 - See more: [Scenario-103](./Scenario-103)
 - TODO

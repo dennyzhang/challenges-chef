@@ -10,38 +10,28 @@ Table of Contents
    * [Requirements](#requirements)
    * [Procedures](#procedures)
 
-- TODO
+![scenario-103-design.png](../images/scenario-103-design.png)
 
 <a href="https://www.dennyzhang.com"><img align="right" width="200" height="183" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns.png"></a>
 
 # Requirements
-1. Start chef server in one container
-2. Setup chef client in another container
-3. Apply dummy cookbook in chef client node
+1. Start 3 containers to run chef server, knife and chef client
+2. Install and configure knife
+3. From knife node run chef deployment in chef client node
 
 # Procedures
 - Start docker-compose env
 docker-compose up -d
 
 - Setup chef server in docker container
+
+In docker-compose.yml, chef_server is using a dedicated chef server image.
+
 ```
-docker exec -it chef_server bash
-# install chef server
-wget -O /tmp/chef-server-core_12.17.5-1_amd64.deb \
-     https://packages.chef.io/files/stable/chef-server/12.17.5/ubuntu/14.04/chef-server-core_12.17.5-1_amd64.deb
-
-dpkg -i /tmp/chef-server-core_*.deb
-which chef-server-ctl
-
 # https://hub.docker.com/r/base/chef-server/~/dockerfile/
 
-dpkg-divert --local --rename --add /sbin/initctl
-ln -sf /bin/true /sbin/initctl
-sysctl -w kernel.shmall=4194304 && sysctl -w kernel.shmmax=17179869184
-
-nohup /opt/opscode/embedded/bin/runsvdir-start &
-
-chef-server-ctl reconfigure
+# Verify chef server
+curl -k -I https://localhost/users/login
 ```
 
 - Use chef_client as both client and knife workstation
@@ -49,6 +39,10 @@ chef-server-ctl reconfigure
 - Configure knife workstation
 ```
 docker exec -it chef_client bash
+
+which knife
+
+curl -k -I https://chef_server/organizations/digitalocean
 
 cat > ~/.ssh/knife.rb <<EOF
 log_level                :info
@@ -65,6 +59,8 @@ EOF
 
 - Upload chef cookbook
 ```
+docker exec -it chef_client bash
+knife upload
 ```
 
 - Use knife to run deployment
@@ -76,4 +72,5 @@ docker exec -it chef_client bash
 ```
 docker-compose down -v
 ```
+
 <a href="https://www.dennyzhang.com"><img align="right" width="200" height="183" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns.png"></a>

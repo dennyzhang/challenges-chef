@@ -9,6 +9,12 @@ services:
     privileged: true
     ports:
     - "443:443"
+  chef_knife:
+    container_name: chef_knife
+    hostname: chef_knife
+    # https://hub.docker.com/r/chef/chefdk/
+    image: chef/chefdk
+    entrypoint: ["tail", "-f", "/dev/null"]
   chef_client:
     container_name: chef_client
     hostname: chef_client
