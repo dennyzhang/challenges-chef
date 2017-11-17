@@ -60,7 +60,7 @@ Table of Contents
 - TODO
 
 ## Scenario-201: Enforce TDD For Your Chef Cookbooks I
-- Objective: Test your cookbooks
+- Objective: Test your cookbooks. Run kitchen vagrant in your laptop.
 - Requirements:
 ```
 1. Use kitchen to test your cookbook: start a VM and test the logic
