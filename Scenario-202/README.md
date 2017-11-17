@@ -72,6 +72,14 @@ kitchen destroy
 ```
 
 ## kitchen ec2 deployment
+- Install AWS cli and configure aws credential
+```
+# http://docs.aws.amazon.com/cli/latest/userguide/installing.html
+pip install awscli
+aws configure
+```
+
+- Install and run kitchen-ec2
 ```
 # https://github.com/test-kitchen/kitchen-ec2
 # https://github.com/test-kitchen/kitchen-ec2/blob/master/lib/kitchen/driver/ec2.rb
