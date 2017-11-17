@@ -90,6 +90,7 @@ export AWS_SSH_KEY_ID="$KEY_USER"
 ```
 # https://github.com/test-kitchen/kitchen-ec2
 # https://github.com/test-kitchen/kitchen-ec2/blob/master/lib/kitchen/driver/ec2.rb
+# http://kg4giy.com/2015/12/11/test-kitchen-to-support-amazon-web-service-aws-amis/
 cd cookbooks/example
 export KITCHEN_YAML=".kitchen_ec2.yml"
 # TODO: customize this

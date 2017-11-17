@@ -14,8 +14,9 @@ platforms:
     driver_config:
       region: us-east-1
       image_id: <%= ENV.fetch('EC2_IMAGE_ID', "ami-2a69aa47") %>
-      instance_type: <%= ENV.fetch('EC2_INSTANCE_TYPE', "t1.micro") %>
+      instance_type: <%= ENV.fetch('EC2_INSTANCE_TYPE', "t2.micro") %>
       server_name: <%= ENV.fetch('INSTANCE_NAME', "example") %>
+      transport.username: ["ec2-user"]
 
 suites:
   - name: default
