@@ -10,7 +10,7 @@ Table of Contents
    * [Requirements](#requirements)
    * [Procedure](#procedure)
 
-- TODO: add screenshot
+- TODO: add screenshot: workstation, test env
 
 <a href="https://www.dennyzhang.com"><img align="right" width="200" height="183" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns.png"></a>
 
