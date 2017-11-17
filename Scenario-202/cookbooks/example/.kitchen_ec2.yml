@@ -6,6 +6,8 @@ provisioner:
   name: chef_zero
   require_chef_omnibus: 12.17.44
   data_path: test/shared
+transport:
+   username: ec2-user
 
 platforms:
   - name: ubuntu-14.04
