@@ -98,7 +98,7 @@ Table of Contents
 - See more: [Scenario-302](./Scenario-302)
 - TODO
 
-<img align="right" width="200" height="183" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/magic.gif">
+<a href="https://www.dennyzhang.com"><img align="right" width="200" height="183" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/magic.gif"></a>
 
 # More Resources
 
