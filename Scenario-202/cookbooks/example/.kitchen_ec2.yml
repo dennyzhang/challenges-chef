@@ -9,6 +9,7 @@ transport:
 
 provisioner:
   name: chef_solo
+  # TODO: use specific version
   require_chef_omnibus: true
   data_path: test/shared
 
