@@ -7,5 +7,5 @@ end
 
 template '/etc/ec2-user/version.txt' do
   source 'version.txt.erb'
-  mode 0o700  
+  mode 0o700
 end
