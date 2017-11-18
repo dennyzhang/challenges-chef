@@ -8,7 +8,6 @@ driver_config:
   use_sudo: false
   privileged: true
   remove_images: false
-  image: <%= ENV.fetch('IMAGE_NAME', "chef/chefdk") %>
   forward:
   - <%= ENV.fetch('DOCKER_PORT_FORWARD_PREFIX', "80") %>80:8080
   # tls_verify: true
@@ -27,7 +26,13 @@ provisioner:
       file_cache_path: "/var/chef/cache"
 
 platforms:
+  - name: centos-7
+    # https://hub.docker.com/r/jannikzed/chefdk-centos7/
+    driver_config:
+      image: <%= ENV.fetch('IMAGE_NAME', "jannikzed/chefdk-centos7") %>
   - name: ubuntu-14.04
+    driver_config:
+      image: <%= ENV.fetch('IMAGE_NAME', "chef/chefdk") %>
 
 suites:
   - name: default

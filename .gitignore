@@ -4,3 +4,4 @@ local-mode-cache
 Berksfile.lock
 .kitchen
 Gemfile.lock
+Dockerfile-kitchen*

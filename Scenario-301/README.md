@@ -19,6 +19,7 @@ Table of Contents
 2. Chef shall add one jenkins user
 3. Chef shall add a dummy job with slack notification enabled
 4. Run deployment in docker, vagrant and EC2
+5. Test both Ubuntu 14.04 and centos 7
 
 # Procedure
 ## Common Setup
