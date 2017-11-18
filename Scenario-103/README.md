@@ -39,13 +39,44 @@ curl -k -I https://localhost/users/login
 
 - Use chef_client as both client and knife workstation
 
+- Get certificate from chef server to chef knife
+
+To configure knife, we need admin.pem and chef-validator.pem from chef server node
+
+```
+docker cp chef_server:/etc/chef-server/admin.pem /tmp/admin.pem
+docker cp chef_server:/etc/chef-server/chef-validator.pem /tmp/chef-validator.pem
+
+docker cp /tmp/admin.pem chef_knife:/tmp/
+docker cp /tmp/chef-validator.pem chef_knife:/tmp/
+
+rm -rf /tmp/admin.pem /tmp/chef-validator.pem
+```
+
 - Configure knife workstation
 ```
-docker exec -it chef_client bash
+docker exec -it chef_knife bash
+
+mkdir -p /root/chef-server/.chef
+mv /tmp/*.pem /root/chef-server/
+chmod 600 -R /root/chef-server/*.pem
+ls -lth /root/chef-server/
 
 which knife
 
 curl -k -I https://chef_server/organizations/digitalocean
+
+knife configure --initial
+
+# Please enter the chef server URL:
+# https://chef_server/organizations/myorg
+#
+# Please enter a name for the new user:
+# dennykitchen
+#
+# Please enter a password for the new user:
+# password1
+#
 
 cat > ~/.ssh/knife.rb <<EOF
 log_level                :info
