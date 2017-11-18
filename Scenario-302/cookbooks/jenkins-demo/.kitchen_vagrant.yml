@@ -17,6 +17,7 @@ provisioner:
 
 platforms:
   - name: ubuntu-14.04
+    # https://stackoverflow.com/questions/38677059/port-forwarding-not-working-with-test-kitchen-and-vagrant
     driver_config:
       network:
         - ["forwarded_port", {guest: 8080, host: 8080}]
