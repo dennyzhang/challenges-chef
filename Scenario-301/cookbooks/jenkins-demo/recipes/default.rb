@@ -12,7 +12,7 @@
 include_recipe 'apt::default'
 include_recipe 'jenkins-demo::master'
 
-%w[lsof].each do |x|
+%w[lsof iproute2].each do |x|
   package x do
     action :install
     not_if "dpkg -l #{x} | grep -E '^ii'"
