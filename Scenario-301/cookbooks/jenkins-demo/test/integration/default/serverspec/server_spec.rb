@@ -14,11 +14,11 @@ describe command('java -version') do
 end
 
 describe command('dpkg -l | grep jenkins') do
-  its(:stderr) { should contain '2.90' }
+  its(:stdout) { should contain '2.90' }
 end
 
 describe command('chef-solo --version') do
-  its(:stderr) { should contain '13.6.4' }
+  its(:stdout) { should contain '13.6.4' }
 end
 
 %w[8080].each do |port|
