@@ -9,7 +9,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-# TODO
+include_recipe 'apt::default'
 include_recipe 'jenkins-demo::master'
 
 %w[lsof].each do |x|

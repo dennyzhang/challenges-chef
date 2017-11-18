@@ -13,8 +13,12 @@ describe command('java -version') do
   its(:stderr) { should contain '1.8' }
 end
 
-%w[8080].each do |port|
-  describe port(port) do
-    it { should be_listening }
-  end
+# %w[8080].each do |port|
+#   describe port(port) do
+#     it { should be_listening }
+#   end
+# end
+
+describe port(8080) do
+  it { should be_listening }
 end
