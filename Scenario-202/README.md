@@ -114,6 +114,12 @@ kitchen destroy
 cd cookbooks/example
 export KITCHEN_YAML=".kitchen_vagrant.yml"
 
+source ~/.bash_profile
 bundle install
+
+kitchen converge
+kitchen list
+kitchen verify
+kitchen destroy
 ```
 <a href="https://www.dennyzhang.com"><img align="right" width="185" height="37" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns_small.png"></a>
