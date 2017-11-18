@@ -9,7 +9,6 @@
 # All rights reserved - Do Not Redistribute
 #
 
-include_recipe 'apt::default'
 include_recipe 'jenkins-demo::master'
 
 %w[lsof iproute2].each do |x|
