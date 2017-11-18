@@ -16,7 +16,7 @@ Table of Contents
    * [More Resources](#more-resources)
 
 ![scenario-103-design.png](../images/scenario-103-design.png)
-<a href="https://www.dennyzhang.com"><img align="right" width="200" height="183" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns_small.png"></a>
+<a href="https://www.dennyzhang.com"><img align="right" width="185" height="37" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns_small.png"></a>
 
 # Requirement
 
@@ -58,4 +58,4 @@ docker-compose down -v
 
 # More Resources
 - jenkins cookbook: https://github.com/chef-cookbooks/jenkins
-<a href="https://www.dennyzhang.com"><img align="right" width="200" height="183" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns_small.png"></a>
+<a href="https://www.dennyzhang.com"><img align="right" width="185" height="37" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns_small.png"></a>
