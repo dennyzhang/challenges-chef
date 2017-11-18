@@ -18,8 +18,9 @@ Table of Contents
       * [Scenario-103: Chef HelloWorld III](#scenario-103-chef-helloworld-iii)
       * [Scenario-201: Enforce TDD For Your Chef Cookbooks I](#scenario-201-enforce-tdd-for-your-chef-cookbooks-i)
       * [Scenario-202: Enforce TDD For Your Chef Cookbooks II](#scenario-202-enforce-tdd-for-your-chef-cookbooks-ii)
-      * [Scenario-301: Use Chef To Deploy A Real Service I](#scenario-301-use-chef-to-deploy-a-real-service-i)
-      * [Scenario-302: Use Chef To Deploy A Real Service II](#scenario-302-use-chef-to-deploy-a-real-service-ii)
+      * [Scenario-301: Use Chef To Deploy Jenkins I](#scenario-301-use-chef-to-deploy-jenkins-i)
+      * [Scenario-302: Use Chef To Deploy Jenkins II](#scenario-302-use-chef-to-deploy-jenkins-ii)
+      * [Scenario-303: Use Chef To Deploy Jenkins II](#scenario-303-use-chef-to-deploy-jenkins-ii)
    * [More Resources](#more-resources)
    * [Contributors: Give People Credits](#contributors-give-people-credits)
    * [License](#license)
@@ -84,7 +85,7 @@ Table of Contents
 
 ![scenario-202-design.png](./images/scenario-202-design.png)
 
-## Scenario-301: Use Chef To Deploy A Real Service I
+## Scenario-301: Use Chef To Deploy Jenkins I
 - Objective: Use chef to deploy one common service for real
 - Requirements:
 ```
@@ -95,7 +96,20 @@ Table of Contents
 - See more: [Scenario-301](./Scenario-301)
 - TODO
 
-## Scenario-302: Use Chef To Deploy A Real Service II
+## Scenario-302: Use Chef To Deploy Jenkins II
+- Objective: More Jenkins customization
+- Requirements:
+```
+1. For better security, listen Jenkins on port 18080, instead of 8080
+2. Verify the Jenkins deployment
+3. Use EC2 to deploy jenkins
+4. Enable nagios monitoring and slack notification
+5. Enable and configure ThinBackup
+```
+- See more: [Scenario-302](./Scenario-302)
+- TODO
+
+## Scenario-303: Use Chef To Deploy Jenkins II
 - Objective: Test and verify the deployment for both all-in-one and 2 nodes cluster
 - Requirements:
 ```
@@ -103,7 +117,7 @@ Table of Contents
 2. Verify the deployment
 3. Support deploy to both docker and EC2
 ```
-- See more: [Scenario-302](./Scenario-302)
+- See more: [Scenario-303](./Scenario-303)
 - TODO
 
 <a href="https://www.dennyzhang.com"><img align="right" width="200" height="183" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/magic.gif"></a>

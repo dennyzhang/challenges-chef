@@ -11,15 +11,14 @@ Table of Contents
    * [Procedure](#procedure)
    * [More Resources](#more-resources)
 
+![scenario-303-design.png](../images/scenario-303-design.png)
 <a href="https://www.dennyzhang.com"><img align="right" width="185" height="37" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns_small.png"></a>
 
 # Requirement
 
-1. For better security, listen Jenkins on port 18080, instead of 8080
-2. Verify the Jenkins deployment
-3. Use EC2 to deploy jenkins
-4. Enable nagios monitoring and slack notification
-5. Enable and configure ThinBackup
+1. Test 2 nodes jenkins cluster deployment in docker
+2. Verify the deployment
+3. Support deploy to both docker and EC2
 
 # Procedure
 - Start docker-compose env
