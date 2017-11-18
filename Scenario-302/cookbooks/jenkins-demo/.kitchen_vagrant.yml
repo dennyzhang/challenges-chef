@@ -1,0 +1,30 @@
+---
+driver:
+  name: vagrant
+
+driver_config:
+  instance_name: <%= ENV.fetch('INSTANCE_NAME', "jenkins-demo") %>
+  hostname: <%= ENV.fetch('INSTANCE_NAME', "jenkins-demo") %>
+transport:
+   username: kitchen
+
+provisioner:
+  name: chef_zero
+  require_chef_omnibus: 13.6.4
+  data_path: test/shared
+  client_rb:
+      file_cache_path: "/var/chef/cache"
+
+platforms:
+  - name: ubuntu-14.04
+
+suites:
+  - name: default
+    run_list:
+      - recipe[apt::default]
+      - recipe[jenkins-demo::default]
+    attributes:
+        {jenkins-demo:
+                {update_version: '1.1'
+                }
+        }
