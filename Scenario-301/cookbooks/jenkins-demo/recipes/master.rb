@@ -22,6 +22,8 @@ node.default['jenkins']['master']['repository'] \
 node.default['jenkins']['master']['repository_key'] \
   = 'http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key'
 
+node.default['jenkins']['executor']['timeout'] = 360
+
 include_recipe 'java::default'
 include_recipe 'jenkins::master'
 

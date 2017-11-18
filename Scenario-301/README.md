@@ -81,7 +81,6 @@ aws ec2 create-key-pair --key-name $KEY_USER | ruby -e "require 'json'; puts JSO
 chmod 600 ~/.ssh/$KEY_USER
 
 export AWS_SSH_KEY_ID="$KEY_USER"
-
 ```
 
 - Install and run kitchen-ec2
