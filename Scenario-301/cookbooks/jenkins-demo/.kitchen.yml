@@ -9,6 +9,8 @@ driver_config:
   privileged: true
   remove_images: false
   image: <%= ENV.fetch('IMAGE_NAME', "chef/chefdk") %>
+  forward:
+  - <%= ENV.fetch('DOCKER_PORT_FORWARD_PREFIX', "80") %>80:8080
   # tls_verify: true
   # tls_cacert: <%= ENV.fetch('TLS_FOLDER', "tls") %>/ca.pem
   # tls_cert: <%= ENV.fetch('TLS_FOLDER', "tls") %>/cert.pem
