@@ -12,7 +12,7 @@ require 'json'
 # buildrepo_dir = chef_data.fetch('jenkins_mdm').fetch('buildrepo_dir')
 
 describe command('java -version') do
-  its(:stderr) { should contain 'java version \"1.8' }
+  its(:stderr) { should contain '1.8' }
 end
 
 %w[8080].each do |port|

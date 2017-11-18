@@ -11,3 +11,10 @@
 
 # TODO
 include_recipe 'jenkins-demo::master'
+
+%w[lsof].each do |x|
+  package x do
+    action :install
+    not_if "dpkg -l #{x} | grep -E '^ii'"
+  end
+end

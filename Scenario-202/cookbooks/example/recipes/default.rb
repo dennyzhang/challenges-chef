@@ -10,7 +10,7 @@
 #
 
 %w[jq].each do |x|
-  package 'jq' do
+  package x do
     action :install
     not_if "dpkg -l #{x} | grep -E '^ii'"
   end
