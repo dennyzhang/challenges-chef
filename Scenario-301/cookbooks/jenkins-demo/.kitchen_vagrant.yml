@@ -16,6 +16,10 @@ provisioner:
       file_cache_path: "/var/chef/cache"
 
 platforms:
+  - name: centos-7
+    driver_config:
+      network:
+        - ["forwarded_port", {guest: 8080, host: 8080}]
   - name: ubuntu-14.04
     # https://stackoverflow.com/questions/38677059/port-forwarding-not-working-with-test-kitchen-and-vagrant
     driver_config:

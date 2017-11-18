@@ -27,12 +27,12 @@ provisioner:
 
 platforms:
   - name: centos-7
-    # https://hub.docker.com/r/jannikzed/chefdk-centos7/
+    # https://hub.docker.com/r/library/centos/tags/
     driver_config:
-      image: <%= ENV.fetch('IMAGE_NAME', "jannikzed/chefdk-centos7") %>
+      image: <%= ENV.fetch('IMAGE_NAME', "centos:7") %>
   - name: ubuntu-14.04
     driver_config:
-      image: <%= ENV.fetch('IMAGE_NAME', "chef/chefdk") %>
+      image: <%= ENV.fetch('IMAGE_NAME', "ubuntu:14.04") %>
 
 suites:
   - name: default

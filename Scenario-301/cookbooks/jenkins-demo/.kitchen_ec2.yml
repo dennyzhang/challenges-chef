@@ -13,10 +13,11 @@ provisioner:
   data_path: test/shared
 
 platforms:
-  - name: ubuntu-14.04
+  - name: centos-ami
     driver:
       image_id: <%= ENV.fetch('EC2_IMAGE_ID', "ami-6869aa05") %>
       instance_type: <%= ENV.fetch('EC2_INSTANCE_TYPE', "t2.micro") %>
+  # TODO: support ubuntu 14.04
 
 suites:
   - name: default
