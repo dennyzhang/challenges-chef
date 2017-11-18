@@ -17,6 +17,9 @@ provisioner:
 
 platforms:
   - name: ubuntu-14.04
+    driver_config:
+      network:
+        - ["forwarded_port", {guest: 8080, host: 8080}]
 
 suites:
   - name: default
