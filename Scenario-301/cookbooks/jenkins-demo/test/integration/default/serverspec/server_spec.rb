@@ -17,6 +17,10 @@ describe command('dpkg -l | grep jenkins') do
   its(:stderr) { should contain '2.90' }
 end
 
+describe command('chef-solo --version') do
+  its(:stderr) { should contain '13.6.4' }
+end
+
 %w[8080].each do |port|
   describe port(port) do
     it { should be_listening }
