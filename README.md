@@ -81,7 +81,6 @@ Table of Contents
 3. Use Kitchen to test cloud VM deployment
 ```
 - See more: [Scenario-202](./Scenario-202)
-- TODO
 
 ![scenario-202-design.png](./images/scenario-202-design.png)
 
@@ -89,7 +88,9 @@ Table of Contents
 - Objective: Use chef to deploy one common service for real
 - Requirements:
 ```
-1. Deploy jenkins with customization: one jenkins user, dummy jobs and some plugins
+1. Deploy a standalone jenkins by chef
+2. Chef shall add one jenkins user
+3. Chef shall add a dummy job with slack notification enabled
 ```
 - See more: [Scenario-301](./Scenario-301)
 - TODO

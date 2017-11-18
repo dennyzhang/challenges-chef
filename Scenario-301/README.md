@@ -8,11 +8,7 @@ Table of Contents
 =================
 
    * [Requirement](#requirement)
-   * [Start docker-compose env](#start-docker-compose-env)
-   * [Login to the container, and run procedure](#login-to-the-container-and-run-procedure)
-   * [Apply Chef update](#apply-chef-update)
-   * [Verify Jenkins](#verify-jenkins)
-   * [Destroy docker-compose env after testing](#destroy-docker-compose-env-after-testing)
+   * [Procedure](#procedure)
    * [More Resources](#more-resources)
 
 ![scenario-103-design.png](../images/scenario-103-design.png)
@@ -20,14 +16,15 @@ Table of Contents
 
 # Requirement
 
-1. Setup standalone jenkins server
-2. Install plugin: ThinBackup, slack
-3. Install job: serverspec, rubocop check for git repo
+1. Deploy a standalone jenkins by chef
+2. Chef shall add one jenkins user
+3. Chef shall add a dummy job with slack notification enabled
 
-# Start docker-compose env
+# Procedure
+- Start docker-compose env
 docker-compose up -d
 
-# Login to the container, and run procedure
+- Login to the container, and run procedure
 ```
 docker exec -it my_chef sh
 
@@ -38,19 +35,19 @@ berks vendor /tmp/berks_cookbooks
 ls -lth /tmp/berks_cookbooks
 ```
 
-# Apply Chef update
+- Apply Chef update
 ```
 cd /tmp
 # From config/node.json, we specify to apply example cookbook
 chef-solo -L chef_solo.log -c config/solo.rb -j config/node.json
 
-# After deployment, jenkins is up and running
+- After deployment, jenkins is up and running
 ```
 
-# Verify Jenkins
+- Verify Jenkins
 curl -I http://localhost:8080
 
-# Destroy docker-compose env after testing
+- Destroy docker-compose env after testing
 
 ```
 docker-compose down -v
