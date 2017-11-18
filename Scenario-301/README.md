@@ -35,7 +35,7 @@ bundle --version
 
 - Install gem depenencies
 ```
-cd cookbooks/example
+cd cookbooks/jenkins-demo
 bundle install
 ```
 
@@ -52,7 +52,7 @@ kitchen destroy
 ## kitchen digitalocean deployment
 ```
 # https://github.com/test-kitchen/kitchen-digitalocean
-cd cookbooks/example
+cd cookbooks/jenkins-demo
 export KITCHEN_YAML=".kitchen_digitalocean.yml"
 
 # Customize this with your credential
@@ -90,10 +90,10 @@ export AWS_SSH_KEY_ID="$KEY_USER"
 # https://github.com/test-kitchen/kitchen-ec2/blob/master/lib/kitchen/driver/ec2.rb
 # http://kg4giy.com/2015/12/11/test-kitchen-to-support-amazon-web-service-aws-amis/
 
-cd cookbooks/example
+cd cookbooks/jenkins-demo
 export KITCHEN_YAML=".kitchen_ec2.yml"
 # TODO: customize this
-export AWS_SSH_KEY_ID="my_ssh_key_id"
+export AWS_SSH_KEY_ID="$KEY_USER"
 
 # Update bundle: https://github.com/chef/chef-provisioning/issues/151
 bundle update
@@ -107,7 +107,7 @@ kitchen destroy
 ## kitchen vagrant deployment
 ```
 # https://github.com/test-kitchen/kitchen-vagrant
-cd cookbooks/example
+cd cookbooks/jenkins-demo
 export KITCHEN_YAML=".kitchen_vagrant.yml"
 
 bundle install

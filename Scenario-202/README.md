@@ -97,7 +97,7 @@ export AWS_SSH_KEY_ID="$KEY_USER"
 cd cookbooks/example
 export KITCHEN_YAML=".kitchen_ec2.yml"
 # TODO: customize this
-export AWS_SSH_KEY_ID="my_ssh_key_id"
+export AWS_SSH_KEY_ID="$KEY_USER"
 
 # Update bundle: https://github.com/chef/chef-provisioning/issues/151
 bundle update
