@@ -92,6 +92,7 @@ Table of Contents
 1. Deploy a standalone jenkins by chef
 2. Chef shall add one jenkins user
 3. Chef shall add a dummy job with slack notification enabled
+4. Run deployment in docker, vagrant and EC2
 ```
 - See more: [Scenario-301](./Scenario-301)
 - TODO
