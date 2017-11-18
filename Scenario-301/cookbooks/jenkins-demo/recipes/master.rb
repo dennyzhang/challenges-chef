@@ -16,11 +16,13 @@ node.default['java']['jdk_version'] = '8'
 node.default['java']['set_etc_environment'] = true
 node.default['java']['oracle']['accept_oracle_download_terms'] = true
 
-node.default['jenkins']['master']['repository'] \
-  = 'http://pkg.jenkins-ci.org/debian'
-
-node.default['jenkins']['master']['repository_key'] \
-  = 'http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key'
+node.default['jenkins']['master']['repository'], \
+  node.default['jenkins']['master']['repository_key'] =
+  case [node['platform_family'], node['jenkins']['master']['channel']]
+  when %w[debian stable]
+    ['http://pkg.jenkins-ci.org/debian', \
+     'http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key']
+  end
 
 node.default['jenkins']['executor']['timeout'] = 360
 
