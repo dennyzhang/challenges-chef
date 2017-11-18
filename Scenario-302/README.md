@@ -11,14 +11,14 @@ Table of Contents
    * [Procedure](#procedure)
    * [More Resources](#more-resources)
 
-![scenario-103-design.png](../images/scenario-103-design.png)
+![scenario-302-design.png](../images/scenario-302-design.png)
 <a href="https://www.dennyzhang.com"><img align="right" width="185" height="37" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns_small.png"></a>
 
 # Requirement
 
-1. Deploy a standalone jenkins by chef
-2. Chef shall add one jenkins user
-3. Chef shall add a dummy job with slack notification enabled
+1. Test 2 nodes jenkins cluster deployment in docker
+2. Verify the deployment
+3. Support deploy to both docker and EC2
 
 # Procedure
 - Start docker-compose env
