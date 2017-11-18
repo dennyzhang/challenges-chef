@@ -128,6 +128,8 @@ Table of Contents
 # Contributors: Give People Credits
 Below are folks who have contributed via GitHub!
 
+- Ming Zhang: [![LinkedIn](https://www.dennyzhang.com/wp-content/uploads/sns/linkedin.png)](https://www.linkedin.com/in/blackmagic02881/)
+
 <a href="https://www.dennyzhang.com"><img align="right" width="185" height="37" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns_small.png"></a>
 
 # License
