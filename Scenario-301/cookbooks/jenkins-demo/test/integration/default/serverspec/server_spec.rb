@@ -13,6 +13,10 @@ describe command('java -version') do
   its(:stderr) { should contain '1.8' }
 end
 
+describe command('dpkg -l | grep jenkins') do
+  its(:stderr) { should contain '2.90' }
+end
+
 %w[8080].each do |port|
   describe port(port) do
     it { should be_listening }
