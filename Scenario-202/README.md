@@ -114,7 +114,6 @@ kitchen destroy
 cd cookbooks/example
 export KITCHEN_YAML=".kitchen_vagrant.yml"
 
-source ~/.bash_profile
 bundle install
 
 kitchen converge

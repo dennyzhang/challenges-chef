@@ -3,8 +3,8 @@ driver:
   name: vagrant
 
 driver_config:
-  instance_name: <%= ENV.fetch('INSTANCE_NAME', "example") %>
-  hostname: <%= ENV.fetch('INSTANCE_NAME', "example") %>
+  instance_name: <%= ENV.fetch('INSTANCE_NAME', "jenkins-demo") %>
+  hostname: <%= ENV.fetch('INSTANCE_NAME', "jenkins-demo") %>
 transport:
    username: kitchen
 
@@ -22,9 +22,9 @@ suites:
   - name: default
     run_list:
       - recipe[apt::default]
-      - recipe[example::default]
+      - recipe[jenkins-demo::default]
     attributes:
-        {example:
+        {jenkins-demo:
                 {update_version: '1.1'
                 }
         }

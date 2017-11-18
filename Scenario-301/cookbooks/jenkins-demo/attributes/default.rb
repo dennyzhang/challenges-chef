@@ -5,4 +5,4 @@ default['jenkins_plugins'] = {
   'slack' => '2.3'
 }
 
-default['jenkins_mdm']['jenkins_jobs'] = 'TailLogfile'
+default['jenkins_demo']['jenkins_jobs'] = 'TailLogfile'
