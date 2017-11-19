@@ -25,7 +25,7 @@ if jenkins_jobs.index('CommonServerCheckRepo')
     its(:stdout) { should contain '2.41.3' }
   end
 
-  describe command('which n') do
+  describe command('which nc') do
     its(:exit_status) { should eq 0 }
   end
 end
