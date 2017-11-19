@@ -23,9 +23,8 @@ end
 end
 
 if os[:family] == 'redhat'
-  # TODO: change this
-  describe command('dpkg -l | grep jenkins') do
-    its(:stdout) { should contain '2.90' }
+  describe command('yum info jenkins') do
+    its(:stdout) { should contain '2.73.3' }
   end
 elsif %w[debian ubuntu].include?(os[:family])
   # debian related environment spec
