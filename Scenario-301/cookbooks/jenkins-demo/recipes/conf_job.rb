@@ -11,6 +11,7 @@
 
 jenkins_jobs = node['jenkins_demo']['jenkins_jobs']
 
+# Install Jenkins jobs 
 jenkins_jobs.split(',').each do |job_name|
   config = File.join(Chef::Config[:file_cache_path], "#{job_name}.xml")
 
@@ -24,16 +25,17 @@ jenkins_jobs.split(',').each do |job_name|
   end
 end
 
+# Install required facilities
 if jenkins_jobs.index('CommonServerCheckRepo')
   if platform_family?('debian')
-    %w[nc].each do |x|
+    %w[nc gem rake].each do |x|
       package x do
         action :install
         not_if "dpkg -l #{x} | grep -E '^ii'"
       end
     end
   else
-    %w[nc].each do |x|
+    %w[nc gem rake].each do |x|
       package x do
         action :install
         # TODO: change this

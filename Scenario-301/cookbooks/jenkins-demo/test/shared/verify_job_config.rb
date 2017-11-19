@@ -16,4 +16,12 @@ if jenkins_jobs.index('CommonServerCheckRepo')
   describe command('nc -version') do
     its(:stderr) { should contain '6.40' }
   end
+
+  describe command('gem -version') do
+    its(:stdout) { should contain '2.0.14' }
+  end
+
+  describe command('rake -version') do
+    its(:stdout) { should contain '0.9.6' }
+  end
 end
