@@ -23,6 +23,7 @@ end
 end
 
 if os[:family] == 'redhat'
+  # TODO: change this
   describe command('dpkg -l | grep jenkins') do
     its(:stdout) { should contain '2.90' }
   end
