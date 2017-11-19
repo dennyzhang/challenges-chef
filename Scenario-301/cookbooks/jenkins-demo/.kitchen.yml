@@ -29,6 +29,7 @@ provisioner:
 platforms:
   - name: centos-7
     driver_config:
+      # https://hub.docker.com/r/dokken/centos-7/
       image: <%= ENV.fetch('IMAGE_NAME', "dokken/centos-7") %>
       pid_one_command: /usr/lib/systemd/systemd
   - name: ubuntu-14.04
