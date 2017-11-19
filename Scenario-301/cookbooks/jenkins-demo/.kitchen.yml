@@ -9,8 +9,6 @@ driver_config:
   # because Docker and SystemD/Upstart
   privileged: true
   remove_images: false
-  forward:
-  - <%= ENV.fetch('DOCKER_PORT_FORWARD_PREFIX', "80") %>80:8080
   # tls_verify: true
   # tls_cacert: <%= ENV.fetch('TLS_FOLDER', "tls") %>/ca.pem
   # tls_cert: <%= ENV.fetch('TLS_FOLDER', "tls") %>/cert.pem
@@ -32,9 +30,13 @@ platforms:
       # https://hub.docker.com/r/dokken/centos-7/
       image: <%= ENV.fetch('IMAGE_NAME', "dokken/centos-7") %>
       pid_one_command: /usr/lib/systemd/systemd
+      forward:
+        - <%= ENV.fetch('DOCKER_PORT_FORWARD_PREFIX', "180") %>80:8080
   - name: ubuntu-14.04
     driver_config:
       image: <%= ENV.fetch('IMAGE_NAME', "ubuntu:14.04") %>
+      forward:
+        - <%= ENV.fetch('DOCKER_PORT_FORWARD_PREFIX', "280") %>80:8080
 
 suites:
   - name: default
