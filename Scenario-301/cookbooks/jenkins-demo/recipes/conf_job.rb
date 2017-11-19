@@ -11,7 +11,7 @@
 
 jenkins_jobs = node['jenkins_demo']['jenkins_jobs']
 
-# Install Jenkins jobs 
+# Install Jenkins jobs
 jenkins_jobs.split(',').each do |job_name|
   config = File.join(Chef::Config[:file_cache_path], "#{job_name}.xml")
 
@@ -47,5 +47,5 @@ if jenkins_jobs.index('CommonServerCheckRepo')
   gem_package 'serverspec' do
     action :install
     version '2.41.3'
-  end  
+  end
 end
