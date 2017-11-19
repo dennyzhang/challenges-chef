@@ -94,8 +94,7 @@ end
   <builders>
     <hudson.tasks.Shell>
       <command>#!/bin/bash -ex
-# TODO: change this
-bash -e /var/lib/jenkins/serverspec_check.sh</command>
+bash -e /var/lib/jenkins/script/serverspec_check.sh</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>

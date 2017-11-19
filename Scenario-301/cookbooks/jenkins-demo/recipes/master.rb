@@ -39,3 +39,12 @@ end
 jenkins_command 'safe-restart' do
   action :nothing
 end
+
+%w[/var/lib/jenkins/script].each do |x|
+  directory x do
+    owner 'jenkins'
+    group 'jenkins'
+    mode 0o755
+    action :create
+  end
+end

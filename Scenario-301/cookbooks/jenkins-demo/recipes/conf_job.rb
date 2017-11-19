@@ -69,4 +69,11 @@ if jenkins_jobs.index('CommonServerCheckRepo')
     action :install
     version '2.41.3'
   end
+
+  cookbook_file '/var/lib/jenkins/script/serverspec_check.sh' do
+    source 'serverspec_check.sh'
+    mode 0o755
+    user 'jenkins'
+    group 'jenkins'
+  end
 end
