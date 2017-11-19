@@ -9,7 +9,9 @@
 # All rights reserved - Do Not Redistribute
 #
 
-node['jenkins_demo']['jenkins_jobs'].split(',').each do |job_name|
+jenkins_jobs = node['jenkins_demo']['jenkins_jobs']
+
+jenkins_jobs.split(',').each do |job_name|
   config = File.join(Chef::Config[:file_cache_path], "#{job_name}.xml")
 
   template config do
@@ -19,5 +21,24 @@ node['jenkins_demo']['jenkins_jobs'].split(',').each do |job_name|
   # Create a jenkins job (default action is `:create`)
   jenkins_job job_name do
     config config
+  end
+end
+
+if jenkins_jobs.index('CommonServerCheckRepo')
+  if platform_family?('debian')
+    %w[nc].each do |x|
+      package x do
+        action :install
+        not_if "dpkg -l #{x} | grep -E '^ii'"
+      end
+    end
+  else
+    %w[nc].each do |x|
+      package x do
+        action :install
+        # TODO: change this
+        # not_if "dpkg -l #{x} | grep -E '^ii'"
+      end
+    end
   end
 end

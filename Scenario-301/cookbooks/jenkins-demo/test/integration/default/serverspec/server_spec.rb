@@ -32,3 +32,7 @@ port = 8080
 describe port(port), wait: { timeout: 60 } do
   it { should be_listening }
 end
+
+#############################################################################
+# If extra jenkins jobs have been triggered, verify the logic
+require_relative '../../../kitchen/data/verify_job_config'
