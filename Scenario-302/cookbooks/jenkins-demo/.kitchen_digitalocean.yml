@@ -8,7 +8,14 @@ provisioner:
   data_path: test/shared
 
 platforms:
-  - name: jenkins-demo
+  - name: jenkins-demo-centos7
+    driver_config:
+      region: sfo2
+      size: <%= ENV.fetch('DIGITALOCEAN_FLAVOR', "1gb") %>
+      private_networking: false
+      image: centos-7
+      server_name: <%= ENV.fetch('INSTANCE_NAME', "jenkins-demo") %>
+  - name: jenkins-demo-ubuntu1404
     driver_config:
       region: sfo2
       size: <%= ENV.fetch('DIGITALOCEAN_FLAVOR', "1gb") %>
