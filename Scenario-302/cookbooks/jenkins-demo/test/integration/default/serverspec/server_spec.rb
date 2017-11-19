@@ -29,6 +29,6 @@ end
 
 port = 8080
 # Wait for service slow start/restart
-describe port(port), wait: { timeout: 30 } do
+describe port(port), wait: { timeout: 60 } do
   it { should be_listening }
 end
