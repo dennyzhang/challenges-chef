@@ -13,7 +13,8 @@ platforms:
       region: sfo2
       size: <%= ENV.fetch('DIGITALOCEAN_FLAVOR', "1gb") %>
       private_networking: false
-      image: centos-7
+      # https://github.com/test-kitchen/kitchen-digitalocean
+      image: centos-7-x64
       server_name: <%= ENV.fetch('INSTANCE_NAME', "jenkins-demo") %>
   - name: jenkins-demo-ubuntu1404
     driver_config:
