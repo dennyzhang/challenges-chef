@@ -27,9 +27,8 @@ elsif %w[debian ubuntu].include?(os[:family])
   end
 end
 
-%w[8080].each do |port|
-  # Wait for service slow start/restart
-  describe port(port), wait: { timeout: 30 } do
-    it { should be_listening }
-  end
+port = 8080
+# Wait for service slow start/restart
+describe port(port), wait: { timeout: 30 } do
+  it { should be_listening }
 end
