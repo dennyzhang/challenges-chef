@@ -56,7 +56,7 @@ if jenkins_jobs.index('CommonServerCheckRepo')
     end
   end
 
-  # TODO: keep the gem install minimal
+  # TODO: keep the gem install minimal: --no-ri --no-rdoc
   gem_package 'serverspec' do
     action :install
     version '2.41.3'
