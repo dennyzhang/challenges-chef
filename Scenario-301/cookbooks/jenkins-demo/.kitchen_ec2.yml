@@ -25,6 +25,8 @@ platforms:
       # https://stackoverflow.com/questions/40835953/how-to-find-ami-id-of-centos-7-image-in-aws-marketplace
       image_id: <%= ENV.fetch('EC2_IMAGE_ID', "ami-6d1c2007") %>
       instance_type: <%= ENV.fetch('EC2_INSTANCE_TYPE', "t2.micro") %>
+    transport:
+      username: centos
   - name: centos-ami
     driver:
       image_id: <%= ENV.fetch('EC2_IMAGE_ID', "ami-6869aa05") %>
