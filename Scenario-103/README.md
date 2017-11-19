@@ -15,7 +15,7 @@ Table of Contents
 <a href="https://www.dennyzhang.com"><img align="right" width="185" height="37" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns_small.png"></a>
 
 # Requirements
-1. Start 3 containers to run chef server, knife and chef client
+1. Start 3 containers to run chef server, knife workstation and chef client
 2. Install and configure knife
 3. From knife node run chef deployment in chef client node
 

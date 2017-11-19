@@ -53,7 +53,7 @@ Table of Contents
 - Objective: Setup chef server and chef client
 - Requirements:
 ```
-1. Start 3 containers to run chef server, knife and chef client
+1. Start 3 containers to run chef server, knife workstation and chef client
 2. Install and configure knife
 3. From knife node run chef deployment in chef client node
 ```
@@ -96,7 +96,6 @@ Table of Contents
 5. Test both Ubuntu 14.04 and centos 7
 ```
 - See more: [Scenario-301](./Scenario-301)
-- TODO
 
 ## Scenario-302: Use Chef To Deploy Jenkins II
 - Objective: More Jenkins customization
