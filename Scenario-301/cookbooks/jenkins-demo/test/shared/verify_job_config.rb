@@ -17,11 +17,15 @@ if jenkins_jobs.index('CommonServerCheckRepo')
     its(:stderr) { should contain '6.40' }
   end
 
-  describe command('gem -version') do
+  describe command('gem --version') do
     its(:stdout) { should contain '2.0.14' }
   end
 
-  describe command('rake -version') do
+  describe command('rake --version') do
     its(:stdout) { should contain '0.9.6' }
+  end
+
+  describe command('gem list | grep serverspec') do
+    its(:stdout) { should contain '2.41.3' }
   end
 end
