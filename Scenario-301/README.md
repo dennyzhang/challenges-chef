@@ -44,10 +44,9 @@ bundle install
 - Run kitchen test
 ```
 # https://github.com/test-kitchen/kitchen-docker
-kitchen converge
+
 kitchen list
-kitchen verify
-kitchen destroy
+kitchen test
 ```
 
 ## kitchen digitalocean deployment
@@ -60,10 +59,8 @@ export KITCHEN_YAML=".kitchen_digitalocean.yml"
 export DIGITALOCEAN_ACCESS_TOKEN="1234"
 export DIGITALOCEAN_SSH_KEY_IDS="1234, 5678"
 
-kitchen converge
 kitchen list
-kitchen verify
-kitchen destroy
+kitchen test
 
 - TODO: how does the ssh key work? With which OS user, and where the key is?
 ```
@@ -98,10 +95,8 @@ export AWS_SSH_KEY_ID="$KEY_USER"
 # Update bundle: https://github.com/chef/chef-provisioning/issues/151
 bundle update
 
-kitchen converge
 kitchen list
-kitchen verify
-kitchen destroy
+kitchen test
 ```
 
 ## kitchen vagrant deployment
@@ -112,10 +107,8 @@ export KITCHEN_YAML=".kitchen_vagrant.yml"
 
 bundle install
 
-kitchen converge
 kitchen list
-kitchen verify
-kitchen destroy
+kitchen test
 ```
 
 # More Resources
