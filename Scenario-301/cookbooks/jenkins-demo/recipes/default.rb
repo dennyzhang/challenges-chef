@@ -12,6 +12,7 @@
 include_recipe 'jenkins-demo::master'
 
 if platform_family?('debian')
+  # Install iproute2 for ss package
   %w[lsof iproute2].each do |x|
     package x do
       action :install
@@ -19,7 +20,7 @@ if platform_family?('debian')
     end
   end
 else
-  %w[lsof iproute2].each do |x|
+  %w[lsof].each do |x|
     package x do
       action :install
       # TODO: change this
