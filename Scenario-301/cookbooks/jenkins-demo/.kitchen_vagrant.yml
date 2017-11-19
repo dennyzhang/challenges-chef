@@ -37,6 +37,12 @@ suites:
       - recipe[jenkins-demo::conf_job]
     attributes:
         {jenkins_demo:
-                {jenkins_jobs: 'CommonServerCheckRepo'
+                {jenkins_jobs: 'CommonServerCheckRepo',
+                slack_teamdomain: 'mywechat',
+                slack_authtoken: '<%= ENV.fetch('SLACK_TOKEN', "") %>',
+                # TODO different env use different port
+                # TODO use server ip
+                slack_buildserverurl: 'http://localhost:<%= ENV.fetch('DOCKER_PORT_FORWARD_PREFIX', "180") %>80/',
+                slack_room: '#denny-alerts'
                 }
         }

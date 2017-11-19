@@ -45,6 +45,8 @@ bundle install
 ```
 # https://github.com/test-kitchen/kitchen-docker
 
+# Customize this, if you need to enable jenkins slack notification
+export SLACK_TOKEN="XXXX"
 kitchen list
 kitchen test
 ```
@@ -59,6 +61,8 @@ export KITCHEN_YAML=".kitchen_digitalocean.yml"
 export DIGITALOCEAN_ACCESS_TOKEN="1234"
 export DIGITALOCEAN_SSH_KEY_IDS="1234, 5678"
 
+# Customize this, if you need to enable jenkins slack notification
+export SLACK_TOKEN="XXXX"
 kitchen list
 kitchen test
 
@@ -95,6 +99,8 @@ export AWS_SSH_KEY_ID="$KEY_USER"
 # Update bundle: https://github.com/chef/chef-provisioning/issues/151
 bundle update
 
+# Customize this, if you need to enable jenkins slack notification
+export SLACK_TOKEN="XXXX"
 kitchen list
 kitchen test
 ```
@@ -107,6 +113,8 @@ export KITCHEN_YAML=".kitchen_vagrant.yml"
 
 bundle install
 
+# Customize this, if you need to enable jenkins slack notification
+export SLACK_TOKEN="XXXX"
 kitchen list
 kitchen test
 ```

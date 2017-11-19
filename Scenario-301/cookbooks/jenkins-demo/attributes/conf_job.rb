@@ -8,7 +8,7 @@
 
 default['jenkins_demo']['jenkins_jobs'] = ''
 # slack notification
-default['jenkins_demo']['slack_authtoken'] = ''
 default['jenkins_demo']['slack_teamdomain'] = ''
+default['jenkins_demo']['slack_authtoken'] = ''
 default['jenkins_demo']['slack_buildserverurl'] = ''
 default['jenkins_demo']['slack_room'] = ''

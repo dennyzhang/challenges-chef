@@ -112,10 +112,10 @@ bash -e /var/lib/jenkins/serverspec_check.sh</command>
       <maxSchedule>1</maxSchedule>
     </com.chikli.hudson.plugin.naginator.NaginatorPublisher>
     <jenkins.plugins.slack.SlackNotifier plugin="slack@2.0.1">
-      <teamDomain>testdomain</teamDomain>
-      <authToken>test</authToken>
-      <buildServerUrl>http://test:18080/</buildServerUrl>
-      <room>#test</room>
+      <teamDomain><%= node['jenkins_demo']['slack_teamdomain'] %></teamDomain>
+      <authToken><%= node['jenkins_demo']['slack_authtoken'] %></authToken>
+      <buildServerUrl><%= node['jenkins_demo']['slack_buildserverurl'] %></buildServerUrl>
+      <room><%= node['jenkins_demo']['slack_room'] %></room>
       <startNotification>false</startNotification>
       <notifySuccess>false</notifySuccess>
       <notifyAborted>false</notifyAborted>
