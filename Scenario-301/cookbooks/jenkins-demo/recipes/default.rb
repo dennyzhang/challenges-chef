@@ -11,9 +11,19 @@
 
 include_recipe 'jenkins-demo::master'
 
-%w[lsof iproute2].each do |x|
-  package x do
-    action :install
-    not_if "dpkg -l #{x} | grep -E '^ii'"
+if platform_family?('debian')
+  %w[lsof iproute2].each do |x|
+    package x do
+      action :install
+      not_if "dpkg -l #{x} | grep -E '^ii'"
+    end
+  end
+else
+  %w[lsof iproute2].each do |x|
+    package x do
+      action :install
+      # TODO: change this
+      # not_if "dpkg -l #{x} | grep -E '^ii'"
+    end
   end
 end
