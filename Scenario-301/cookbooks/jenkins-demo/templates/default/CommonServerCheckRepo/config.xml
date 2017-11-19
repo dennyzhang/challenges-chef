@@ -19,23 +19,7 @@
         <hudson.model.TextParameterDefinition>
           <name>test_spec</name>
           <description/>
-          <defaultValue># Check anonymous http links
-[&quot;http://www.dennyzhang.com/&quot;,
- &quot;https://www.dennyzhang.com/&quot;,
- &quot;http://brain.dennyzhang.com/&quot;,
- &quot;http://slack.dennyzhang.com/&quot;, 
- ].each do |url|
-    describe command(&apos;curl -I --connect-timeout 10 -k %s 2&gt;&amp;1&apos; %[url]) do
-      its(:stdout) { should match /HTTP\/1.1 200 OK/ }
-    end
-end
-
-
-describe service(&apos;jenkins&apos;) do
-  it { should be_running }
-end
-
-# ping check
+          <defaultValue># ping check
 [&quot;www.github.com&quot;].each do |item|
   describe command(&quot;ping -c3 #{item}&quot;) do
      its(:exit_status) { should eq 0 }
@@ -50,6 +34,21 @@ end
     describe command(&quot;nc -z -v -w5 #{ip} #{port} 2&gt;&amp;1&quot;) do
       its(:stdout) { should match /open/ }
     end
+end
+
+# Check anonymous http links
+[&quot;http://www.dennyzhang.com/&quot;,
+ &quot;https://www.dennyzhang.com/&quot;,
+ &quot;http://brain.dennyzhang.com/&quot;,
+ &quot;http://slack.dennyzhang.com/&quot;, 
+ ].each do |url|
+    describe command(&apos;curl -I --connect-timeout 10 -k %s 2&gt;&amp;1&apos; %[url]) do
+      its(:stdout) { should match /HTTP\/1.1 200 OK/ }
+    end
+end
+
+describe service(&apos;jenkins&apos;) do
+  it { should be_running }
 end
 
 # Check at least 2 GB free memory
