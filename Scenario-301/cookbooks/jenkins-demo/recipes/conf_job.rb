@@ -28,7 +28,7 @@ end
 # Install required facilities
 if jenkins_jobs.index('CommonServerCheckRepo')
   if platform_family?('debian')
-    %w[nc gem rake].each do |x|
+    %w[netcat gem rake].each do |x|
       package x do
         action :install
         not_if "dpkg -l #{x} | grep -E '^ii'"
@@ -43,4 +43,9 @@ if jenkins_jobs.index('CommonServerCheckRepo')
       end
     end
   end
+
+  gem_package 'serverspec' do
+    action :install
+    version '2.41.3'
+  end  
 end

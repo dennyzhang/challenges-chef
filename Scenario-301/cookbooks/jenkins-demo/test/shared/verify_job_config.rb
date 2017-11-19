@@ -13,10 +13,6 @@ jenkins_jobs = \
   chef_data.fetch('jenkins_demo').fetch('jenkins_jobs')
 
 if jenkins_jobs.index('CommonServerCheckRepo')
-  describe command('nc -version') do
-    its(:stderr) { should contain '6.40' }
-  end
-
   describe command('gem --version') do
     its(:stdout) { should contain '2.0.14' }
   end
@@ -27,5 +23,9 @@ if jenkins_jobs.index('CommonServerCheckRepo')
 
   describe command('gem list | grep serverspec') do
     its(:stdout) { should contain '2.41.3' }
+  end
+
+  describe command('which n') do
+    its(:exit_status) { should eq 0 }
   end
 end
