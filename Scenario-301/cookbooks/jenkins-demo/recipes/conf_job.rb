@@ -28,7 +28,19 @@ end
 # Install required facilities
 if jenkins_jobs.index('CommonServerCheckRepo')
   if platform_family?('debian')
-    %w[netcat gem rake].each do |x|
+
+    # https://www.brightbox.com/blog/2017/01/13/ruby-2-4-ubuntu-packages/
+    apt_repository 'ruby-repo' do
+      uri 'ppa:brightbox/ruby-ng'
+      distribution node['lsb']['codename']
+      key 'C3173AA6'
+      keyserver 'keyserver.ubuntu.com'
+      retries 3
+      retry_delay 3
+      not_if { ::File.exist?('/etc/apt/sources.list.d/ruby-repo.list') }
+    end
+    
+    %w[ruby2.4 ruby2.4-dev netcat gem rake].each do |x|
       package x do
         action :install
         not_if "dpkg -l #{x} | grep -E '^ii'"
@@ -44,6 +56,7 @@ if jenkins_jobs.index('CommonServerCheckRepo')
     end
   end
 
+  # TODO: keep the gem install minimal
   gem_package 'serverspec' do
     action :install
     version '2.41.3'

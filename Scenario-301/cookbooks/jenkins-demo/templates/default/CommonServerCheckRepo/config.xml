@@ -112,10 +112,10 @@ bash -e /var/lib/jenkins/serverspec_check.sh</command>
       <maxSchedule>1</maxSchedule>
     </com.chikli.hudson.plugin.naginator.NaginatorPublisher>
     <jenkins.plugins.slack.SlackNotifier plugin="slack@2.0.1">
-      <teamDomain>totvslabs</teamDomain>
-      <authToken>KcJYiuEaFzgAx22cDreRfUkN</authToken>
-      <buildServerUrl>http://repo.carol.ai:18080/</buildServerUrl>
-      <room>#carol-alerts</room>
+      <teamDomain>testdomain</teamDomain>
+      <authToken>test</authToken>
+      <buildServerUrl>http://test:18080/</buildServerUrl>
+      <room>#test</room>
       <startNotification>false</startNotification>
       <notifySuccess>false</notifySuccess>
       <notifyAborted>false</notifyAborted>
