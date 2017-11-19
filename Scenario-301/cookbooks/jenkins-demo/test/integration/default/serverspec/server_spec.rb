@@ -16,12 +16,6 @@ describe command('chef-solo --version') do
   its(:stdout) { should contain '13.6.4' }
 end
 
-%w[8080].each do |port|
-  describe port(port) do
-    it { should be_listening }
-  end
-end
-
 if %w[redhat centos].include?(os[:family])
   describe command('yum info jenkins') do
     its(:stdout) { should contain '2.73.3' }
@@ -30,5 +24,11 @@ elsif %w[debian ubuntu].include?(os[:family])
   # debian related environment spec
   describe command('dpkg -l | grep jenkins') do
     its(:stdout) { should contain '2.90' }
+  end
+end
+
+%w[8080].each do |port|
+  describe port(port), wait: { timeout: 30 } do
+    it { should be_listening }
   end
 end
