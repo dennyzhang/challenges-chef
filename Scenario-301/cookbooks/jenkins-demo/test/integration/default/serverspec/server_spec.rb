@@ -22,7 +22,7 @@ end
   end
 end
 
-if os[:family] == 'redhat'
+if %w[redhat centos].include?(os[:family])
   describe command('yum info jenkins') do
     its(:stdout) { should contain '2.73.3' }
   end
