@@ -11,4 +11,4 @@ default['jenkins_plugins'] = {
   'script-security' => '1.35'
 }
 
-default['jenkins_demo']['jenkins_jobs'] = 'TailLogfile'
+default['jenkins_demo']['jenkins_jobs'] = ''

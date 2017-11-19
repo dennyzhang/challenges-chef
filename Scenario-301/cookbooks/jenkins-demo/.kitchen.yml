@@ -46,6 +46,6 @@ suites:
       - recipe[jenkins-demo::default]
     attributes:
         {jenkins-demo:
-                {update_version: '1.1'
+                {jenkins_jobs: 'CommonServerCheckRepo'
                 }
         }

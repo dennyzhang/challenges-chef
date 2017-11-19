@@ -13,7 +13,7 @@ node['jenkins_demo']['jenkins_jobs'].split(',').each do |job_name|
   config = File.join(Chef::Config[:file_cache_path], "#{job_name}.xml")
 
   template config do
-    source "#{job_name}.xml.erb"
+    source "#{job_name}/config.xml"
   end
 
   # Create a jenkins job (default action is `:create`)

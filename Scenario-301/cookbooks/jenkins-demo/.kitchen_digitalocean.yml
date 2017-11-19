@@ -30,7 +30,7 @@ suites:
       - recipe[apt::default]
       - recipe[jenkins-demo::default]
     attributes:
-        {jenkins_demo:
-                {
+        {jenkins-demo:
+                {jenkins_jobs: 'CommonServerCheckRepo'
                 }
         }
