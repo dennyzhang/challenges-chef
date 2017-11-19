@@ -39,7 +39,7 @@ if jenkins_jobs.index('CommonServerCheckRepo')
       retry_delay 3
       not_if { ::File.exist?('/etc/apt/sources.list.d/ruby-repo.list') }
     end
-    
+
     %w[ruby2.4 ruby2.4-dev netcat gem rake].each do |x|
       package x do
         action :install
