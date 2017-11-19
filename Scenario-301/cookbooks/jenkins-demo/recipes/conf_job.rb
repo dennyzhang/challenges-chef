@@ -56,7 +56,15 @@ if jenkins_jobs.index('CommonServerCheckRepo')
     end
   end
 
-  # TODO: keep the gem install minimal: --no-ri --no-rdoc
+  # keep the gem installation minimal: --no-ri --no-rdoc
+  # https://coderwall.com/p/spo6bq/default-no-ri-no-rdoc-on-ruby-gem-installation
+  file '/root/.gemrc' do
+    content 'gem: --no-ri --no-rdoc'
+    mode o0755
+    owner 'root'
+    group 'root'
+  end
+
   gem_package 'serverspec' do
     action :install
     version '2.41.3'
