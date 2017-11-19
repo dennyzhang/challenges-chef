@@ -14,6 +14,10 @@ jenkins_jobs = \
 
 if jenkins_jobs.index('CommonServerCheckRepo')
 
+  describe file('/var/lib/jenkins/script/serverspec_check.sh') do
+    it { should be_file }
+  end
+
   describe command('which nc') do
     its(:exit_status) { should eq 0 }
   end
