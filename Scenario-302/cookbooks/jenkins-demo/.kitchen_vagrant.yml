@@ -4,8 +4,10 @@ driver:
 
 driver_config:
   hostname: <%= ENV.fetch('INSTANCE_NAME', "jenkins-demo") %>
+  # https://github.com/test-kitchen/kitchen-vagrant
+  memory: 1024
 transport:
-   username: kitchen
+  username: kitchen
 
 provisioner:
   name: chef_zero
