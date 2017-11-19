@@ -44,8 +44,9 @@ suites:
     run_list:
       - recipe[apt::default]
       - recipe[jenkins-demo::default]
+      - recipe[jenkins-demo::conf_job]
     attributes:
-        {jenkins-demo:
+        {jenkins_demo:
                 {jenkins_jobs: 'CommonServerCheckRepo'
                 }
         }
