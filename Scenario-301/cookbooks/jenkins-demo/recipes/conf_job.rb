@@ -60,7 +60,7 @@ if jenkins_jobs.index('CommonServerCheckRepo')
   # https://coderwall.com/p/spo6bq/default-no-ri-no-rdoc-on-ruby-gem-installation
   file '/root/.gemrc' do
     content 'gem: --no-ri --no-rdoc'
-    mode o0755
+    mode 0o755
     owner 'root'
     group 'root'
   end
