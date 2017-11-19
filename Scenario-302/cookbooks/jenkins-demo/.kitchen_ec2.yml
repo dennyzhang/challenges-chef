@@ -5,7 +5,7 @@ driver:
 
 transport:
   ssh_key: ~/.ssh/<%= ENV.fetch('KEY_USER', "") %>
-  username: ["ec2-user"]
+  username: ["ubuntu", "ec2-user"]
 
 provisioner:
   name: chef_zero
