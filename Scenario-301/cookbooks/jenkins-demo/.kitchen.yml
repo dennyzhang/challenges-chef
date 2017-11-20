@@ -54,7 +54,7 @@ suites:
                 # TODO use server ip
                 slack_buildserverurl: 'http://localhost:<%= ENV.fetch('DOCKER_PORT_FORWARD_PREFIX', "180") %>80/',
                 slack_room: '#denny-alerts',
-                default_username: '<%= ENV.fetch('JENKINS_DEFAULT_USERNAME', "user123") %>',
+                default_username: '<%= ENV.fetch('JENKINS_DEFAULT_USERNAME', "usertest123") %>',
                 default_password: '<%= ENV.fetch('JENKINS_DEFAULT_PASSWORD', "password123") %>'
                 }
         }

@@ -50,10 +50,21 @@ end
 end
 
 # Create password credentials
-if node['jenkins_demo']['default_username'] != ''
-  jenkins_password_credentials node['jenkins_demo']['default_username'] do
-    id node['jenkins_demo']['default_username']
-    description node['jenkins_demo']['default_username']
-    password node['jenkins_demo']['default_password']
+username = node['jenkins_demo']['default_username']
+password = node['jenkins_demo']['default_password']
+if username != ''
+  jenkins_script "add_user #{username}" do
+    command <<-EOH.gsub(/^ {4}/, '')
+    import jenkins.model.*
+    import hudson.security.*
+
+    def instance = Jenkins.getInstance()
+
+    def hudsonRealm = new HudsonPrivateSecurityRealm(false)
+    hudsonRealm.createAccount("#{username}", "#{password}")
+    instance.setSecurityRealm(hudsonRealm)
+    instance.save()
+    EOH
+    not_if "test -d /var/lib/jenkins/users/#{username}"
   end
 end
