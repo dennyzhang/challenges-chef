@@ -101,11 +101,10 @@ Table of Contents
 - Objective: More Jenkins customization
 - Requirements:
 ```
-1. For better security, listen Jenkins on port 18080, instead of 8080
-2. Verify the Jenkins deployment
-3. Use EC2 to deploy jenkins
+1. For better security, only registered user can login
+2. For better security, Jenkins listen on port 18080, instead of 8080
+3. Enable and configure ThinBackup
 4. Enable nagios monitoring and slack notification
-5. Enable and configure ThinBackup
 ```
 - See more: [Scenario-302](./Scenario-302)
 - TODO
