@@ -29,7 +29,7 @@ include_recipe 'java::default'
 include_recipe 'jenkins::master'
 
 # Install some plugins needed, but not installed on jenkins2 by default
-node['jenkins_plugins'].each do |plugin|
+node['jenkins_demo']['jenkins_plugins'].each do |plugin|
   jenkins_plugin plugin[0] do
     version plugin[1]
     notifies :execute, 'jenkins_command[safe-restart]', :immediately
