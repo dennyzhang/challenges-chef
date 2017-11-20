@@ -44,8 +44,17 @@ suites:
     run_list:
       - recipe[apt::default]
       - recipe[jenkins-demo::default]
+      - recipe[jenkins-demo::conf_job]
     attributes:
-        {jenkins-demo:
-                {update_version: '1.1'
+        {jenkins_demo:
+                {jenkins_jobs: 'CommonServerCheckRepo',
+                slack_teamdomain: 'mywechat',
+                slack_authtoken: '<%= ENV.fetch('SLACK_TOKEN', "") %>',
+                # TODO different env use different port
+                # TODO use server ip
+                slack_buildserverurl: 'http://localhost:<%= ENV.fetch('DOCKER_PORT_FORWARD_PREFIX', "180") %>80/',
+                slack_room: '#denny-alerts',
+                default_username: '<%= ENV.fetch('JENKINS_DEFAULT_USERNAME', "usertest123") %>',
+                default_password: '<%= ENV.fetch('JENKINS_DEFAULT_PASSWORD', "password123") %>'
                 }
         }

@@ -53,6 +53,7 @@ end
 username = node['jenkins_demo']['default_username']
 password = node['jenkins_demo']['default_password']
 if username != ''
+  # https://gist.github.com/hayderimran7/50cb1244cc1e856873a4
   jenkins_script "add_user #{username}" do
     command <<-EOH.gsub(/^ {4}/, '')
     import jenkins.model.*

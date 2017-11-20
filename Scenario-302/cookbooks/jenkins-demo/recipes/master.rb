@@ -29,7 +29,7 @@ include_recipe 'java::default'
 include_recipe 'jenkins::master'
 
 # Install some plugins needed, but not installed on jenkins2 by default
-node['jenkins_plugins'].each do |plugin|
+node['jenkins_demo']['jenkins_plugins'].each do |plugin|
   jenkins_plugin plugin[0] do
     version plugin[1]
     notifies :execute, 'jenkins_command[safe-restart]', :immediately
@@ -38,4 +38,34 @@ end
 
 jenkins_command 'safe-restart' do
   action :nothing
+end
+
+%w[/var/lib/jenkins/script].each do |x|
+  directory x do
+    owner 'jenkins'
+    group 'jenkins'
+    mode 0o755
+    action :create
+  end
+end
+
+# Create password credentials
+username = node['jenkins_demo']['default_username']
+password = node['jenkins_demo']['default_password']
+if username != ''
+  # https://gist.github.com/hayderimran7/50cb1244cc1e856873a4
+  jenkins_script "add_user #{username}" do
+    command <<-EOH.gsub(/^ {4}/, '')
+    import jenkins.model.*
+    import hudson.security.*
+
+    def instance = Jenkins.getInstance()
+
+    def hudsonRealm = new HudsonPrivateSecurityRealm(false)
+    hudsonRealm.createAccount("#{username}", "#{password}")
+    instance.setSecurityRealm(hudsonRealm)
+    instance.save()
+    EOH
+    not_if "test -d /var/lib/jenkins/users/#{username}"
+  end
 end

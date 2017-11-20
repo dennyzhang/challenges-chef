@@ -1,6 +1,12 @@
 # -*- encoding: utf-8 -*-
 
-default['jenkins_plugins'] = {
+#
+# Copyright 2017, DennyZhang.com
+#
+# All rights reserved - Do Not Redistribute
+#
+
+default['jenkins_demo']['jenkins_plugins'] = {
   'thinBackup' => '1.9',
   # TODO
   # 'command-launcher' => '1.0',
@@ -11,4 +17,6 @@ default['jenkins_plugins'] = {
   'script-security' => '1.35'
 }
 
-default['jenkins_demo']['jenkins_jobs'] = 'TailLogfile'
+########################################
+default['jenkins_demo']['default_username'] = ''
+default['jenkins_demo']['default_password'] = ''
