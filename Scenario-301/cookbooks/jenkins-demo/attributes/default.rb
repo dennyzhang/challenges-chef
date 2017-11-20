@@ -6,7 +6,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-default['jenkins_plugins'] = {
+default['jenkins_demo']['jenkins_plugins'] = {
   'thinBackup' => '1.9',
   # TODO
   # 'command-launcher' => '1.0',
@@ -16,3 +16,7 @@ default['jenkins_plugins'] = {
   'slack' => '2.3',
   'script-security' => '1.35'
 }
+
+########################################
+default['jenkins_demo']['default_username'] = ''
+default['jenkins_demo']['default_password'] = ''

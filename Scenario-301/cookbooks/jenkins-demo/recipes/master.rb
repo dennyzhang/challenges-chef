@@ -48,3 +48,12 @@ end
     action :create
   end
 end
+
+# Create password credentials
+if node['jenkins_demo']['default_username'] != ''
+  jenkins_password_credentials node['jenkins_demo']['default_username'] do
+    id node['jenkins_demo']['default_username']
+    description node['jenkins_demo']['default_username']
+    password node['jenkins_demo']['default_password']
+  end
+end
