@@ -17,8 +17,8 @@ Table of Contents
 # Requirement
 
 1. Test 2 nodes jenkins cluster deployment in docker
-2. Verify the deployment
-3. Support deploy to both docker and EC2
+2. Use Jenkinsfile to configure Jenkins
+3. Define Jenkins pipeline
 
 # Procedure
 - Start docker-compose env

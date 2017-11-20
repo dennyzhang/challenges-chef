@@ -104,7 +104,7 @@ Table of Contents
 1. For better security, only registered user can login
 2. For better security, Jenkins listen on port 18080, instead of 8080
 3. Enable and configure ThinBackup
-4. Enable nagios monitoring and slack notification
+4. When Jenkins is down, get alerts
 ```
 - See more: [Scenario-302](./Scenario-302)
 - TODO
@@ -114,8 +114,8 @@ Table of Contents
 - Requirements:
 ```
 1. Test 2 nodes jenkins cluster deployment in docker
-2. Verify the deployment
-3. Support deploy to both docker and EC2
+2. Use Jenkinsfile to configure Jenkins
+3. Define Jenkins pipeline
 ```
 - See more: [Scenario-303](./Scenario-303)
 - TODO

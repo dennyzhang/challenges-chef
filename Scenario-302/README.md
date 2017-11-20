@@ -18,7 +18,7 @@ Table of Contents
 1. For better security, only registered user can login
 2. For better security, Jenkins listen on port 18080, instead of 8080
 3. Enable and configure ThinBackup
-4. Enable nagios monitoring and slack notification
+4. When Jenkins is down, get alerts
 
 # Procedure
 ## Common Setup

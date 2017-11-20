@@ -37,3 +37,16 @@ port = 8080
 describe port(port), wait: { timeout: 60 } do
   it { should be_listening }
 end
+
+#############################################################################
+require 'json'
+
+chef_data = JSON.parse(IO.read('/tmp/kitchen/dna.json'))
+username = \
+  chef_data.fetch('jenkins_demo').fetch('default_username')
+
+if username != ''
+  describe file("/var/lib/jenkins/users/#{username}") do
+    it { should be_directory }
+  end
+end
