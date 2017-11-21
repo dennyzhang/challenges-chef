@@ -21,7 +21,7 @@ Table of Contents
       * [Scenario-301: Use Chef To Deploy Jenkins I](#scenario-301-use-chef-to-deploy-jenkins-i)
       * [Scenario-302: Use Chef To Deploy Jenkins II](#scenario-302-use-chef-to-deploy-jenkins-ii)
       * [Scenario-303: Use Chef To Deploy Jenkins II](#scenario-303-use-chef-to-deploy-jenkins-ii)
-   * [More Resources](#more-resources)
+   * [Highlights](#highlights)
    * [Contributors: Give People Credits](#contributors-give-people-credits)
    * [License](#license)
 
@@ -121,7 +121,8 @@ Table of Contents
 
 <a href="https://www.dennyzhang.com"><img align="right" width="200" height="183" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/magic.gif"></a>
 
-# More Resources
+# Highlights
+- More Resources:
 
 # Contributors: Give People Credits
 Below are folks who have contributed via GitHub!
