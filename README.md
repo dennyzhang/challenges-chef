@@ -1,4 +1,4 @@
-# chef-study: Case study from dummy to pro
+# chef-study: Chef Case study from dummy to pro
 
 [![Build Status](https://travis-ci.org/DennyZhang/chef-study.svg?branch=master)](https://travis-ci.org/DennyZhang/chef-study) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
@@ -117,6 +117,7 @@ Table of Contents
 2. Use Jenkinsfile to configure Jenkins
 3. Define Jenkins pipeline
 ```
+![scenario-303-design.png](./images/scenario-303-design.png)
 - See more: [Scenario-303](./Scenario-303)
 - TODO
 
