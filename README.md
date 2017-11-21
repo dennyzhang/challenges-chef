@@ -57,9 +57,9 @@ Table of Contents
 2. Install and configure knife
 3. From knife node run chef deployment in chef client node
 ```
+<a href="https://www.dennyzhang.com"><img src="https://raw.githubusercontent.com/DennyZhang/chef-study/master/images/scenario-103-design.png"/> </a>
 - See more: [Scenario-103](./Scenario-103)
 - TODO
-<a href="https://www.dennyzhang.com"><img src="https://raw.githubusercontent.com/DennyZhang/chef-study/master/images/scenario-103-design.png"/> </a>
 
 ## Scenario-201: Enforce TDD For Your Chef Cookbooks I
 - Objective: Test your cookbooks. Run kitchen docker in your laptop.
