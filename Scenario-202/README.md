@@ -15,7 +15,7 @@ Table of Contents
       * [kitchen ec2 deployment](#kitchen-ec2-deployment)
       * [kitchen vagrant deployment](#kitchen-vagrant-deployment)
 
-![scenario-202-design.png](../images/scenario-202-design.png)
+<a href="https://www.dennyzhang.com"><img src="https://raw.githubusercontent.com/DennyZhang/chef-study/master/images/scenario-202-design.png"/> </a>
 
 <a href="https://www.dennyzhang.com"><img align="right" width="185" height="37" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns_small.png"></a>
 

@@ -59,8 +59,7 @@ Table of Contents
 ```
 - See more: [Scenario-103](./Scenario-103)
 - TODO
-
-![scenario-103-design.png](./images/scenario-103-design.png)
+<a href="https://www.dennyzhang.com"><img src="https://raw.githubusercontent.com/DennyZhang/chef-study/master/images/scenario-103-design.png"/> </a>
 
 ## Scenario-201: Enforce TDD For Your Chef Cookbooks I
 - Objective: Test your cookbooks. Run kitchen docker in your laptop.
@@ -71,8 +70,7 @@ Table of Contents
 ```
 - See more: [Scenario-201](./Scenario-201)
 
-![scenario-201-design.png](./images/scenario-201-design.png)
-
+<a href="https://www.dennyzhang.com"><img src="https://raw.githubusercontent.com/DennyZhang/chef-study/master/images/scenario-201-design.png"/> </a>
 ## Scenario-202: Enforce TDD For Your Chef Cookbooks II
 - Objective: Deploy for 3 scenarios: docker, local VM and public cloud
 - Requirements:
@@ -83,7 +81,7 @@ Table of Contents
 ```
 - See more: [Scenario-202](./Scenario-202)
 
-![scenario-202-design.png](./images/scenario-202-design.png)
+<a href="https://www.dennyzhang.com"><img src="https://raw.githubusercontent.com/DennyZhang/chef-study/master/images/scenario-202-design.png"/> </a>
 
 ## Scenario-301: Use Chef To Deploy Jenkins I
 - Objective: Use chef to deploy one common service for real
@@ -117,7 +115,7 @@ Table of Contents
 2. Use Jenkinsfile to configure Jenkins
 3. Define Jenkins pipeline
 ```
-![scenario-303-design.png](./images/scenario-303-design.png)
+<a href="https://www.dennyzhang.com"><img src="https://raw.githubusercontent.com/DennyZhang/chef-study/master/images/scenario-303-design.png"/> </a>
 - See more: [Scenario-303](./Scenario-303)
 - TODO
 
