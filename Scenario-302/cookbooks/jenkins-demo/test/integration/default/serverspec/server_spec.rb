@@ -23,7 +23,7 @@ if %w[redhat centos].include?(os[:family])
 elsif %w[debian ubuntu].include?(os[:family])
   # debian related environment spec
   describe command('dpkg -l | grep jenkins') do
-    its(:stdout) { should contain '2.90' }
+    its(:stdout) { should contain '2.91' }
   end
 end
 
@@ -32,16 +32,16 @@ end
 require_relative '../../../kitchen/data/verify_job_config'
 
 #############################################################################
-port = 8080
+require 'json'
+chef_data = JSON.parse(IO.read('/tmp/kitchen/dna.json'))
+
+jenkins_port = chef_data.fetch('jenkins_demo').fetch('jenkins_port')
 # Wait for service slow start/restart
-describe port(port), wait: { timeout: 60 } do
+describe port(jenkins_port), wait: { timeout: 60 } do
   it { should be_listening }
 end
 
 #############################################################################
-require 'json'
-
-chef_data = JSON.parse(IO.read('/tmp/kitchen/dna.json'))
 username = chef_data.fetch('jenkins_demo').fetch('default_username')
 
 if username != ''
