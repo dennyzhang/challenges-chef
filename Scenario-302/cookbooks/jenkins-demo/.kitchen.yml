@@ -31,13 +31,13 @@ platforms:
       image: <%= ENV.fetch('IMAGE_NAME', "dokken/centos-7") %>
       pid_one_command: /usr/lib/systemd/systemd
       forward:
-        - <%= ENV.fetch('DOCKER_PORT_FORWARD_PREFIX', "180") %>81:8081
+        - <%= ENV.fetch('DOCKER_PORT_FORWARD_PREFIX', "180") %>83:8081
   - name: ubuntu-14.04
     driver_config:
       instance_name: <%= ENV.fetch('INSTANCE_NAME', "jenkins-demo-ubuntu1404") %>
       image: <%= ENV.fetch('IMAGE_NAME', "ubuntu:14.04") %>
       forward:
-        - <%= ENV.fetch('DOCKER_PORT_FORWARD_PREFIX', "280") %>81:8081
+        - <%= ENV.fetch('DOCKER_PORT_FORWARD_PREFIX', "280") %>83:8081
 
 suites:
   - name: default
