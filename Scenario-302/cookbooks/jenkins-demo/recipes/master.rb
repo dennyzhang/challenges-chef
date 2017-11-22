@@ -25,6 +25,8 @@ end
 
 node.default['jenkins']['executor']['timeout'] = 360
 
+node.default['jenkins']['master']['port'] = node['jenkins_demo']['jenkins_port']
+
 include_recipe 'java::default'
 include_recipe 'jenkins::master'
 
