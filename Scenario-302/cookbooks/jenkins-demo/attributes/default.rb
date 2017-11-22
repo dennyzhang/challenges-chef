@@ -54,4 +54,10 @@ n2DMrFzhp1H6neUFMBeNOw+fQuhPj6OcLrs4dRdyQhVRp0ZOJyLMS39e
 -----END RSA PRIVATE KEY-----'
 
 default['jenkins_demo']['chef_public_key'] = \
-'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDp8jBQrFleAqoQTocIz3h4QR5D6f2Yakqf4KIoTEj3uZC2Kji7MH/gDupVd8FhpraNs9nMPpsO8Zyjzy+B4O5EHm02H+xEEPdPsv0LE0gan2Awyy61GmvAjkwRSwMMVcwqjlmKelF71+53lQE6YQcrS+NFVKAtUIZh2/+JdoEpjd94fxriBS5POR1tS2hQwBRN83J6+FR8tEpJaOvn5/uSthhOomkzspQAv17Z1gyOSPcd7uCIzi6I+0BCcxhyzJ682CkzS4qenr6k/NMxKRI2ne4grppDiVHzSUR+rx9HCrOwi4l1FP/6Iml3pcXz4ZLI63+0SHVE+IQqIYcumZkZ mac@Denny-mac.local'
+  'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDp8jBQrFleAqoQTocIz3h4QR5'\
+  'D6f2Yakqf4KIoTEj3uZC2Kji7MH/gDupVd8FhpraNs9nMPpsO8Zyjzy+B4O5EHm'\
+  '02H+xEEPdPsv0LE0gan2Awyy61GmvAjkwRSwMMVcwqjlmKelF71+53lQE6YQcrS'\
+  '+NFVKAtUIZh2/+JdoEpjd94fxriBS5POR1tS2hQwBRN83J6+FR8tEpJaOvn5/uS'\
+  'thhOomkzspQAv17Z1gyOSPcd7uCIzi6I+0BCcxhyzJ682CkzS4qenr6k/NMxKRI'\
+  '2ne4grppDiVHzSUR+rx9HCrOwi4l1FP/6Iml3pcXz4ZLI63+0SHVE+IQqIYcumZ'\
+  'kZ chef@mytest.com'
