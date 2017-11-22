@@ -21,13 +21,13 @@ platforms:
     driver_config:
       instance_name: <%= ENV.fetch('INSTANCE_NAME', "jenkins-demo-centos7") %>
       network:
-        - ["forwarded_port", {guest: 8080, host: 18080}]
+        - ["forwarded_port", {guest: 8081, host: 18081}]
   - name: ubuntu-14.04
     # https://stackoverflow.com/questions/38677059/port-forwarding-not-working-with-test-kitchen-and-vagrant
     driver_config:
       instance_name: <%= ENV.fetch('INSTANCE_NAME', "jenkins-demo-ubuntu1404") %>
       network:
-        - ["forwarded_port", {guest: 8080, host: 28080}]
+        - ["forwarded_port", {guest: 8081, host: 28081}]
 
 suites:
   - name: default
@@ -37,12 +37,13 @@ suites:
       - recipe[jenkins-demo::conf_job]
     attributes:
         {jenkins_demo:
-                {jenkins_jobs: 'CommonServerCheckRepo',
+                {jenkins_port: '8081',
+                jenkins_jobs: 'CommonServerCheckRepo',
                 slack_teamdomain: 'mywechat',
                 slack_authtoken: '<%= ENV.fetch('SLACK_TOKEN', "") %>',
                 # TODO different env use different port
                 # TODO use server ip
-                slack_buildserverurl: 'http://localhost:<%= ENV.fetch('DOCKER_PORT_FORWARD_PREFIX', "180") %>80/',
+                slack_buildserverurl: 'http://localhost:<%= ENV.fetch('DOCKER_PORT_FORWARD_PREFIX', "180") %>81/',
                 slack_room: '#denny-alerts',
                 default_username: '<%= ENV.fetch('JENKINS_DEFAULT_USERNAME', "usertest123") %>',
                 default_password: '<%= ENV.fetch('JENKINS_DEFAULT_PASSWORD', "password123") %>'
