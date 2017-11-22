@@ -32,16 +32,16 @@ end
 require_relative '../../../kitchen/data/verify_job_config'
 
 #############################################################################
-require 'json'
-
-chef_data = JSON.parse(IO.read('/tmp/kitchen/dna.json'))
-port = chef_data.fetch('jenkins_demo').fetch('jenkins_port')
+port = 8080
 # Wait for service slow start/restart
 describe port(port), wait: { timeout: 60 } do
   it { should be_listening }
 end
 
 #############################################################################
+require 'json'
+
+chef_data = JSON.parse(IO.read('/tmp/kitchen/dna.json'))
 username = chef_data.fetch('jenkins_demo').fetch('default_username')
 
 if username != ''
