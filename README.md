@@ -123,6 +123,9 @@ Table of Contents
 
 # Highlights
 - More Resources:
+```
+https://github.com/chef-cookbooks/jenkins
+```
 
 # Contributors: Give People Credits
 Below are folks who have contributed via GitHub!

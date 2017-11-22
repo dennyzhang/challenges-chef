@@ -52,7 +52,7 @@ end
 #   its(:exit_status) { should eq 0 }
 # end
 
-# TODO: enable this
+# TODO: support for both CentOS and Ubuntu OS
 # # Check remote tcp port
 # [&quot;vpn.dennyzhang.com:6188&quot;, # vpn
 #  &quot;www.dennyzhang.com:443&quot;, # ssl

@@ -14,7 +14,8 @@ default['jenkins_demo']['jenkins_plugins'] = {
   'credentials' => '2.1.16',
   'plain-credentials' => '1.4',
   'slack' => '2.3',
-  'script-security' => '1.35'
+  'script-security' => '1.35',
+  'matrix-auth' => '2.2'
 }
 
 ########################################
