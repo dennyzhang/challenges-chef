@@ -1,6 +1,7 @@
 AllCops:
   Exclude:
     - Berksfile
+    - attributes/default.rb
 
 Style/Next:
   Enabled: false

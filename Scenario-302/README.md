@@ -119,5 +119,6 @@ kitchen destroy
 ```
 
 # More Resources
-- jenkins cookbook: https://github.com/chef-cookbooks/jenkins
+- TODO: security improvement for the built-in chef user: attributes/default.rb
+
 <a href="https://www.dennyzhang.com"><img align="right" width="185" height="37" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns_small.png"></a>
