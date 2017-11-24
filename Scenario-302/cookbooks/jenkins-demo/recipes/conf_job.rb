@@ -47,12 +47,17 @@ if jenkins_jobs.index('CommonServerCheckRepo')
       end
     end
   else
-    %w[nc gem rake].each do |x|
+    %w[nc gem].each do |x|
       package x do
         action :install
         # TODO: change this
         # not_if "dpkg -l #{x} | grep -E '^ii'"
       end
+    end
+
+    gem_package 'rake' do
+      action :install
+      version '12.3.0'
     end
   end
 

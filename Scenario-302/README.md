@@ -20,6 +20,9 @@ Table of Contents
 3. Enable and configure ThinBackup
 4. When Jenkins is down, get alerts
 
+Quiz: 
+- Once I have enabled Jenkins security, how my chef update will work?
+
 # Procedure
 ## Common Setup
 - Install bundle
@@ -120,5 +123,10 @@ kitchen destroy
 
 # More Resources
 - TODO: security improvement for the built-in chef user: attributes/default.rb
+
+- Critical Info
+```
+CentOS Jenkins conf: /etc/sysconfig/jenkins
+```
 
 <a href="https://www.dennyzhang.com"><img align="right" width="185" height="37" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns_small.png"></a>
