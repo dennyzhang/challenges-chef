@@ -47,7 +47,7 @@ if jenkins_jobs.index('CommonServerCheckRepo')
       end
     end
   else
-    %w[nc gem].each do |x|
+    %w[nc gem ruby-devel].each do |x|
       package x do
         action :install
         # TODO: change this
