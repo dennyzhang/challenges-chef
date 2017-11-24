@@ -59,6 +59,11 @@ if jenkins_jobs.index('CommonServerCheckRepo')
       action :install
       version '12.3.0'
     end
+
+    gem_package 'io-console' do
+      action :install
+      version '0.4.6'
+    end
   end
 
   # keep the gem installation minimal: --no-ri --no-rdoc
