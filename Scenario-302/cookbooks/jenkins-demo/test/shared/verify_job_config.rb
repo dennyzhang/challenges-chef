@@ -32,7 +32,7 @@ if jenkins_jobs.index('CommonServerCheckRepo')
     end
 
     describe command('rake --version') do
-      its(:stdout) { should contain '0.9.6' }
+      its(:stdout) { should contain '12.3.0' }
     end
   elsif %w[debian ubuntu].include?(os[:family])
     # debian related environment spec
