@@ -101,6 +101,7 @@ end
   <builders>
     <hudson.tasks.Shell>
       <command>#!/bin/bash -ex
+export PATH=$PATH:/usr/local/bin/
 bash -e /var/lib/jenkins/script/serverspec_check.sh</command>
     </hudson.tasks.Shell>
   </builders>
