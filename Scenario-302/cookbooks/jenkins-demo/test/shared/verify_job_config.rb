@@ -4,6 +4,8 @@ require 'serverspec'
 
 # Required by serverspec
 set :backend, :exec
+# https://github.com/test-kitchen/test-kitchen/issues/469
+set :path, '/sbin:/usr/local/sbin:$PATH'
 
 #############################################################################
 require 'json'
