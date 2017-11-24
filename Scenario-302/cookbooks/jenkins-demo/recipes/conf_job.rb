@@ -27,6 +27,15 @@ end
 
 # Install required facilities
 if jenkins_jobs.index('CommonServerCheckRepo')
+  # keep the gem installation minimal: --no-ri --no-rdoc
+  # https://coderwall.com/p/spo6bq/default-no-ri-no-rdoc-on-ruby-gem-installation
+  file '/root/.gemrc' do
+    content 'gem: --no-ri --no-rdoc'
+    mode 0o755
+    owner 'root'
+    group 'root'
+  end
+  
   if platform_family?('debian')
 
     # https://www.brightbox.com/blog/2017/01/13/ruby-2-4-ubuntu-packages/
@@ -64,15 +73,6 @@ if jenkins_jobs.index('CommonServerCheckRepo')
       action :install
       version '0.4.6'
     end
-  end
-
-  # keep the gem installation minimal: --no-ri --no-rdoc
-  # https://coderwall.com/p/spo6bq/default-no-ri-no-rdoc-on-ruby-gem-installation
-  file '/root/.gemrc' do
-    content 'gem: --no-ri --no-rdoc'
-    mode 0o755
-    owner 'root'
-    group 'root'
   end
 
   gem_package 'serverspec' do
