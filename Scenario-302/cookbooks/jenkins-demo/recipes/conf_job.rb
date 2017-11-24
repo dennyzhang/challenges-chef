@@ -35,7 +35,7 @@ if jenkins_jobs.index('CommonServerCheckRepo')
     owner 'root'
     group 'root'
   end
-  
+
   if platform_family?('debian')
 
     # https://www.brightbox.com/blog/2017/01/13/ruby-2-4-ubuntu-packages/
