@@ -33,10 +33,9 @@ if jenkins_jobs.index('CommonServerCheckRepo')
       its(:stdout) { should contain '2.0.14' }
     end
 
-    # TODO: fix PATH issue: rake not found
-    # describe command('rake --version') do
-    #   its(:stdout) { should contain '12.3.0' }
-    # end
+    describe command('rake --version') do
+      its(:stdout) { should contain '12.3.0' }
+    end
   elsif %w[debian ubuntu].include?(os[:family])
     # debian related environment spec
     describe command('gem --version') do
