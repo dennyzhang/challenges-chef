@@ -69,9 +69,14 @@ if jenkins_jobs.index('CommonServerCheckRepo')
       version '12.3.0'
     end
 
-    gem_package 'io-console' do
-      action :install
-      version '0.4.6'
+    # gem_package 'io-console' do
+    #   action :install
+    #   version '0.4.6'
+    # end
+    execute 'Install io-console' do
+      command 'gem install io-console'
+      action :run
+      not_if 'gem list | grep io-console'
     end
   end
 
