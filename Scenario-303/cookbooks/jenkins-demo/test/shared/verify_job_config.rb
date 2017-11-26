@@ -59,3 +59,11 @@ end
 describe file('/var/lib/jenkins/plugins/cloudbees-folder/META-INF/MANIFEST.MF') do
   its(:content) { should contain 'Plugin-Version: 6.2.1' }
 end
+
+describe file('/var/lib/jenkins/plugins/credentials/META-INF/MANIFEST.MF') do
+  its(:content) { should contain 'Plugin-Version: 2.1.16' }
+end
+
+describe file('/var/lib/jenkins/plugins/plain-credentials/META-INF/MANIFEST.MF') do
+  its(:content) { should contain 'Plugin-Version: 1.4' }
+end
