@@ -28,6 +28,11 @@ Table of Contents
 
 <a href="https://www.dennyzhang.com"><img align="right" width="185" height="37" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns_small.png"></a>
 
+**Related GitHub Repos**:
+- [chef-study](https://github.com/DennyZhang/chef-study): Chef Case study from dummies to pros
+- [jenkins-groovy-study](https://github.com/DennyZhang/jenkins-groovy-study): Case Study: Use groovy and Pipeline in Jenkins as a Pro
+- [aws-jenkins-study](https://github.com/DennyZhang/aws-jenkins-study): Case Study Using AWS To Setup Jenkins.
+
 # Scenarios
 
 ## Scenario-101: Chef HelloWorld I
