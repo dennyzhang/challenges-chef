@@ -21,7 +21,6 @@ jenkins_pipeline_plugins = {
   'git' => '3.6.4',
   # upgrade or downgrade plugins
   'structs' => '1.10',
-  'git-client' => '2.6.0',
   'scm-api' => '2.2.5',
   ############################################
   # Install pipeline plugin
@@ -35,7 +34,8 @@ jenkins_pipeline_plugins = {
   'workflow-cps' => '2.41',
   'workflow-support' => '2.16',
   'credentials' => '2.1.16',
-  'plain-credentials' => '1.4'
+  'plain-credentials' => '1.4',
+  'git-client' => '2.6.0'
 }
 
 jenkins_pipeline_plugins.each do |plugin|

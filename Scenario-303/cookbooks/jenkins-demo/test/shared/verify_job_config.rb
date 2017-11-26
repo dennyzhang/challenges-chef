@@ -39,31 +39,19 @@ elsif %w[debian ubuntu].include?(os[:family])
   end
 end
 
+jenkins_plugins_versions = {
+  'workflow-cps' => '2.41',
+  'git' => '3.6.4',
+  'workflow-job' => '2.9',
+  'workflow-support' => '2.16',
+  'cloudbees-folder' => '6.2.1',
+  'credentials' => '2.1.16',
+  'plain-credentials' => '1.4',
+  'git-client' => '2.6.0'
+}
 # verify plugin version
-describe file('/var/lib/jenkins/plugins/workflow-cps/META-INF/MANIFEST.MF') do
-  its(:content) { should contain 'Plugin-Version: 2.41' }
-end
-
-describe file('/var/lib/jenkins/plugins/git/META-INF/MANIFEST.MF') do
-  its(:content) { should contain 'Plugin-Version: 3.6.4' }
-end
-
-describe file('/var/lib/jenkins/plugins/workflow-job/META-INF/MANIFEST.MF') do
-  its(:content) { should contain 'Plugin-Version: 2.9' }
-end
-
-describe file('/var/lib/jenkins/plugins/workflow-support/META-INF/MANIFEST.MF') do
-  its(:content) { should contain 'Plugin-Version: 2.16' }
-end
-
-describe file('/var/lib/jenkins/plugins/cloudbees-folder/META-INF/MANIFEST.MF') do
-  its(:content) { should contain 'Plugin-Version: 6.2.1' }
-end
-
-describe file('/var/lib/jenkins/plugins/credentials/META-INF/MANIFEST.MF') do
-  its(:content) { should contain 'Plugin-Version: 2.1.16' }
-end
-
-describe file('/var/lib/jenkins/plugins/plain-credentials/META-INF/MANIFEST.MF') do
-  its(:content) { should contain 'Plugin-Version: 1.4' }
+jenkins_plugins_versions.each do |plugin|
+  describe file("/var/lib/jenkins/plugins/#{plugin[0]}/META-INF/MANIFEST.MF") do
+    its(:content) { should contain "Plugin-Version: #{plugin[1]}" }
+  end
 end
