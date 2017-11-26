@@ -1,20 +1,13 @@
 ---
 driver:
-  name: docker
+  name: vagrant
 
 driver_config:
-  use_sudo: false
-  # because Docker and SystemD/Upstart
-  privileged: true
-  remove_images: false
   hostname: <%= ENV.fetch('INSTANCE_NAME', "jenkins-demo") %>
-  # tls_verify: true
-  # tls_cacert: <%= ENV.fetch('TLS_FOLDER', "tls") %>/ca.pem
-  # tls_cert: <%= ENV.fetch('TLS_FOLDER', "tls") %>/cert.pem
-  # tls_key: <%= ENV.fetch('TLS_FOLDER', "tls") %>/key.pem
-  # socket: tcp://172.17.0.1:4243
+  # https://github.com/test-kitchen/kitchen-vagrant
+  memory: 1024
 transport:
-   username: kitchen
+  username: kitchen
 
 provisioner:
   name: chef_zero
@@ -26,18 +19,15 @@ provisioner:
 platforms:
   - name: centos-7
     driver_config:
-      # https://hub.docker.com/r/dokken/centos-7/
       instance_name: <%= ENV.fetch('INSTANCE_NAME', "jenkins-demo-centos7") %>
-      image: <%= ENV.fetch('IMAGE_NAME', "dokken/centos-7") %>
-      pid_one_command: /usr/lib/systemd/systemd
-      forward:
-        - <%= ENV.fetch('DOCKER_PORT_FORWARD_PREFIX', "180") %>83:8081
+      network:
+        - ["forwarded_port", {guest: 8080, host: 18080}]
   - name: ubuntu-14.04
+    # https://stackoverflow.com/questions/38677059/port-forwarding-not-working-with-test-kitchen-and-vagrant
     driver_config:
       instance_name: <%= ENV.fetch('INSTANCE_NAME', "jenkins-demo-ubuntu1404") %>
-      image: <%= ENV.fetch('IMAGE_NAME', "ubuntu:14.04") %>
-      forward:
-        - <%= ENV.fetch('DOCKER_PORT_FORWARD_PREFIX', "280") %>83:8081
+      network:
+        - ["forwarded_port", {guest: 8080, host: 28080}]
 
 suites:
   - name: default
@@ -53,7 +43,7 @@ suites:
                 slack_authtoken: '<%= ENV.fetch('SLACK_TOKEN', "") %>',
                 # TODO different env use different port
                 # TODO use server ip
-                slack_buildserverurl: 'http://localhost:<%= ENV.fetch('DOCKER_PORT_FORWARD_PREFIX', "180") %>80/',
+                slack_buildserverurl: 'http://localhost:<%= ENV.fetch('DOCKER_PORT_FORWARD_PREFIX', "180") %>81/',
                 slack_room: '#denny-alerts',
                 default_username: '<%= ENV.fetch('JENKINS_DEFAULT_USERNAME', "usertest123") %>',
                 default_password: '<%= ENV.fetch('JENKINS_DEFAULT_PASSWORD', "password123") %>'

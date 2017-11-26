@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?><project>
+  <actions/>
+  <description/>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>-1</daysToKeep>
+        <numToKeep>50</numToKeep>
+        <artifactDaysToKeep>-1</artifactDaysToKeep>
+        <artifactNumToKeep>-1</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+    <com.chikli.hudson.plugin.naginator.NaginatorOptOutProperty plugin="naginator@1.17.2">
+      <optOut>false</optOut>
+    </com.chikli.hudson.plugin.naginator.NaginatorOptOutProperty>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.TextParameterDefinition>
+          <name>test_spec</name>
+          <description/>
+          <defaultValue># ping check
+[&quot;www.github.com&quot;].each do |item|
+  describe command(&quot;ping -c3 #{item}&quot;) do
+     its(:exit_status) { should eq 0 }
+  end
+end
+
+# Check anonymous http links
+[&quot;http://www.dennyzhang.com/&quot;,
+ &quot;https://www.dennyzhang.com/&quot;,
+ &quot;http://brain.dennyzhang.com/&quot;,
+ &quot;http://slack.dennyzhang.com/&quot;,
+ ].each do |url|
+    describe command(&apos;curl -I --connect-timeout 10 -k %s 2&gt;&amp;1&apos; %[url]) do
+      its(:stdout) { should match /HTTP\/1.1 200 OK/ }
+    end
+end
+
+describe service(&apos;jenkins&apos;) do
+  it { should be_running }
+end
+
+# Check at least 2 GB free disk
+describe command(&quot;[ $(df -h / | tail -n1 |awk -F&apos; &apos; &apos;{print $4}&apos; | awk -F&apos;G&apos; &apos;{print $1}&apos; | awk -F&apos;.&apos; &apos;{print $1}&apos;) -gt 2 ]&quot;) do
+  its(:exit_status) { should eq 0 }
+end
+
+# TODO: enable this
+# # Check at least 2 GB free memory
+# describe command(&quot;[ $(free -ml | grep &apos;buffers/cache&apos; | awk -F&apos; &apos; &apos;{print $4}&apos;) -gt 2048 ]&quot;) do
+#   its(:exit_status) { should eq 0 }
+# end
+
+# TODO: support for both CentOS and Ubuntu OS
+# # Check remote tcp port
+# [&quot;vpn.dennyzhang.com:6188&quot;, # vpn
+#  &quot;www.dennyzhang.com:443&quot;, # ssl
+#  ].each do |ip_port|
+#     (ip, port) = ip_port.split(&apos;:&apos;)
+#     describe command(&quot;nc -z -v -w5 #{ip} #{port} 2&gt;&amp;1&quot;) do
+#       its(:stdout) { should match /open/ }
+#     end
+# end
+
+# # check cpu loadavg in latest one min
+# [&quot;172.17.0.1:2702:10&quot;].each do |item|
+# (ip, port, cpu_load) = item.split(&apos;:&apos;)
+#     command_str = &quot;[ `ssh -o stricthostkeychecking=no -i /var/jenkins_home/.ssh/docker_host_id_rsa -p %s root@%s cat /proc/loadavg | awk &apos;{print int($1+0.99)}&apos;` -lt %s ]&quot; \
+#                 % [port, ip, cpu_load]
+#     describe command(command_str) do
+#         its(:exit_status) { should eq 0 }
+#     end
+# end
+
+# # check docker container number
+# [&quot;172.17.0.1:2702:15&quot;].each do |item|
+# (ip, port, container_count) = item.split(&apos;:&apos;)
+#     command_str = &quot;[ `ssh -o stricthostkeychecking=no -i /var/jenkins_home/.ssh/docker_host_id_rsa -p %s root@%s docker ps | sed 1d | wc -l` -lt %s ]&quot; \
+#                 % [port, ip, container_count]
+#     describe command(command_str) do
+#         its(:exit_status) { should eq 0 }
+#     end
+# end
+</defaultValue>
+        </hudson.model.TextParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers>
+    <hudson.triggers.TimerTrigger>
+      <spec>H H/5 * * *</spec>
+    </hudson.triggers.TimerTrigger>
+  </triggers>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>#!/bin/bash -ex
+export PATH=$PATH:/usr/local/bin/
+bash -e /var/lib/jenkins/script/serverspec_check.sh</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <com.chikli.hudson.plugin.naginator.NaginatorPublisher plugin="naginator@1.17.2">
+      <regexpForRerun></regexpForRerun>
+      <rerunIfUnstable>false</rerunIfUnstable>
+      <rerunMatrixPart>false</rerunMatrixPart>
+      <checkRegexp>false</checkRegexp>
+      <regexpForMatrixStrategy>TestParent</regexpForMatrixStrategy>
+      <delay class="com.chikli.hudson.plugin.naginator.FixedDelay">
+        <delay>3</delay>
+      </delay>
+      <maxSchedule>1</maxSchedule>
+    </com.chikli.hudson.plugin.naginator.NaginatorPublisher>
+    <jenkins.plugins.slack.SlackNotifier plugin="slack@2.0.1">
+      <teamDomain><%= node['jenkins_demo']['slack_teamdomain'] %></teamDomain>
+      <authToken><%= node['jenkins_demo']['slack_authtoken'] %></authToken>
+      <buildServerUrl><%= node['jenkins_demo']['slack_buildserverurl'] %></buildServerUrl>
+      <room><%= node['jenkins_demo']['slack_room'] %></room>
+      <startNotification>false</startNotification>
+      <notifySuccess>false</notifySuccess>
+      <notifyAborted>false</notifyAborted>
+      <notifyNotBuilt>false</notifyNotBuilt>
+      <notifyUnstable>false</notifyUnstable>
+      <notifyFailure>true</notifyFailure>
+      <notifyBackToNormal>true</notifyBackToNormal>
+      <notifyRepeatedFailure>true</notifyRepeatedFailure>
+      <includeTestSummary>false</includeTestSummary>
+      <commitInfoChoice>NONE</commitInfoChoice>
+      <includeCustomMessage>false</includeCustomMessage>
+      <customMessage></customMessage>
+    </jenkins.plugins.slack.SlackNotifier>
+  </publishers>
+  <buildWrappers/>
+</project>

@@ -11,48 +11,122 @@ Table of Contents
    * [Procedure](#procedure)
    * [More Resources](#more-resources)
 
-<a href="https://www.dennyzhang.com"><img src="https://raw.githubusercontent.com/DennyZhang/chef-study/master/images/scenario-303-design.png"/> </a>
 <a href="https://www.dennyzhang.com"><img align="right" width="185" height="37" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns_small.png"></a>
 
 # Requirement
 
-1. Test 2 nodes jenkins cluster deployment in docker
-2. Use Jenkinsfile to configure Jenkins
-3. Define Jenkins pipeline
+1. For better security, only registered user can login
+2. For better security, Jenkins listen on port 18080, instead of 8080
+3. Enable and configure ThinBackup
+4. When Jenkins is down, get alerts
+
+Quiz: 
+- Once I have enabled Jenkins security, how my chef update will work?
 
 # Procedure
-- Start docker-compose env
-docker-compose up -d
-
-- Login to the container, and run procedure
+## Common Setup
+- Install bundle
 ```
-docker exec -it my_chef sh
+apt-get install ruby-dev
 
-mkdir -p /tmp/berks_cookbooks
+ruby --version
+# https://github.com/bundler/bundler/issues/4065
+sudo gem install bundler -n /usr/local/bin
 
-cd /tmp/cookbooks/jenkins-demo/
-berks vendor /tmp/berks_cookbooks
-ls -lth /tmp/berks_cookbooks
+bundle --version
 ```
 
-- Apply Chef update
+- Install gem depenencies
 ```
-cd /tmp
-# From config/node.json, we specify to apply example cookbook
-chef-solo -L chef_solo.log -c config/solo.rb -j config/node.json
-
-- After deployment, jenkins is up and running
+cd cookbooks/jenkins-demo
+bundle install
 ```
 
-- Verify Jenkins
-curl -I http://localhost:8080
+## kitchen docker deployment
+- Run kitchen test
+```
+# https://github.com/test-kitchen/kitchen-docker
+kitchen converge
+kitchen list
+kitchen verify
+kitchen destroy
+```
 
-- Destroy docker-compose env after testing
+## kitchen digitalocean deployment
+```
+# https://github.com/test-kitchen/kitchen-digitalocean
+cd cookbooks/jenkins-demo
+export KITCHEN_YAML=".kitchen_digitalocean.yml"
+
+# Customize this with your credential
+export DIGITALOCEAN_ACCESS_TOKEN="1234"
+export DIGITALOCEAN_SSH_KEY_IDS="1234, 5678"
+
+kitchen converge
+kitchen list
+kitchen verify
+kitchen destroy
+
+- TODO: how does the ssh key work? With which OS user, and where the key is?
+```
+
+## kitchen ec2 deployment
+- Install AWS cli and configure aws credential
+```
+# http://docs.aws.amazon.com/cli/latest/userguide/installing.html
+pip install awscli
+aws configure
+
+# Customize this
+export KEY_USER="denny-kitchen-test"
+aws ec2 create-key-pair --key-name $KEY_USER | ruby -e "require 'json'; puts JSON.parse(STDIN.read)['KeyMaterial']" > ~/.ssh/$KEY_USER
+
+chmod 600 ~/.ssh/$KEY_USER
+
+export AWS_SSH_KEY_ID="$KEY_USER"
 
 ```
-docker-compose down -v
+
+- Install and run kitchen-ec2
+```
+# https://github.com/test-kitchen/kitchen-ec2
+# https://github.com/test-kitchen/kitchen-ec2/blob/master/lib/kitchen/driver/ec2.rb
+# http://kg4giy.com/2015/12/11/test-kitchen-to-support-amazon-web-service-aws-amis/
+
+cd cookbooks/jenkins-demo
+export KITCHEN_YAML=".kitchen_ec2.yml"
+# TODO: customize this
+export AWS_SSH_KEY_ID="$KEY_USER"
+
+# Update bundle: https://github.com/chef/chef-provisioning/issues/151
+bundle update
+
+kitchen converge
+kitchen list
+kitchen verify
+kitchen destroy
+```
+
+## kitchen vagrant deployment
+```
+# https://github.com/test-kitchen/kitchen-vagrant
+cd cookbooks/jenkins-demo
+export KITCHEN_YAML=".kitchen_vagrant.yml"
+
+bundle install
+
+kitchen converge
+kitchen list
+kitchen verify
+kitchen destroy
 ```
 
 # More Resources
-- jenkins cookbook: https://github.com/chef-cookbooks/jenkins
+- TODO: security improvement for the built-in chef user: attributes/default.rb
+
+- Critical Info
+```
+CentOS Jenkins conf: /etc/sysconfig/jenkins
+```
+
 <a href="https://www.dennyzhang.com"><img align="right" width="185" height="37" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns_small.png"></a>

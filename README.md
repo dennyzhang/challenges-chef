@@ -21,6 +21,7 @@ Table of Contents
       * [Scenario-301: Use Chef To Deploy Jenkins I](#scenario-301-use-chef-to-deploy-jenkins-i)
       * [Scenario-302: Use Chef To Deploy Jenkins II](#scenario-302-use-chef-to-deploy-jenkins-ii)
       * [Scenario-303: Use Chef To Deploy Jenkins II](#scenario-303-use-chef-to-deploy-jenkins-ii)
+      * [Scenario-401: Use Chef To Deploy 2 Nodes Jenkins I](#scenario-401-use-chef-to-deploy-2-nodes-jenkins-i)
    * [Highlights](#highlights)
    * [Contributors: Give People Credits](#contributors-give-people-credits)
    * [License](#license)
@@ -101,13 +102,21 @@ Table of Contents
 ```
 1. For better security, only registered user can login
 2. For better security, Jenkins listen on port 18080, instead of 8080
-3. Enable and configure ThinBackup
-4. When Jenkins is down, get alerts
+3. When Jenkins is down, get alerts
 ```
 - See more: [Scenario-302](./Scenario-302)
-- TODO
 
 ## Scenario-303: Use Chef To Deploy Jenkins II
+- Objective: More Jenkins customization
+- Requirements:
+```
+1. Use Jenkinsfile to create a Jenkins pipeline
+2. Enable and configure ThinBackup
+```
+- See more: [Scenario-303](./Scenario-303)
+- TODO
+
+## Scenario-401: Use Chef To Deploy 2 Nodes Jenkins I
 - Objective: Test and verify the deployment for both all-in-one and 2 nodes cluster
 - Requirements:
 ```
@@ -115,7 +124,7 @@ Table of Contents
 2. Use Jenkinsfile to configure Jenkins
 3. Define Jenkins pipeline
 ```
-<a href="https://www.dennyzhang.com"><img src="https://raw.githubusercontent.com/DennyZhang/chef-study/master/images/scenario-303-design.png"/> </a>
+<a href="https://www.dennyzhang.com"><img src="https://raw.githubusercontent.com/DennyZhang/chef-study/master/images/scenario-401-design.png"/> </a>
 - See more: [Scenario-303](./Scenario-303)
 - TODO
 
@@ -125,6 +134,7 @@ Table of Contents
 - More Resources:
 ```
 https://github.com/chef-cookbooks/jenkins
+https://github.com/jenkinsci/pipeline-examples
 ```
 
 # Contributors: Give People Credits
