@@ -7,16 +7,18 @@
 #
 default['jenkins_demo']['jenkins_port'] = 8080
 
+# TODO: speed up the deployment process
 default['jenkins_demo']['jenkins_plugins'] = {
+  'icon-shim' => '2.0.3',
+  'credentials' => '2.1.16',
   'thinBackup' => '1.9',
-  # TODO
   # 'command-launcher' => '1.0',
   'bouncycastle-api' => '2.16.2',
-  'credentials' => '2.1.16',
   'plain-credentials' => '1.4',
   'slack' => '2.3',
   'script-security' => '1.35',
-  'matrix-auth' => '2.2'
+  'matrix-auth' => '2.2',
+  'ssh-credentials' => '1.13'
 }
 
 ########################################

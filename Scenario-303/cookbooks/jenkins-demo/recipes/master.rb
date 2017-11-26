@@ -15,6 +15,8 @@ node.default['java']['install_flavor'] = 'oracle'
 node.default['java']['jdk_version'] = '8'
 node.default['java']['set_etc_environment'] = true
 node.default['java']['oracle']['accept_oracle_download_terms'] = true
+# Avoid unecessary change to /etc/sysconfig/jenkins in CentOS
+node.default['jenkins']['java'] = 'java'
 
 if %w[debian ubuntu].include?(node['platform_family'])
   node.default['jenkins']['master']['repository'] = \
@@ -23,7 +25,7 @@ if %w[debian ubuntu].include?(node['platform_family'])
     'http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key'
 end
 
-node.default['jenkins']['executor']['timeout'] = 360
+node.default['jenkins']['executor']['timeout'] = 480
 
 node.default['jenkins']['master']['port'] = node['jenkins_demo']['jenkins_port']
 node.default['jenkins']['master']['endpoint'] = \
@@ -36,12 +38,14 @@ include_recipe 'jenkins::master'
 node['jenkins_demo']['jenkins_plugins'].each do |plugin|
   jenkins_plugin plugin[0] do
     version plugin[1]
-    notifies :execute, 'jenkins_command[safe-restart]', :immediately
+    notifies :execute, 'jenkins_command[safe-restart]', :delayed
   end
 end
 
+# force restart, since critical jenkins plugin installed
+# TODO: When re-run chef update, avoid this extra blind jenkins restart
 jenkins_command 'safe-restart' do
-  action :nothing
+  action :execute
 end
 
 %w[/var/lib/jenkins/script].each do |x|

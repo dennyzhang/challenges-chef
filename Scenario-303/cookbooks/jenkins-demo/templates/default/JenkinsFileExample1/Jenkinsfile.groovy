@@ -3,15 +3,15 @@
 node('master') {
     try {
         stage('build') {
-            sh "echo todo"
+            sh "echo dummy build action"
         }
 
         stage('test') {
-            sh "echo todo"
+            sh "echo dummy test action"
         }
 
         stage('deploy') {
-            sh "echo todo"
+            sh "echo dummy deploy action"
         }
     } catch(error) {
         throw error
