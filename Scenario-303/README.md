@@ -15,10 +15,8 @@ Table of Contents
 
 # Requirement
 
-1. For better security, only registered user can login
-2. For better security, Jenkins listen on port 18080, instead of 8080
-3. Enable and configure ThinBackup
-4. When Jenkins is down, get alerts
+1. Use Jenkinsfile to create a Jenkins pipeline
+2. Enable and configure ThinBackup
 
 Quiz: 
 - Once I have enabled Jenkins security, how my chef update will work?
