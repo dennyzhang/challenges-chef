@@ -8,16 +8,6 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-# -*- encoding: utf-8 -*-
-
-#
-# Cookbook Name:: jenkins-demo
-# Recipe:: conf_test_job
-#
-# Copyright 2017, DennyZhang.com
-#
-# All rights reserved - Do Not Redistribute
-#
 
 ################################################################################
 # Install simple jobs
@@ -96,47 +86,4 @@ cookbook_file '/var/lib/jenkins/script/serverspec_check.sh' do
   group 'jenkins'
 end
 ################################################################################
-# Install Jenkins pipeline plugins
-
-package 'git' do
-  action :install
-end
-
-jenkins_pipeline_plugins = {
-  # Install git plugin
-  'structs' => '1.10',
-  'git-client' => '2.6.0',
-  'scm-api' => '2.2.5',
-  'git' => '3.6.4',
-  # Install pipeline plugin
-  'workflow-step-api' => '2.14',
-  'workflow-support' => '2.16',
-  'cloudbees-folder' => '6.2.1',
-  'branch-api' => '2.0.15',
-  'workflow-cps' => '2.41',
-  'workflow-aggregator' => '2.5'
-}
-
-jenkins_pipeline_plugins.each do |plugin|
-  jenkins_plugin plugin[0] do
-    version plugin[1]
-    notifies :execute, 'jenkins_command[safe-restart]', :delayed
-  end
-end
-
-# force restart, since critical jenkins plugin installed
-jenkins_command 'safe-restart' do
-  action :execute
-end
-
-%w[JenkinsFileExample1 JenkinsFileExample2].each do |job_name|
-  config = File.join(Chef::Config[:file_cache_path], "#{job_name}.xml")
-  template config do
-    source "#{job_name}/config.xml"
-  end
-
-  jenkins_job job_name do
-    config config
-  end
-end
-################################################################################
+include_recipe 'jenkins-demo::test_pipeline'
