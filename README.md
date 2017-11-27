@@ -8,6 +8,8 @@ File me [tickets](https://github.com/DennyZhang/chef-study/issues) or star [the 
 
 <a href="https://github.com/DennyZhang?tab=followers"><img align="right" width="200" height="183" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/fork_github.png" /></a>
 
+<a href="https://www.dennyzhang.com"><img src="https://raw.githubusercontent.com/DennyZhang/chef-study/master/images/chef_icon.png"/> </a>
+
 Table of Contents
 =================
 
@@ -33,7 +35,6 @@ Table of Contents
 - [jenkins-groovy-study](https://github.com/DennyZhang/jenkins-groovy-study): Case Study: Use groovy and Pipeline in Jenkins as a Pro
 - [aws-jenkins-study](https://github.com/DennyZhang/aws-jenkins-study): Case Study Using AWS To Setup Jenkins.
 
-<a href="https://www.dennyzhang.com"><img src="https://raw.githubusercontent.com/DennyZhang/chef-study/master/images/chef_icon.png"/> </a>
 # Scenarios
 
 ## Scenario-101: Chef HelloWorld I
