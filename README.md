@@ -12,8 +12,8 @@ File me [tickets](https://github.com/DennyZhang/chef-study/issues) or star [the 
 
 Table of Contents
 =================
+Challenges Your Chef Skills By Solving Real Questions.
 
-   * [chef-study](#chef-study)
    * [Scenarios](#scenarios)
       * [Scenario-101: Chef HelloWorld I](#scenario-101-chef-helloworld-i)
       * [Scenario-102: Chef HelloWorld II](#scenario-102-chef-helloworld-ii)
@@ -30,10 +30,7 @@ Table of Contents
 
 <a href="https://www.dennyzhang.com"><img align="right" width="185" height="37" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns_small.png"></a>
 
-**Related GitHub Repos**:
-- [chef-study](https://github.com/DennyZhang/chef-study): Chef Case study from dummies to pros
-- [jenkins-groovy-study](https://github.com/DennyZhang/jenkins-groovy-study): Case Study: Use groovy and Pipeline in Jenkins as a Pro
-- [aws-jenkins-study](https://github.com/DennyZhang/aws-jenkins-study): Case Study Using AWS To Setup Jenkins.
+**Similar Challenges**: https://www.dennyzhang.com/battle
 
 # Scenarios
 
