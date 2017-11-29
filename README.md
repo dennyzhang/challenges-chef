@@ -132,7 +132,7 @@ Challenges Your Chef Skills By Solving Real Questions.
 - See more: [Scenario-303](./Scenario-303)
 - TODO
 
-<a href="https://www.dennyzhang.com"><img align="right" width="150" height="183" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/denny_intro.jpg"></a>
+<a href="https://www.dennyzhang.com"><img align="right" width="144" height="192" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/denny_201706.png"></a>
 
 # Highlights
 - More Resources:
