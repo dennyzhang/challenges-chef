@@ -1,14 +1,14 @@
-# chef-study: Chef Case study from dummy to pro
+# challenges-chef: Chef Case study from dummy to pro
 
-[![Build Status](https://travis-ci.org/DennyZhang/chef-study.svg?branch=master)](https://travis-ci.org/DennyZhang/chef-study) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+[![Build Status](https://travis-ci.org/DennyZhang/challenges-chef.svg?branch=master)](https://travis-ci.org/DennyZhang/challenges-chef) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
 [![LinkedIn](https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/linkedin.png)](https://www.linkedin.com/in/dennyzhang001) <a href="https://www.dennyzhang.com/slack" target="_blank" rel="nofollow"><img src="http://slack.dennyzhang.com/badge.svg" alt="slack"/></a> [![Github](https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/github.png)](https://github.com/DennyZhang)
 
-File me [tickets](https://github.com/DennyZhang/chef-study/issues) or star [the repo](https://github.com/DennyZhang/chef-study).
+File me [tickets](https://github.com/DennyZhang/challenges-chef/issues) or star [the repo](https://github.com/DennyZhang/challenges-chef).
 
 <a href="https://github.com/DennyZhang?tab=followers"><img align="right" width="200" height="183" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/fork_github.png" /></a>
 
-<a href="https://www.dennyzhang.com"><img src="https://raw.githubusercontent.com/DennyZhang/chef-study/master/images/chef_icon.png"/> </a>
+<a href="https://www.dennyzhang.com"><img src="https://raw.githubusercontent.com/DennyZhang/challenges-chef/master/images/chef_icon.png"/> </a>
 
 Table of Contents
 =================
@@ -62,7 +62,7 @@ Challenges Your Chef Skills By Solving Real Questions.
 2. Install and configure knife
 3. From knife node run chef deployment in chef client node
 ```
-<a href="https://www.dennyzhang.com"><img src="https://raw.githubusercontent.com/DennyZhang/chef-study/master/images/scenario-103-design.png"/> </a>
+<a href="https://www.dennyzhang.com"><img src="https://raw.githubusercontent.com/DennyZhang/challenges-chef/master/images/scenario-103-design.png"/> </a>
 - See more: [Scenario-103](./Scenario-103)
 - TODO
 
@@ -75,7 +75,7 @@ Challenges Your Chef Skills By Solving Real Questions.
 ```
 - See more: [Scenario-201](./Scenario-201)
 
-<a href="https://www.dennyzhang.com"><img src="https://raw.githubusercontent.com/DennyZhang/chef-study/master/images/scenario-201-design.png"/> </a>
+<a href="https://www.dennyzhang.com"><img src="https://raw.githubusercontent.com/DennyZhang/challenges-chef/master/images/scenario-201-design.png"/> </a>
 ## Scenario-202: Enforce TDD For Your Chef Cookbooks II
 - Objective: Deploy for 3 scenarios: docker, local VM and public cloud
 - Requirements:
@@ -86,7 +86,7 @@ Challenges Your Chef Skills By Solving Real Questions.
 ```
 - See more: [Scenario-202](./Scenario-202)
 
-<a href="https://www.dennyzhang.com"><img src="https://raw.githubusercontent.com/DennyZhang/chef-study/master/images/scenario-202-design.png"/> </a>
+<a href="https://www.dennyzhang.com"><img src="https://raw.githubusercontent.com/DennyZhang/challenges-chef/master/images/scenario-202-design.png"/> </a>
 
 ## Scenario-301: Use Chef To Deploy Jenkins I
 - Objective: Use chef to deploy one common service for real
@@ -128,7 +128,7 @@ Challenges Your Chef Skills By Solving Real Questions.
 2. Use Jenkinsfile to configure Jenkins
 3. Define Jenkins pipeline
 ```
-<a href="https://www.dennyzhang.com"><img src="https://raw.githubusercontent.com/DennyZhang/chef-study/master/images/scenario-401-design.png"/> </a>
+<a href="https://www.dennyzhang.com"><img src="https://raw.githubusercontent.com/DennyZhang/challenges-chef/master/images/scenario-401-design.png"/> </a>
 - See more: [Scenario-303](./Scenario-303)
 - TODO
 
