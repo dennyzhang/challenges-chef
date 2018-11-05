@@ -1,23 +1,8 @@
-* org-mode configuration                                           :noexport:
-#+STARTUP: overview customtime noalign logdone hidestars
-#+TITLE:  Challenges Your Chef Skills
-#+DESCRIPTION: 
-#+KEYWORDS: 
-#+AUTHOR: Denny Zhang
-#+EMAIL:  denny@dennyzhang.com
-#+TAGS: noexport(n)
-#+PRIORITIES: A D C
-#+OPTIONS:   H:3 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
-#+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:t pri:nil tags:not-in-toc
-#+EXPORT_EXCLUDE_TAGS: exclude noexport
-#+SEQ_TODO: TODO HALF ASSIGN | DONE BYPASS DELEGATE CANCELED DEFERRED
-#+LINK_UP:   
-#+LINK_HOME: 
 * Summary
 #+BEGIN_HTML
 <a href="https://www.linkedin.com/in/dennyzhang001"><img src="https://www.dennyzhang.com/wp-content/uploads/sns/linkedin.png" alt="linkedin" /></a>
 <a href="https://github.com/DennyZhang"><img src="https://www.dennyzhang.com/wp-content/uploads/sns/github.png" alt="github" /></a>
-<a href="https://www.dennyzhang.com/slack" target="_blank" rel="nofollow"><img src="http://slack.dennyzhang.com/badge.svg" alt="slack"/></a>
+<a href="https://www.dennyzhang.com/slack" target="_blank" rel="nofollow"><img src="https://slack.dennyzhang.com/badge.svg" alt="slack"/></a>
 <a href="https://github.com/DennyZhang"><img align="right" width="200" height="183" src="https://www.dennyzhang.com/wp-content/uploads/denny/watermark/github.png" /></a>
 
 <br/><br/>
@@ -61,7 +46,7 @@ See more challenges from Denny: [[https://github.com/topics/denny-challenges][#d
 #+END_EXAMPLE
 
 #+BEGIN_HTML
-<a href="https://www.dennyzhang.com"><img src="https://raw.githubusercontent.com/DennyZhang/challenges-chef/master/images/scenario-103-design.png"/> </a>
+<a href="https://www.dennyzhang.com"><img src="https://raw.githubusercontent.com/dennyzhang/challenges-chef/master/images/scenario-103-design.png"/> </a>
 #+END_HTML
 - See more: [[Scenario-103][Scenario-103]]
 - TODO
@@ -77,7 +62,7 @@ See more challenges from Denny: [[https://github.com/topics/denny-challenges][#d
 - See more: [[Scenario-201][Scenario-201]]
 
 #+BEGIN_HTML
-<a href="https://www.dennyzhang.com"><img src="https://raw.githubusercontent.com/DennyZhang/challenges-chef/master/images/scenario-201-design.png"/> </a>
+<a href="https://www.dennyzhang.com"><img src="https://raw.githubusercontent.com/dennyzhang/challenges-chef/master/images/scenario-201-design.png"/> </a>
 #+END_HTML
 ** Scenario-202: Enforce TDD For Your Chef Cookbooks II
 - Objective: Deploy for 3 scenarios: docker, local VM and public cloud
@@ -91,7 +76,7 @@ See more challenges from Denny: [[https://github.com/topics/denny-challenges][#d
 - See more: [[Scenario-202][Scenario-202]]
 
 #+BEGIN_HTML
-<a href="https://www.dennyzhang.com"><img src="https://raw.githubusercontent.com/DennyZhang/challenges-chef/master/images/scenario-202-design.png"/> </a>
+<a href="https://www.dennyzhang.com"><img src="https://raw.githubusercontent.com/dennyzhang/challenges-chef/master/images/scenario-202-design.png"/> </a>
 #+END_HTML
 
 ** Scenario-301: Use Chef To Deploy Jenkins I
@@ -139,7 +124,7 @@ See more challenges from Denny: [[https://github.com/topics/denny-challenges][#d
 #+END_EXAMPLE
 
 #+BEGIN_HTML
-<a href="https://www.dennyzhang.com"><img src="https://raw.githubusercontent.com/DennyZhang/challenges-chef/master/images/scenario-401-design.png"/> </a>
+<a href="https://www.dennyzhang.com"><img src="https://raw.githubusercontent.com/dennyzhang/challenges-chef/master/images/scenario-401-design.png"/> </a>
 #+END_HTML
 - See more: [[Scenario-303][Scenario-303]]
 - TODO
@@ -158,9 +143,26 @@ https://github.com/jenkinsci/pipeline-examples
 
 #+BEGIN_HTML
 <a href="https://www.dennyzhang.com"><img align="right" width="201" height="268" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/denny_201706.png"></a>
-
 <a href="https://www.dennyzhang.com"><img align="right" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns_small.png"></a>
+
+<a href="https://www.linkedin.com/in/dennyzhang001"><img align="bottom" src="https://www.dennyzhang.com/wp-content/uploads/sns/linkedin.png" alt="linkedin" /></a>
+<a href="https://github.com/DennyZhang"><img align="bottom"src="https://www.dennyzhang.com/wp-content/uploads/sns/github.png" alt="github" /></a>
+<a href="https://www.dennyzhang.com/slack" target="_blank" rel="nofollow"><img align="bottom" src="https://slack.dennyzhang.com/badge.svg" alt="slack"/></a>
 #+END_HTML
+* org-mode configuration                                           :noexport:
+#+STARTUP: overview customtime noalign logdone showall
+#+DESCRIPTION: 
+#+KEYWORDS: 
+#+AUTHOR: Denny Zhang
+#+EMAIL:  denny@dennyzhang.com
+#+TAGS: noexport(n)
+#+PRIORITIES: A D C
+#+OPTIONS:   H:3 num:t toc:nil \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:nil skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+EXPORT_EXCLUDE_TAGS: exclude noexport
+#+SEQ_TODO: TODO HALF ASSIGN | DONE BYPASS DELEGATE CANCELED DEFERRED
+#+LINK_UP:   
+#+LINK_HOME: 
 * #  --8<-------------------------- separator ------------------------>8-- :noexport:
 * [#A] Routine job by chef                               :IMPORTANT:noexport:
 # Delete old client
@@ -24910,7 +24912,7 @@ http://jiracn.dennyzhang.com:40051/browse/DOCS-231
 #           export git_repo_url="git@github.com:DennyZhang/chef_community_cookbooks.git"
 #           export chef_json="{\"run_list\": [\"recipe[general_security]\"], \"general_security\": {\"ssh_disable_passwd_login\": \"true\", \"ssh_disable_root_login\": \"false\"}}"
 #           apt-get install -y curl
-#           curl -o /tmp/linux_apply_cookbook.sh https://raw.githubusercontent.com/DennyZhang/devops_public/master/chef/linux_apply_cookbook.sh
+#           curl -o /tmp/linux_apply_cookbook.sh https://raw.githubusercontent.com/dennyzhang/devops_public/master/chef/linux_apply_cookbook.sh
 #           bash -xe /tmp/linux_apply_cookbook.sh
 ** DONE show chef update report
   CLOSED: [2016-06-01 Wed 09:53]
@@ -25081,7 +25083,7 @@ docker exec -it my-test bash
 apt-get -y update
 apt-get install -y curl wget
 
-wget -O /root/devops_provision_os.sh https://raw.githubusercontent.com/DennyZhang/devops_public/master/chef/devops_provision_os.sh
+wget -O /root/devops_provision_os.sh https://raw.githubusercontent.com/dennyzhang/devops_public/master/chef/devops_provision_os.sh
 bash -e /root/devops_provision_os.sh
 
 # Checkout git source code

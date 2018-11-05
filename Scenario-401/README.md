@@ -11,7 +11,7 @@ Table of Contents
    * [Procedure](#procedure)
    * [More Resources](#more-resources)
 
-<a href="https://www.dennyzhang.com"><img src="https://raw.githubusercontent.com/DennyZhang/challenges-chef/master/images/scenario-401-design.png"/> </a>
+<a href="https://www.dennyzhang.com"><img src="https://raw.githubusercontent.com/dennyzhang/challenges-chef/master/images/scenario-401-design.png"/> </a>
 <a href="https://www.dennyzhang.com"><img align="right" width="185" height="37" src="https://raw.githubusercontent.com/USDevOps/mywechat-slack-group/master/images/dns_small.png"></a>
 
 # Requirement

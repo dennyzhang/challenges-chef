@@ -29,7 +29,7 @@ end
 # Check anonymous http links
 [&quot;http://www.dennyzhang.com/&quot;,
  &quot;https://www.dennyzhang.com/&quot;,
- &quot;http://brain.dennyzhang.com/&quot;,
+ &quot;https://code.dennyzhang.com/&quot;,
  &quot;http://slack.dennyzhang.com/&quot;,
  ].each do |url|
     describe command(&apos;curl -I --connect-timeout 10 -k %s 2&gt;&amp;1&apos; %[url]) do
